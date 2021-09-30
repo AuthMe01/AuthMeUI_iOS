@@ -235,11 +235,16 @@ SWIFT_CLASS("_TtC8AuthMeUI27AuthMeCaptureViewController")
 - (void)notifyMessageWithMessage:(NSString * _Nonnull)message;
 @end
 
+@class NSNumber;
 
 SWIFT_CLASS("_TtC8AuthMeUI28AuthMeLivenessViewController")
 @interface AuthMeLivenessViewController : AuthMeCaptureViewController
 - (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
+- (void)viewWillDisappear:(BOOL)animated;
 - (void)captureOutput:(AVCaptureOutput * _Nonnull)output didOutputSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer fromConnection:(AVCaptureConnection * _Nonnull)connection;
+- (void)notifyTitleWithTitle:(NSString * _Nonnull)title;
+- (void)notifyMessageWithMessage:(NSString * _Nonnull)message;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
