@@ -16,7 +16,18 @@ extension AuthMeCaptureViewController : AVFoundation.AVCaptureVideoDataOutputSam
   @objc dynamic public func captureOutput(_ output: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from connection: AVFoundation.AVCaptureConnection)
 }
 public protocol AuthMeAuthenticationDelegate : ObjectiveC.NSObjectProtocol {
-  func authenticate(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, error: Swift.Error?)
+  func authLiveness(image: UIKit.UIImage?, error: Swift.Error?)
+  func authTWLicenseResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWLicenseResult?, error: Swift.Error?)
+  func authTWIDResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWIDResult?, error: Swift.Error?)
+  func authTWHealthResult(image: UIKit.UIImage?, result: TWHealthResult?, error: Swift.Error?)
+  func authMRZResult(image: UIKit.UIImage?, result: MRZResult?, error: Swift.Error?)
+}
+extension AuthMeAuthenticationDelegate {
+  public func authLiveness(image: UIKit.UIImage?, error: Swift.Error?)
+  public func authTWLicenseResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWLicenseResult?, error: Swift.Error?)
+  public func authTWIDResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWIDResult?, error: Swift.Error?)
+  public func authTWHealthResult(image: UIKit.UIImage?, result: TWHealthResult?, error: Swift.Error?)
+  public func authMRZResult(image: UIKit.UIImage?, result: MRZResult?, error: Swift.Error?)
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AuthMeLivenessViewController : AuthMeUI.AuthMeCaptureViewController {
   @objc override dynamic public func viewDidLoad()
@@ -30,6 +41,7 @@ public protocol AuthMeAuthenticationDelegate : ObjectiveC.NSObjectProtocol {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AuthMeOCRViewController : AuthMeUI.AuthMeCaptureViewController {
   public var cardType: OCRCardType
+  public var watermark: UIKit.UIImage?
   @objc override dynamic public func viewDidLoad()
   @objc override dynamic public func captureOutput(_ output: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from connection: AVFoundation.AVCaptureConnection)
   @objc override dynamic public func notifyTitle(title: Swift.String)

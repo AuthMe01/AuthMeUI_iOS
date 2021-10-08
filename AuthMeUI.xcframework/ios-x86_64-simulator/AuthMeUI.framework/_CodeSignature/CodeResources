@@ -6,19 +6,23 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		yVPjAVDtpEoeXMq3x/FPO9s4C2k=
+		o9OwOqAUjzYJkti/MJnn8E14KG0=
 		</data>
 		<key>AuthMeCaptureViewController.nib</key>
 		<data>
-		JUz2YeV/xAjQTFjxhftEpcTI7gk=
+		djn2r2noxyefgGtKiHKh/3qm/pk=
 		</data>
 		<key>AuthMeConfirmViewController.nib</key>
 		<data>
-		HwlNV/UH87nebTADZihjPQX+YZ0=
+		wM36K8UgqX+S42x1ur6JvkCqRmI=
+		</data>
+		<key>AuthMeOCRTextViewController.nib</key>
+		<data>
+		IuZcm4lkkWqIsA4YWYfsOOid9Y4=
 		</data>
 		<key>Headers/AuthMeUI-Swift.h</key>
 		<data>
-		C3Wslv6Jk3GcUBjF8OCXNUBoa3s=
+		bWB5hl/oHkT1ENcdULihTAnJ5Zw=
 		</data>
 		<key>Headers/AuthMeUI.h</key>
 		<data>
@@ -34,11 +38,11 @@
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		w4/685TWGDi5RIu/IaNIrWc0avo=
+		NKsTMYV6ETLbTTFZbYD5zB38N6o=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		uG+6ociraLTj+gsOY8+TPjhOlf8=
+		/TP8G8EynIqkRZPkzFbeUKLF3G4=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -46,11 +50,11 @@
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		w4/685TWGDi5RIu/IaNIrWc0avo=
+		NKsTMYV6ETLbTTFZbYD5zB38N6o=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		uG+6ociraLTj+gsOY8+TPjhOlf8=
+		/TP8G8EynIqkRZPkzFbeUKLF3G4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -81,28 +85,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AYEgDvu2sA7JqdTjyPEMlqMRgt9ryY+IV/P9tZCV2Ks=
+			xRgLkU49Dlz/o3m3ViQcl8B7nXdyY6GidQgJWZloEz0=
 			</data>
 		</dict>
 		<key>AuthMeCaptureViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ojmadDvCxrBbx73OjrQe9tazUf9V993Na8sqk19Xt0c=
+			Bx35wh2kOLnILz8T3awQEJtOPJNUMiuh7ML1ewSRyus=
 			</data>
 		</dict>
 		<key>AuthMeConfirmViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wf0vqHdFgnjJanqCyn4Bf8Teh8INWNgodvv0WXIEFaM=
+			rIlHydBcl5me7EGYJ1XLWVu5ZC+OBD97NwYLKLZBhEo=
+			</data>
+		</dict>
+		<key>AuthMeOCRTextViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			DR3q0QMPUyEKWJNexzsB781/1LQpMkGJvhj6yd9BtZc=
 			</data>
 		</dict>
 		<key>Headers/AuthMeUI-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			By6ovK/WUEyXA0EdJNJ1U7nwVtlrZ/1AYMDBbZGwYqM=
+			E897vBX6Q60Pa7xIrA9riSsh5n0F/Jg/ISub/jFNcPc=
 			</data>
 		</dict>
 		<key>Headers/AuthMeUI.h</key>
@@ -123,14 +134,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VB3ry3WqIF9qTkcqhkZ/djTfxsKOxTI9SNln8RfvVoA=
+			AJcPfAMJR4Uynv8WGrARgiOsJSOfCGQII27/hSS9jz4=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+7DH/cFLD3nIkQPCx2Pg+M713NAfHRyefosjtLpkHHY=
+			fn9rhPGPa887zRPFrLWvZyb3icFPx4ONuBp9uAeLf1M=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64.swiftdoc</key>
@@ -144,14 +155,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VB3ry3WqIF9qTkcqhkZ/djTfxsKOxTI9SNln8RfvVoA=
+			AJcPfAMJR4Uynv8WGrARgiOsJSOfCGQII27/hSS9jz4=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+7DH/cFLD3nIkQPCx2Pg+M713NAfHRyefosjtLpkHHY=
+			fn9rhPGPa887zRPFrLWvZyb3icFPx4ONuBp9uAeLf1M=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

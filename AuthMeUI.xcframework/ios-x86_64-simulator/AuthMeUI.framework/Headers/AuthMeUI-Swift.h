@@ -221,7 +221,6 @@ SWIFT_CLASS("_TtC8AuthMeUI27AuthMeCaptureViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
-
 @class AVCaptureOutput;
 @class AVCaptureConnection;
 
@@ -234,6 +233,7 @@ SWIFT_CLASS("_TtC8AuthMeUI27AuthMeCaptureViewController")
 - (void)notifyTitleWithTitle:(NSString * _Nonnull)title;
 - (void)notifyMessageWithMessage:(NSString * _Nonnull)message;
 @end
+
 
 @class NSNumber;
 
