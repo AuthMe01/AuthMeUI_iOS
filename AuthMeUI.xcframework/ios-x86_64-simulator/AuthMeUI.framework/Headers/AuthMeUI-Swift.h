@@ -213,10 +213,19 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @class NSString;
 @class NSBundle;
 
+SWIFT_CLASS("_TtC8AuthMeUI30AntiFakeOCRIntroViewController")
+@interface AntiFakeOCRIntroViewController : UIViewController
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ SWIFT_UNAVAILABLE;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC8AuthMeUI27AuthMeCaptureViewController")
 @interface AuthMeCaptureViewController : UIViewController
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ SWIFT_UNAVAILABLE;
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
@@ -225,11 +234,12 @@ SWIFT_CLASS("_TtC8AuthMeUI27AuthMeCaptureViewController")
 @class AVCaptureConnection;
 
 @interface AuthMeCaptureViewController (SWIFT_EXTENSION(AuthMeUI)) <AVCaptureVideoDataOutputSampleBufferDelegate>
-- (void)captureOutput:(AVCaptureOutput * _Nonnull)output didOutputSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer fromConnection:(AVCaptureConnection * _Nonnull)connection;
+- (void)captureOutput:(AVCaptureOutput * _Nonnull)_ didOutputSampleBuffer:(CMSampleBufferRef _Nonnull)_ fromConnection:(AVCaptureConnection * _Nonnull)_;
 @end
 
 
 @interface AuthMeCaptureViewController (SWIFT_EXTENSION(AuthMeUI))
+- (void)score:(NSString * _Nonnull)_;
 - (void)notifyTitleWithTitle:(NSString * _Nonnull)title;
 - (void)notifyMessageWithMessage:(NSString * _Nonnull)message;
 @end
@@ -240,9 +250,9 @@ SWIFT_CLASS("_TtC8AuthMeUI27AuthMeCaptureViewController")
 SWIFT_CLASS("_TtC8AuthMeUI28AuthMeLivenessViewController")
 @interface AuthMeLivenessViewController : AuthMeCaptureViewController
 - (void)viewDidLoad;
-- (void)viewWillAppear:(BOOL)animated;
-- (void)viewWillDisappear:(BOOL)animated;
-- (void)captureOutput:(AVCaptureOutput * _Nonnull)output didOutputSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer fromConnection:(AVCaptureConnection * _Nonnull)connection;
+- (void)viewWillAppear:(BOOL)_;
+- (void)viewWillDisappear:(BOOL)_;
+- (void)captureOutput:(AVCaptureOutput * _Nonnull)_ didOutputSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer fromConnection:(AVCaptureConnection * _Nonnull)_;
 - (void)notifyTitleWithTitle:(NSString * _Nonnull)title;
 - (void)notifyMessageWithMessage:(NSString * _Nonnull)message;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -259,11 +269,22 @@ SWIFT_CLASS("_TtC8AuthMeUI13AuthMeManager")
 SWIFT_CLASS("_TtC8AuthMeUI23AuthMeOCRViewController")
 @interface AuthMeOCRViewController : AuthMeCaptureViewController
 - (void)viewDidLoad;
-- (void)captureOutput:(AVCaptureOutput * _Nonnull)output didOutputSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer fromConnection:(AVCaptureConnection * _Nonnull)connection;
+- (void)captureOutput:(AVCaptureOutput * _Nonnull)_ didOutputSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer fromConnection:(AVCaptureConnection * _Nonnull)_;
 - (void)notifyTitleWithTitle:(NSString * _Nonnull)title;
 - (void)notifyMessageWithMessage:(NSString * _Nonnull)message;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
+SWIFT_CLASS("_TtC8AuthMeUI29PersonalPrivacyViewController")
+@interface PersonalPrivacyViewController : UIViewController
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ SWIFT_UNAVAILABLE;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
