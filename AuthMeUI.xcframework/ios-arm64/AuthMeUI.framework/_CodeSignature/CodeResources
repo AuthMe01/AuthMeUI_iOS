@@ -6,35 +6,35 @@
 	<dict>
 		<key>AntiFakeOCRConfirmViewController.nib/objects-13.0+.nib</key>
 		<data>
-		fnnP9raf72LF5GDznrutiacqNZs=
+		CAlDN0w8dLcVVUHZBnVVa2qOTP4=
 		</data>
 		<key>AntiFakeOCRConfirmViewController.nib/runtime.nib</key>
 		<data>
-		XsROGhRh+SvEufj8/eP+ov1aQZU=
+		LLLZhV195FAPztZzQGPrhpbqN24=
 		</data>
 		<key>AntiFakeOCRIntroViewController.nib/objects-13.0+.nib</key>
 		<data>
-		vx25dCbP7XTQaomyMYWbOoXqW5k=
+		x3/vtaCz8B7ZpqlmVnviGAr9sG8=
 		</data>
 		<key>AntiFakeOCRIntroViewController.nib/runtime.nib</key>
 		<data>
-		4PriYCopNEN69RHewZLrssc4zNc=
+		NOtGXiSBnHyo8P86sY/cZ5vQ19w=
 		</data>
 		<key>AntiFakeOCRScanViewController.nib/objects-13.0+.nib</key>
 		<data>
-		ALw5zNomlIJGghqUHqP6yU4LR3o=
+		zST2OM4vGBdTlqpyQa+SeHAkvwA=
 		</data>
 		<key>AntiFakeOCRScanViewController.nib/runtime.nib</key>
 		<data>
-		5HTuFESfRLE21fmoEA/UoE3/lQk=
+		8+bmwd152bahfeLg2FsdwJmB5Dg=
 		</data>
 		<key>AntiOCRResultViewController.nib/objects-13.0+.nib</key>
 		<data>
-		GiNj6PG+2Q4b6fzmL8rj5h6GI0k=
+		5cdhCJ4031xWGK8Hzw296dYkKaM=
 		</data>
 		<key>AntiOCRResultViewController.nib/runtime.nib</key>
 		<data>
-		vLdHOmPevm+nqABismorH51DJLQ=
+		XY8+RVpn9lNH5T194IcZkdmzSXc=
 		</data>
 		<key>Assets.car</key>
 		<data>
@@ -42,19 +42,23 @@
 		</data>
 		<key>AuthMeCaptureViewController.nib</key>
 		<data>
-		PR3JZEa6XQx/dfga+B6+sqiPOfs=
+		aUKh7z+yaeZgClrgKlfVAu1Naj8=
 		</data>
 		<key>AuthMeConfirmViewController.nib</key>
 		<data>
-		mVR/vmR9kbnNbvNe9t8AQJv1HSQ=
+		CalKw1rkVsFyWGZA+36/vL4VJJU=
+		</data>
+		<key>AuthMeMyDataViewController.nib</key>
+		<data>
+		V6xHAJ4+uSKsA//wi6BKFm5SMRQ=
 		</data>
 		<key>AuthMeOCRTextViewController.nib</key>
 		<data>
-		Jo0N5tBuf8vE3dxn8aUcjfrcZFA=
+		LKPAg5KrwrTHA/E7h9Sj+UZHOkg=
 		</data>
 		<key>Headers/AuthMeUI-Swift.h</key>
 		<data>
-		sZo/be+wUiI1LlBcAFxBwyOCsbE=
+		K2+Vu6UbRuJGT09TDxup413vc2I=
 		</data>
 		<key>Headers/AuthMeUI.h</key>
 		<data>
@@ -62,7 +66,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		XPCHwXDYdYwyLw79KWQrjeMQdYo=
+		3KZKnfp65EZUOM/3I/CrRSCNn4s=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -70,11 +74,11 @@
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		oshLs0cHnh/gl6iaSpv8cw9LOi0=
+		+6IBCOC75cmZ4+GtrZytIzDX5rc=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		DH/JIjife6hTgHbVdjMnX+UAurU=
+		KZ77J/YHiNwaDLujW68xYPDn+wY=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -82,11 +86,11 @@
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		oshLs0cHnh/gl6iaSpv8cw9LOi0=
+		+6IBCOC75cmZ4+GtrZytIzDX5rc=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		DH/JIjife6hTgHbVdjMnX+UAurU=
+		KZ77J/YHiNwaDLujW68xYPDn+wY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -94,17 +98,17 @@
 		</data>
 		<key>PersonalPrivacyViewController.nib</key>
 		<data>
-		0CAUz4SCk508exwDinzikNKi7Vk=
+		B+R9/ygyRNtEl1utiKHdReEK5cM=
 		</data>
 		<key>ResultTableViewCell.nib</key>
 		<data>
-		SuvKf/hudTdM1xa5y0cWOVH1H2M=
+		cjhFRM0nGPl8Lj79028TjtuEdHA=
 		</data>
 		<key>en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rWEru23eB/rwLjxRkcdMganxg/0=
+			dzhN/R9N1TVuT7nURetuSjemHZs=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -113,7 +117,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5UHw8Ah7K6ZWuJtFQwyP3FAF5Ng=
+			S9BODkJDDHJAmlheiZo3Vhkn4wo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -125,56 +129,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wYlhSRX1vyzdPs9MQ98HTzb0yqjbUKk1wbxSnA5WGyo=
+			TlEe6gtUaEKrZbTxLVMSSinxj2wme3T5XpQZzAw4aLA=
 			</data>
 		</dict>
 		<key>AntiFakeOCRConfirmViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			y8jk+6bRVXx81f142Zc1fNjQpV9e5XNNMaGPrY8T/tY=
+			YHDsvV094CwDsGRnu0tn6Rwbda4UTn9AHFBkJ2z/LFY=
 			</data>
 		</dict>
 		<key>AntiFakeOCRIntroViewController.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pJxDntGhrSnROFC8FzFXFAunmZtGuftKyBSFqY6Q6U0=
+			gRggdnecfjoQLOD1ZUJ9jZHTaVgykTl314OUUVaoDFQ=
 			</data>
 		</dict>
 		<key>AntiFakeOCRIntroViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IL8DzSRbBWAlaFBqaHJ4jLjXITdlcxsBO54pJc0zdHY=
+			74oklG0b98NiMovYvLPvYa6LqFVjDjs7rG+MpFG+rFU=
 			</data>
 		</dict>
 		<key>AntiFakeOCRScanViewController.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4OuPOcmUO3y1+69nFaZhQxea3vae/N8Fha/ZNuJLbC0=
+			XiISD1FbivfiPKx3XumWh4dmL8p11ycdH0/K9UnbL9Y=
 			</data>
 		</dict>
 		<key>AntiFakeOCRScanViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5Y/IwYmSSqQi9EXu3syKbUZbljHXyxob0dl61ZUJhpA=
+			rlztxzEUVS+FDucbkIhofG87gvzVVWIVvY83LhfMJWs=
 			</data>
 		</dict>
 		<key>AntiOCRResultViewController.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mlVeh3dAGmqPmo8MOKvsTBiMoF6vW3shxg+3soohxzU=
+			DsvEjumLhEGrVgnf3/oHE+AWnCeJdQU08TKQG4T2EqY=
 			</data>
 		</dict>
 		<key>AntiOCRResultViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hV+XJ9uElbzatAl0ztHcSWeosBsJQ7DIA1bDdHalSLE=
+			wfqs8FdKTIoj7yYldVyw8hjUHaT8oxdRBeVx5lH8MlQ=
 			</data>
 		</dict>
 		<key>Assets.car</key>
@@ -188,28 +192,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BSZySDQ22Fc74bvN+VC4ykVX7AbWKJATE7Lb/KvEDXY=
+			b96HgtztzSPxGkRlmjlI7JT5yPhej+hsSjbccu9gyeQ=
 			</data>
 		</dict>
 		<key>AuthMeConfirmViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8GjXYDUrhwEFjaE/5c1COZpSPTwrowSXUg4f4XPwAYk=
+			HRg3PuACCtlWzsZDqV0TnaS/AL1PfVRfvcRJjSP9CM0=
+			</data>
+		</dict>
+		<key>AuthMeMyDataViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Oo+8sP0neCYVfK5iTronlUFiREaL+HfrBo/kkKuuUP0=
 			</data>
 		</dict>
 		<key>AuthMeOCRTextViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1gO5gi997CouLOsvgi2+6//e83mc5IM6NFa6eYQT+rg=
+			wze7r5dogIk6nWnyZIo25MiSp2pRWwWNd1GHs06mtUI=
 			</data>
 		</dict>
 		<key>Headers/AuthMeUI-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JjFAh9/AWZ+RAfotNGoKoPd0PTu7OIpvyHPNP1xkbfc=
+			voY12w+h6MBQcrIBBbj/BtGjC2tYVPnv9Tp6WHPpkAM=
 			</data>
 		</dict>
 		<key>Headers/AuthMeUI.h</key>
@@ -230,14 +241,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			g7oGlx6Shu3qe1LPx8fuUQ5i3Fh15PmQVuyvgDygON0=
+			9Yr8WIbG5jo+TdLzZB6WD1pi5HI1A8NDLa+HosFSWiU=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pXMyYePRxpPOoDhzlEJs0i6kTSilcck9kfzOUklnx9c=
+			D9Yk6LkTthOCiWjLxnLnVXHM3AfQ48u/v03DbIVCgB4=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/arm64.swiftdoc</key>
@@ -251,14 +262,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			g7oGlx6Shu3qe1LPx8fuUQ5i3Fh15PmQVuyvgDygON0=
+			9Yr8WIbG5jo+TdLzZB6WD1pi5HI1A8NDLa+HosFSWiU=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pXMyYePRxpPOoDhzlEJs0i6kTSilcck9kfzOUklnx9c=
+			D9Yk6LkTthOCiWjLxnLnVXHM3AfQ48u/v03DbIVCgB4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -272,21 +283,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YUMwK6GrD18Yslumk8J1hM4Ow88IFEc1UVqrphqejU4=
+			cVTXE0YsYynKVyqjMm/E1WaNkAdDQY+dHlhIMSSpe2M=
 			</data>
 		</dict>
 		<key>ResultTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IzvB+08XYMYKrwCQchumN6s48k7S+3ZZYd9Bphtv5Ak=
+			D4gaXnmZuQeAOKQByUSRpcScjMU2YDgGeE7OUtdtCDk=
 			</data>
 		</dict>
 		<key>en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MrchnbNOu64P744oL/v96RcStRFTxHyGUqYj094Wr+E=
+			WJNRcpoOBi9sXQlTen6IvUQOyhJsGMuvU5kxNvh2GKA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -295,7 +306,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			whVuqOLTFi0W3t49paMR7ZCD3WyX8vuN4FcVBiUISrs=
+			ut9QgnsRLakz31bPzwL1EpFBU0bfcgzEbvxILBoZhyY=
 			</data>
 			<key>optional</key>
 			<true/>

@@ -266,6 +266,15 @@ SWIFT_CLASS("_TtC8AuthMeUI13AuthMeManager")
 @end
 
 
+SWIFT_CLASS("_TtC8AuthMeUI26AuthMeMyDataViewController") SWIFT_AVAILABILITY(ios,introduced=13.0)
+@interface AuthMeMyDataViewController : UIViewController
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC8AuthMeUI23AuthMeOCRViewController")
 @interface AuthMeOCRViewController : AuthMeCaptureViewController
 - (void)viewDidLoad;

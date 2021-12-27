@@ -34,6 +34,13 @@ extension AuthMeAuthenticationDelegate {
   public func authMRZResult(image _: UIKit.UIImage?, result _: MRZResult?, error _: Swift.Error?)
   public func personalPrivacyResult(result _: Swift.Bool)
 }
+@objc @_hasMissingDesignatedInitializers @available(iOS 13.0, *)
+public class AuthMeMyDataViewController : UIKit.UIViewController {
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
 @objc @_inheritsConvenienceInitializers public class AuthMeLivenessViewController : AuthMeUI.AuthMeCaptureViewController {
   @objc override dynamic public func viewDidLoad()
   @objc override dynamic public func viewWillAppear(_: Swift.Bool)
@@ -48,6 +55,7 @@ extension AuthMeAuthenticationDelegate {
   @objc dynamic public init()
   @objc deinit
   weak public var delegate: AuthMeUI.AuthMeAuthenticationDelegate?
+  public func closeAll()
   @objc override dynamic public func viewDidLoad()
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
 }
