@@ -14,6 +14,7 @@ import WebKit
   public static let instance: AuthMeUI.AuthMeManager
   public func initialize(serverUrl: Swift.String, clientID: Swift.String, clientSecret: Swift.String, customerID: Swift.String, controller: UIKit.UIViewController, completion: @escaping (Swift.Result<Swift.Void, AuthMeError>) -> Swift.Void)
   public func initialize(serverUrl: Swift.String = "", token: Swift.String, controller: UIKit.UIViewController, completion: @escaping (Swift.Result<Swift.Void, AuthMeError>) -> Swift.Void)
+  public func refresh(token: Swift.String)
 }
 extension AuthMeCaptureViewController : AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
   @objc dynamic public func captureOutput(_: AVFoundation.AVCaptureOutput, didOutput _: CoreMedia.CMSampleBuffer, from _: AVFoundation.AVCaptureConnection)
