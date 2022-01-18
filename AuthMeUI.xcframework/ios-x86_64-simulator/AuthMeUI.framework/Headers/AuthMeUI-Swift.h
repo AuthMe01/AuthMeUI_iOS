@@ -210,6 +210,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 @class NSCoder;
+@class NSNumber;
 @class NSString;
 @class NSBundle;
 
@@ -218,6 +219,7 @@ SWIFT_CLASS("_TtC8AuthMeUI30AntiFakeOCRIntroViewController")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ SWIFT_UNAVAILABLE;
 - (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
@@ -245,7 +247,6 @@ SWIFT_CLASS("_TtC8AuthMeUI27AuthMeCaptureViewController")
 @end
 
 
-@class NSNumber;
 
 SWIFT_CLASS("_TtC8AuthMeUI28AuthMeLivenessViewController")
 @interface AuthMeLivenessViewController : AuthMeCaptureViewController
@@ -292,6 +293,7 @@ SWIFT_CLASS("_TtC8AuthMeUI29PersonalPrivacyViewController")
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
+
 
 
 

@@ -5,6 +5,7 @@ import AVFoundation
 import AuthMe
 @_exported import AuthMeUI
 import Foundation
+import ImageIO
 import Swift
 import SwiftUI
 import UIKit
@@ -58,6 +59,7 @@ public class AuthMeMyDataViewController : UIKit.UIViewController {
   weak public var delegate: AuthMeUI.AuthMeAuthenticationDelegate?
   public func closeAll()
   @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
 }
 @objc @_inheritsConvenienceInitializers public class AuthMeOCRViewController : AuthMeUI.AuthMeCaptureViewController {
