@@ -270,7 +270,7 @@ SWIFT_CLASS("_TtC8AuthMeUI13AuthMeManager")
 SWIFT_CLASS("_TtC8AuthMeUI26AuthMeMyDataViewController") SWIFT_AVAILABILITY(ios,introduced=13.0)
 @interface AuthMeMyDataViewController : UIViewController
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ SWIFT_UNAVAILABLE;
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end

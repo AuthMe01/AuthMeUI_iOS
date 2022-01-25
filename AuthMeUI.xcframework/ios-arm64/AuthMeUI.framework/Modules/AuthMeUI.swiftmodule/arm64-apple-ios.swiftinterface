@@ -58,6 +58,7 @@ public class AuthMeMyDataViewController : UIKit.UIViewController {
   @objc deinit
   weak public var delegate: AuthMeUI.AuthMeAuthenticationDelegate?
   public func closeAll()
+  public func backToIntro()
   @objc override dynamic public func viewDidLoad()
   @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
