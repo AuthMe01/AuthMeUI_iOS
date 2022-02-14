@@ -1,7 +1,8 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AuthMeUI
 import AVFoundation
+import AudioToolbox
 import AuthMe
 @_exported import AuthMeUI
 import Foundation
@@ -10,6 +11,7 @@ import Swift
 import SwiftUI
 import UIKit
 import WebKit
+import _Concurrency
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AuthMeManager : ObjectiveC.NSObject {
   @objc deinit
   public static let instance: AuthMeUI.AuthMeManager
@@ -17,8 +19,8 @@ import WebKit
   public func initialize(serverUrl: Swift.String = "", token: Swift.String, controller: UIKit.UIViewController, completion: @escaping (Swift.Result<Swift.Void, AuthMeError>) -> Swift.Void)
   public func refresh(token: Swift.String)
 }
-extension AuthMeCaptureViewController : AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
-  @objc dynamic public func captureOutput(_: AVFoundation.AVCaptureOutput, didOutput _: CoreMedia.CMSampleBuffer, from _: AVFoundation.AVCaptureConnection)
+extension AuthMeUI.AuthMeCaptureViewController : AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func captureOutput(_: AVFoundation.AVCaptureOutput, didOutput _: CoreMedia.CMSampleBuffer, from _: AVFoundation.AVCaptureConnection)
 }
 public protocol AuthMeAuthenticationDelegate : ObjectiveC.NSObjectProtocol {
   func authLiveness(image: UIKit.UIImage?, error: Swift.Error?)
@@ -28,7 +30,7 @@ public protocol AuthMeAuthenticationDelegate : ObjectiveC.NSObjectProtocol {
   func authMRZResult(image: UIKit.UIImage?, result: MRZResult?, error: Swift.Error?)
   func personalPrivacyResult(result: Swift.Bool)
 }
-extension AuthMeAuthenticationDelegate {
+extension AuthMeUI.AuthMeAuthenticationDelegate {
   public func authLiveness(image _: UIKit.UIImage?, error _: Swift.Error?)
   public func authTWLicenseResult(frontImage _: UIKit.UIImage?, backImage _: UIKit.UIImage?, result _: TWLicenseResult?, error _: Swift.Error?)
   public func authTWIDResult(frontImage _: UIKit.UIImage?, backImage _: UIKit.UIImage?, result _: TWIDResult?, error _: Swift.Error?)
@@ -37,59 +39,61 @@ extension AuthMeAuthenticationDelegate {
   public func personalPrivacyResult(result _: Swift.Bool)
 }
 @objc @_hasMissingDesignatedInitializers @available(iOS 13.0, *)
-public class AuthMeMyDataViewController : UIKit.UIViewController {
+@_Concurrency.MainActor(unsafe) public class AuthMeMyDataViewController : UIKit.UIViewController {
   @objc dynamic public init()
-  @objc override dynamic public func viewDidLoad()
-  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers public class AuthMeLivenessViewController : AuthMeUI.AuthMeCaptureViewController {
-  @objc override dynamic public func viewDidLoad()
-  @objc override dynamic public func viewWillAppear(_: Swift.Bool)
-  @objc override dynamic public func viewWillDisappear(_: Swift.Bool)
-  @objc override dynamic public func captureOutput(_: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from _: AVFoundation.AVCaptureConnection)
-  @objc override dynamic public func notifyTitle(title: Swift.String)
-  @objc override dynamic public func notifyMessage(message: Swift.String)
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class AuthMeLivenessViewController : AuthMeUI.AuthMeCaptureViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func captureOutput(_: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from _: AVFoundation.AVCaptureConnection)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func notifyTitle(title: Swift.String)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func notifyMessage(message: Swift.String)
   @objc override dynamic public init()
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers public class AntiFakeOCRIntroViewController : UIKit.UIViewController {
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AntiFakeOCRIntroViewController : UIKit.UIViewController {
   @objc dynamic public init()
   @objc deinit
-  weak public var delegate: AuthMeUI.AuthMeAuthenticationDelegate?
-  public func closeAll()
-  public func backToIntro()
-  @objc override dynamic public func viewDidLoad()
-  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
-  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) weak public var delegate: AuthMeUI.AuthMeAuthenticationDelegate?
+  @_Concurrency.MainActor(unsafe) public func closeAll()
+  @_Concurrency.MainActor(unsafe) public func backToIntro()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
 }
-@objc @_inheritsConvenienceInitializers public class AuthMeOCRViewController : AuthMeUI.AuthMeCaptureViewController {
-  public var cardType: OCRCardType
-  public var watermark: UIKit.UIImage?
-  @objc override dynamic public func viewDidLoad()
-  @objc override dynamic public func captureOutput(_: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from _: AVFoundation.AVCaptureConnection)
-  @objc override dynamic public func notifyTitle(title: Swift.String)
-  @objc override dynamic public func notifyMessage(message: Swift.String)
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class AuthMeOCRViewController : AuthMeUI.AuthMeCaptureViewController {
+  @_Concurrency.MainActor(unsafe) public var cardType: OCRCardType
+  @_Concurrency.MainActor(unsafe) public var watermark: UIKit.UIImage?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func captureOutput(_: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from _: AVFoundation.AVCaptureConnection)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func notifyTitle(title: Swift.String)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func notifyMessage(message: Swift.String)
   @objc override dynamic public init()
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers public class PersonalPrivacyViewController : UIKit.UIViewController {
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class PersonalPrivacyViewController : UIKit.UIViewController {
   @objc dynamic public init()
   @objc deinit
-  public var url: Foundation.URL?
-  weak public var delegate: AuthMeUI.AuthMeAuthenticationDelegate?
-  @objc override dynamic public func viewDidLoad()
-  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) public var url: Foundation.URL?
+  @_Concurrency.MainActor(unsafe) weak public var delegate: AuthMeUI.AuthMeAuthenticationDelegate?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
 }
-@objc @_hasMissingDesignatedInitializers public class AuthMeCaptureViewController : UIKit.UIViewController {
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AuthMeCaptureViewController : UIKit.UIViewController {
   @objc dynamic public init()
   @objc deinit
-  weak public var delegate: AuthMeUI.AuthMeAuthenticationDelegate?
-  @objc override dynamic public func viewDidLoad()
-  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) weak public var delegate: AuthMeUI.AuthMeAuthenticationDelegate?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
 }
-@objc extension AuthMeCaptureViewController : FlowDelegate {
-  @objc dynamic public func score(_: Swift.String)
-  @objc dynamic public func notifyTitle(title: Swift.String)
-  @objc dynamic public func notifyMessage(message: Swift.String)
+@objc extension AuthMeUI.AuthMeCaptureViewController : FlowDelegate {
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func score(_: Swift.String)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func notifyTitle(title: Swift.String)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func notifyMessage(message: Swift.String)
 }
