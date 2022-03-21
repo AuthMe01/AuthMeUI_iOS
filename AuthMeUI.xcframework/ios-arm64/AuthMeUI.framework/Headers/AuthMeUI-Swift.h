@@ -242,7 +242,6 @@ SWIFT_CLASS("_TtC8AuthMeUI27AuthMeCaptureViewController")
 
 
 @interface AuthMeCaptureViewController (SWIFT_EXTENSION(AuthMeUI))
-- (void)score:(NSString * _Nonnull)_;
 - (void)notifyTitleWithTitle:(NSString * _Nonnull)title;
 - (void)notifyMessageWithMessage:(NSString * _Nonnull)message;
 @end
@@ -255,10 +254,9 @@ SWIFT_CLASS("_TtC8AuthMeUI28AuthMeLivenessViewController")
 - (void)viewWillAppear:(BOOL)_;
 - (void)viewWillDisappear:(BOOL)_;
 - (void)captureOutput:(AVCaptureOutput * _Nonnull)_ didOutputSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer fromConnection:(AVCaptureConnection * _Nonnull)_;
-- (void)notifyTitleWithTitle:(NSString * _Nonnull)title;
-- (void)notifyMessageWithMessage:(NSString * _Nonnull)message;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 SWIFT_CLASS("_TtC8AuthMeUI13AuthMeManager")
@@ -281,8 +279,6 @@ SWIFT_CLASS("_TtC8AuthMeUI23AuthMeOCRViewController")
 @interface AuthMeOCRViewController : AuthMeCaptureViewController
 - (void)viewDidLoad;
 - (void)captureOutput:(AVCaptureOutput * _Nonnull)_ didOutputSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer fromConnection:(AVCaptureConnection * _Nonnull)_;
-- (void)notifyTitleWithTitle:(NSString * _Nonnull)title;
-- (void)notifyMessageWithMessage:(NSString * _Nonnull)message;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

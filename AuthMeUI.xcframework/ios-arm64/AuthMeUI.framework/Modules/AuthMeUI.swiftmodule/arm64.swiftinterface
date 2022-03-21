@@ -18,6 +18,9 @@ import _Concurrency
   public func initialize(serverUrl: Swift.String, clientID: Swift.String, clientSecret: Swift.String, customerID: Swift.String, controller: UIKit.UIViewController, completion: @escaping (Swift.Result<Swift.Void, AuthMeError>) -> Swift.Void)
   public func initialize(serverUrl: Swift.String = "", token: Swift.String, controller: UIKit.UIViewController, completion: @escaping (Swift.Result<Swift.Void, AuthMeError>) -> Swift.Void)
   public func refresh(token: Swift.String)
+  public static var version: Swift.String {
+    get
+  }
 }
 extension AuthMeUI.AuthMeCaptureViewController : AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
   @_Concurrency.MainActor(unsafe) @objc dynamic public func captureOutput(_: AVFoundation.AVCaptureOutput, didOutput _: CoreMedia.CMSampleBuffer, from _: AVFoundation.AVCaptureConnection)
@@ -49,10 +52,10 @@ extension AuthMeUI.AuthMeAuthenticationDelegate {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func captureOutput(_: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from _: AVFoundation.AVCaptureConnection)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func notifyTitle(title: Swift.String)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func notifyMessage(message: Swift.String)
   @objc override dynamic public init()
   @objc deinit
+}
+@objc extension AuthMeUI.AuthMeLivenessViewController : FlowDelegate {
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AntiFakeOCRIntroViewController : UIKit.UIViewController {
   @objc dynamic public init()
@@ -71,10 +74,12 @@ extension AuthMeUI.AuthMeAuthenticationDelegate {
   @_Concurrency.MainActor(unsafe) public var watermark: UIKit.UIImage?
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func captureOutput(_: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from _: AVFoundation.AVCaptureConnection)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func notifyTitle(title: Swift.String)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func notifyMessage(message: Swift.String)
   @objc override dynamic public init()
   @objc deinit
+}
+@objc extension AuthMeUI.AuthMeCaptureViewController : OCRFlowDelegate {
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func notifyTitle(title: Swift.String)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func notifyMessage(message: Swift.String)
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class PersonalPrivacyViewController : UIKit.UIViewController {
   @objc dynamic public init()
@@ -91,9 +96,4 @@ extension AuthMeUI.AuthMeAuthenticationDelegate {
   @objc deinit
   @_Concurrency.MainActor(unsafe) weak public var delegate: AuthMeUI.AuthMeAuthenticationDelegate?
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
-}
-@objc extension AuthMeUI.AuthMeCaptureViewController : FlowDelegate {
-  @objc @_Concurrency.MainActor(unsafe) dynamic public func score(_: Swift.String)
-  @objc @_Concurrency.MainActor(unsafe) dynamic public func notifyTitle(title: Swift.String)
-  @objc @_Concurrency.MainActor(unsafe) dynamic public func notifyMessage(message: Swift.String)
 }
