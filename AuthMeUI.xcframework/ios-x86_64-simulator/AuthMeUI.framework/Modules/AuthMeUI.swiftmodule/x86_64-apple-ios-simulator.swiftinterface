@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AuthMeUI
 import AVFoundation
 import AudioToolbox
@@ -8,15 +8,15 @@ import AuthMe
 import Foundation
 import ImageIO
 import Swift
-import SwiftUI
 import UIKit
 import WebKit
 import _Concurrency
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AuthMeManager : ObjectiveC.NSObject {
   @objc deinit
   public static let instance: AuthMeUI.AuthMeManager
-  public func initialize(serverUrl: Swift.String, clientID: Swift.String, clientSecret: Swift.String, customerID: Swift.String, controller: UIKit.UIViewController, completion: @escaping (Swift.Result<Swift.Void, AuthMeError>) -> Swift.Void)
+  @available(*, deprecated, message: "This function is already deprecated and will remove after version 1.5.0, use initialize instead.")
   public func initialize(serverUrl: Swift.String = "", token: Swift.String, controller: UIKit.UIViewController, completion: @escaping (Swift.Result<Swift.Void, AuthMeError>) -> Swift.Void)
+  @available(*, deprecated, message: "This function is already deprecated and will remove after version 1.5.0, use replace(accessToken: String) instead.")
   public func refresh(token: Swift.String)
   public static var version: Swift.String {
     get
@@ -26,7 +26,7 @@ extension AuthMeUI.AuthMeCaptureViewController : AVFoundation.AVCaptureVideoData
   @_Concurrency.MainActor(unsafe) @objc dynamic public func captureOutput(_: AVFoundation.AVCaptureOutput, didOutput _: CoreMedia.CMSampleBuffer, from _: AVFoundation.AVCaptureConnection)
 }
 public protocol AuthMeAuthenticationDelegate : ObjectiveC.NSObjectProtocol {
-  func authLiveness(image: UIKit.UIImage?, error: Swift.Error?)
+  func authmeLivenessViewController(_ viewController: AuthMeUI.AuthMeLivenessViewController, didRecognize result: AuthMeUI.AuthMeLivenessViewController.LivenessResult)
   func authTWLicenseResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWLicenseResult?, error: Swift.Error?)
   func authTWIDResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWIDResult?, error: Swift.Error?)
   func authTWHealthResult(image: UIKit.UIImage?, result: TWHealthResult?, error: Swift.Error?)
@@ -34,7 +34,7 @@ public protocol AuthMeAuthenticationDelegate : ObjectiveC.NSObjectProtocol {
   func personalPrivacyResult(result: Swift.Bool)
 }
 extension AuthMeUI.AuthMeAuthenticationDelegate {
-  public func authLiveness(image _: UIKit.UIImage?, error _: Swift.Error?)
+  public func authmeLivenessViewController(_ viewController: AuthMeUI.AuthMeLivenessViewController, didRecognize result: AuthMeUI.AuthMeLivenessViewController.LivenessResult)
   public func authTWLicenseResult(frontImage _: UIKit.UIImage?, backImage _: UIKit.UIImage?, result _: TWLicenseResult?, error _: Swift.Error?)
   public func authTWIDResult(frontImage _: UIKit.UIImage?, backImage _: UIKit.UIImage?, result _: TWIDResult?, error _: Swift.Error?)
   public func authTWHealthResult(image _: UIKit.UIImage?, result _: TWHealthResult?, error _: Swift.Error?)
@@ -47,15 +47,39 @@ extension AuthMeUI.AuthMeAuthenticationDelegate {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class AuthMeLivenessViewController : AuthMeUI.AuthMeCaptureViewController {
+@objc @_Concurrency.MainActor(unsafe) public class AuthMeLivenessViewController : AuthMeUI.AuthMeCaptureViewController {
+  @_Concurrency.MainActor(unsafe) public init(type: AuthMeUI.AuthMeLivenessViewController.`Type`)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func captureOutput(_: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from _: AVFoundation.AVCaptureConnection)
-  @objc override dynamic public init()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func notifyTitle(title: Swift.String)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func notifyMessage(message: Swift.String)
   @objc deinit
 }
-@objc extension AuthMeUI.AuthMeLivenessViewController : FlowDelegate {
+extension AuthMeUI.AuthMeLivenessViewController {
+  public enum `Type` {
+    case passive
+    case active
+    public static func == (a: AuthMeUI.AuthMeLivenessViewController.`Type`, b: AuthMeUI.AuthMeLivenessViewController.`Type`) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+extension AuthMeUI.AuthMeLivenessViewController : LivenessFlowDelegate {
+  @_Concurrency.MainActor(unsafe) public func livenessFlow(_ livenessFlow: LivenessFlow, didNotifyTitle title: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func livenessFlow(_ livenessFlow: LivenessFlow, didNotifyMessage message: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func livenessFlow(_ livenessFlow: LivenessFlow, didFailureWith error: LivenessFlow.FlowError, retryHandler: @escaping (() -> Swift.Void))
+  @_Concurrency.MainActor(unsafe) public func livenessFlow(_ livenessFlow: LivenessFlow, didRecognize image: UIKit.UIImage)
+}
+extension AuthMeUI.AuthMeLivenessViewController {
+  public enum LivenessResult {
+    case succeed(UIKit.UIImage)
+    case failed
+    case canceled
+  }
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AntiFakeOCRIntroViewController : UIKit.UIViewController {
   @objc dynamic public init()
@@ -69,13 +93,20 @@ extension AuthMeUI.AuthMeAuthenticationDelegate {
     @_Concurrency.MainActor(unsafe) @objc get
   }
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class AuthMeOCRViewController : AuthMeUI.AuthMeCaptureViewController {
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AuthMeOCRViewController : UIKit.UIViewController {
   @_Concurrency.MainActor(unsafe) public var cardType: OCRCardType
   @_Concurrency.MainActor(unsafe) public var watermark: UIKit.UIImage?
+  @_Concurrency.MainActor(unsafe) weak public var delegate: AuthMeUI.AuthMeAuthenticationDelegate?
+  @objc dynamic public init()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func captureOutput(_: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from _: AVFoundation.AVCaptureConnection)
-  @objc override dynamic public init()
   @objc deinit
+}
+extension AuthMeUI.AuthMeOCRViewController : AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func captureOutput(_: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from _: AVFoundation.AVCaptureConnection)
+}
+extension AuthMeUI.AuthMeOCRViewController : OCRFlowDelegate {
+  @_Concurrency.MainActor(unsafe) public func notifyTitle(title: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func notifyMessage(message: Swift.String)
 }
 @objc extension AuthMeUI.AuthMeCaptureViewController : OCRFlowDelegate {
   @objc @_Concurrency.MainActor(unsafe) dynamic public func notifyTitle(title: Swift.String)
@@ -97,3 +128,5 @@ extension AuthMeUI.AuthMeAuthenticationDelegate {
   @_Concurrency.MainActor(unsafe) weak public var delegate: AuthMeUI.AuthMeAuthenticationDelegate?
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
 }
+extension AuthMeUI.AuthMeLivenessViewController.`Type` : Swift.Equatable {}
+extension AuthMeUI.AuthMeLivenessViewController.`Type` : Swift.Hashable {}
