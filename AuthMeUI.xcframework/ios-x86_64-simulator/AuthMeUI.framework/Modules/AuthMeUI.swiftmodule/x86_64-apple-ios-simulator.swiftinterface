@@ -14,7 +14,6 @@ import WebKit
 import _Concurrency
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AntiFakeOCRIntroViewController : UIKit.UIViewController {
   @objc dynamic public init()
-  @objc deinit
   @_Concurrency.MainActor(unsafe) weak public var delegate: AuthMeUI.AuthMeAuthenticationDelegate?
   @_Concurrency.MainActor(unsafe) public var displayDataConfirmView: Swift.Bool
   @_Concurrency.MainActor(unsafe) public func closeAll()
@@ -23,31 +22,33 @@ import _Concurrency
   @_Concurrency.MainActor(unsafe) @objc override dynamic public var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
     @_Concurrency.MainActor(unsafe) @objc get
   }
+  @objc deinit
 }
 public protocol AuthMeAuthenticationDelegate : ObjectiveC.NSObjectProtocol {
   func authmeLivenessViewController(_ viewController: AuthMeUI.AuthMeLivenessViewController, didRecognize result: AuthMeUI.AuthMeLivenessViewController.LivenessResult)
   func authmeLivenessViewController(_ viewController: AuthMeUI.AuthMeLivenessViewController, didFinishVerifyWith result: AuthMeUI.AuthMeLivenessViewController.LivenessResult, isVerifyPass: Swift.Bool)
-  func authTWLicenseResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWLicenseResult?, error: Swift.Error?)
+  func authTWIDFraudResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWIDResult?, error: Swift.Error?)
   func authTWIDResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWIDResult?, error: Swift.Error?)
+  func authTWLicenseResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWLicenseResult?, error: Swift.Error?)
   func authTWHealthResult(image: UIKit.UIImage?, result: TWHealthResult?, error: Swift.Error?)
-  func authMRZResult(image: UIKit.UIImage?, result: MRZResult?, error: Swift.Error?)
+  func authMRZResult(result: MRZResult?, error: Swift.Error?)
   func personalPrivacyResult(result: Swift.Bool)
 }
 extension AuthMeUI.AuthMeAuthenticationDelegate {
   public func authmeLivenessViewController(_ viewController: AuthMeUI.AuthMeLivenessViewController, didRecognize result: AuthMeUI.AuthMeLivenessViewController.LivenessResult)
   public func authmeLivenessViewController(_ viewController: AuthMeUI.AuthMeLivenessViewController, didFinishVerifyWith result: AuthMeUI.AuthMeLivenessViewController.LivenessResult, isVerifyPass: Swift.Bool)
-  public func authTWLicenseResult(frontImage _: UIKit.UIImage?, backImage _: UIKit.UIImage?, result _: TWLicenseResult?, error _: Swift.Error?)
+  public func authTWIDFraudResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWIDResult?, error: Swift.Error?)
   public func authTWIDResult(frontImage _: UIKit.UIImage?, backImage _: UIKit.UIImage?, result _: TWIDResult?, error _: Swift.Error?)
+  public func authTWLicenseResult(frontImage _: UIKit.UIImage?, backImage _: UIKit.UIImage?, result _: TWLicenseResult?, error _: Swift.Error?)
   public func authTWHealthResult(image _: UIKit.UIImage?, result _: TWHealthResult?, error _: Swift.Error?)
-  public func authMRZResult(image _: UIKit.UIImage?, result _: MRZResult?, error _: Swift.Error?)
+  public func authMRZResult(result _: MRZResult?, error _: Swift.Error?)
   public func personalPrivacyResult(result _: Swift.Bool)
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AuthMeLivenessViewController : UIKit.UIViewController, AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
   public typealias Action = LivenessFlow.Action
   @_Concurrency.MainActor(unsafe) weak public var delegate: AuthMeUI.AuthMeAuthenticationDelegate?
   @_Concurrency.MainActor(unsafe) final public let action: AuthMeUI.AuthMeLivenessViewController.Action
-  @_Concurrency.MainActor(unsafe) public init(action: AuthMeUI.AuthMeLivenessViewController.Action = .register, type: AuthMeUI.AuthMeLivenessViewController.`Type`)
-  @objc deinit
+  @_Concurrency.MainActor(unsafe) public init(action: AuthMeUI.AuthMeLivenessViewController.Action = .register(true), type: AuthMeUI.AuthMeLivenessViewController.`Type`)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
     @_Concurrency.MainActor(unsafe) @objc get
   }
@@ -57,6 +58,7 @@ extension AuthMeUI.AuthMeAuthenticationDelegate {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLayoutSubviews()
   @_Concurrency.MainActor(unsafe) @objc public func captureOutput(_: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from _: AVFoundation.AVCaptureConnection)
+  @objc deinit
 }
 extension AuthMeUI.AuthMeLivenessViewController {
   public enum `Type` {
@@ -84,10 +86,12 @@ extension AuthMeUI.AuthMeLivenessViewController {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AuthMeManager : ObjectiveC.NSObject {
   @objc deinit
-  public static let instance: AuthMeUI.AuthMeManager
+  public static let shared: AuthMeUI.AuthMeManager
   public static var version: Swift.String {
     get
   }
+  public var UIConfig: AuthMeUI.AuthMeUIConfig
+  public func setLocalize(localize: AuthMeUI.AuthMeLocalize)
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AuthMeOCRViewController : UIKit.UIViewController {
   @_Concurrency.MainActor(unsafe) public var cardType: OCRCardType
@@ -105,6 +109,15 @@ extension AuthMeUI.AuthMeOCRViewController : AVFoundation.AVCaptureVideoDataOutp
 extension AuthMeUI.AuthMeOCRViewController : OCRFlowDelegate {
   @_Concurrency.MainActor(unsafe) public func didFailureWith(error: OCRError, retryHandler: @escaping (() -> Swift.Void))
 }
+public enum AuthMeLocalize : Swift.String {
+  case en
+  case zh_Hant
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class PersonalPrivacyViewController : UIKit.UIViewController {
   @objc dynamic public init()
   @objc deinit
@@ -115,5 +128,56 @@ extension AuthMeUI.AuthMeOCRViewController : OCRFlowDelegate {
     @_Concurrency.MainActor(unsafe) @objc get
   }
 }
+public struct AuthMeUIConfig {
+  public struct Customized {
+    public struct ActionButton {
+      public let backgroundColor: UIKit.UIColor
+      public let contentColor: UIKit.UIColor
+      public init(backgroundColor: UIKit.UIColor, contentColor: UIKit.UIColor)
+    }
+    public struct ActionHint {
+      public let backgroundColor: UIKit.UIColor
+      public let contentColor: UIKit.UIColor
+      public init(backgroundColor: UIKit.UIColor, contentColor: UIKit.UIColor)
+    }
+    public struct CloseHint {
+      public let backgroundColor: UIKit.UIColor
+      public let contentColor: UIKit.UIColor
+      public init(backgroundColor: UIKit.UIColor, contentColor: UIKit.UIColor)
+    }
+    public struct BackHint {
+      public let contentColor: UIKit.UIColor
+      public init(contentColor: UIKit.UIColor)
+    }
+    public struct Scanner {
+      public let contentColor: UIKit.UIColor
+      public init(contentColor: UIKit.UIColor)
+    }
+    public struct Frame {
+      public let defaultColor: UIKit.UIColor
+      public let highlightColor: UIKit.UIColor
+      public init(defaultColor: UIKit.UIColor, highlightColor: UIKit.UIColor)
+    }
+    public struct StepButton {
+      public let backgroundColor: UIKit.UIColor
+      public let contentColor: UIKit.UIColor
+      public init(backgroundColor: UIKit.UIColor, contentColor: UIKit.UIColor)
+    }
+    public let actionButton: AuthMeUI.AuthMeUIConfig.Customized.ActionButton
+    public let actionHint: AuthMeUI.AuthMeUIConfig.Customized.ActionHint
+    public let closeHint: AuthMeUI.AuthMeUIConfig.Customized.CloseHint
+    public let backHint: AuthMeUI.AuthMeUIConfig.Customized.BackHint
+    public let scanner: AuthMeUI.AuthMeUIConfig.Customized.Scanner
+    public let frame: AuthMeUI.AuthMeUIConfig.Customized.Frame
+    public let stepButton: AuthMeUI.AuthMeUIConfig.Customized.StepButton
+    public init(actionButton: AuthMeUI.AuthMeUIConfig.Customized.ActionButton, actionHint: AuthMeUI.AuthMeUIConfig.Customized.ActionHint, closeHint: AuthMeUI.AuthMeUIConfig.Customized.CloseHint, backHint: AuthMeUI.AuthMeUIConfig.Customized.BackHint, scanner: AuthMeUI.AuthMeUIConfig.Customized.Scanner, frame: AuthMeUI.AuthMeUIConfig.Customized.Frame, stepButton: AuthMeUI.AuthMeUIConfig.Customized.StepButton)
+  }
+  public var customized: AuthMeUI.AuthMeUIConfig.Customized
+  public var showStatement: Swift.Bool
+  public init(customized: AuthMeUI.AuthMeUIConfig.Customized, showStatement: Swift.Bool)
+}
 extension AuthMeUI.AuthMeLivenessViewController.`Type` : Swift.Equatable {}
 extension AuthMeUI.AuthMeLivenessViewController.`Type` : Swift.Hashable {}
+extension AuthMeUI.AuthMeLocalize : Swift.Equatable {}
+extension AuthMeUI.AuthMeLocalize : Swift.Hashable {}
+extension AuthMeUI.AuthMeLocalize : Swift.RawRepresentable {}
