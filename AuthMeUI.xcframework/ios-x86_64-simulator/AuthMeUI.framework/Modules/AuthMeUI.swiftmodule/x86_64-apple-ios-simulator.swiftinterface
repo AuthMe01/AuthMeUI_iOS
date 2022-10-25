@@ -13,9 +13,10 @@ import UIKit
 import WebKit
 import _Concurrency
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AntiFakeOCRIntroViewController : UIKit.UIViewController {
-  @objc dynamic public init()
+  @_Concurrency.MainActor(unsafe) public init(needConfirm: Swift.Bool)
   @_Concurrency.MainActor(unsafe) weak public var delegate: AuthMeUI.AuthMeAuthenticationDelegate?
-  @_Concurrency.MainActor(unsafe) public var displayDataConfirmView: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var displayResultPage: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var resultEditable: Swift.Bool
   @_Concurrency.MainActor(unsafe) public func closeAll()
   @_Concurrency.MainActor(unsafe) public func backToIntro()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
@@ -45,10 +46,10 @@ extension AuthMeUI.AuthMeAuthenticationDelegate {
   public func personalPrivacyResult(result _: Swift.Bool)
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AuthMeLivenessViewController : UIKit.UIViewController, AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
-  public typealias Action = LivenessFlow.Action
   @_Concurrency.MainActor(unsafe) weak public var delegate: AuthMeUI.AuthMeAuthenticationDelegate?
-  @_Concurrency.MainActor(unsafe) final public let action: AuthMeUI.AuthMeLivenessViewController.Action
-  @_Concurrency.MainActor(unsafe) public init(action: AuthMeUI.AuthMeLivenessViewController.Action = .register(true), type: AuthMeUI.AuthMeLivenessViewController.`Type`)
+  @_Concurrency.MainActor(unsafe) final public let action: Action
+  @_Concurrency.MainActor(unsafe) public init(action: Action = .register(true), type: AuthMeUI.AuthMeLivenessViewController.`Type`)
+  @_Concurrency.MainActor(unsafe) public func checkModel(progressHandler: ((Swift.Double) -> Swift.Void)? = nil, handler: ((Swift.Result<Swift.Void, FlowError>) -> Swift.Void)?)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
     @_Concurrency.MainActor(unsafe) @objc get
   }
@@ -74,7 +75,8 @@ extension AuthMeUI.AuthMeLivenessViewController {
 extension AuthMeUI.AuthMeLivenessViewController : LivenessFlowDelegate {
   @_Concurrency.MainActor(unsafe) public func livenessFlow(_ livenessFlow: LivenessFlow, didNotifyMessage message: Swift.String)
   @_Concurrency.MainActor(unsafe) public func livenessFlow(_ livenessFlow: LivenessFlow, didUpdateReconize result: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) public func livenessFlow(_ livenessFlow: LivenessFlow, didFailureWith error: LivenessFlow.FlowError, retryHandler: @escaping (() -> Swift.Void))
+  @_Concurrency.MainActor(unsafe) public func livenessFlow(_ livenessFlow: LivenessFlow, didFailureWith error: FlowError, retryHandler: @escaping (() -> Swift.Void))
+  @_Concurrency.MainActor(unsafe) public func livenessFlow_bak(_ livenessFlow: LivenessFlow, didRecognize image: UIKit.UIImage)
   @_Concurrency.MainActor(unsafe) public func livenessFlow(_ livenessFlow: LivenessFlow, didRecognize image: UIKit.UIImage)
 }
 extension AuthMeUI.AuthMeLivenessViewController {
@@ -91,14 +93,21 @@ extension AuthMeUI.AuthMeLivenessViewController {
     get
   }
   public var UIConfig: AuthMeUI.AuthMeUIConfig
+  public func setLocalizedBundle(with bundle: Foundation.Bundle)
   public func setLocalize(localize: AuthMeUI.AuthMeLocalize)
+  public var localize: AuthMeUI.AuthMeLocalize {
+    get
+    set
+  }
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AuthMeOCRViewController : UIKit.UIViewController {
   @_Concurrency.MainActor(unsafe) public var cardType: OCRCardType
   @_Concurrency.MainActor(unsafe) public var watermark: UIKit.UIImage?
   @_Concurrency.MainActor(unsafe) weak public var delegate: AuthMeUI.AuthMeAuthenticationDelegate?
-  @_Concurrency.MainActor(unsafe) public var displayDataConfirmView: Swift.Bool
-  @objc dynamic public init()
+  @_Concurrency.MainActor(unsafe) public var displayResultPage: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var resultEditable: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public init(cardType: OCRCardType, needConfirm: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func checkModel(progressHandler: ((Swift.Double) -> Swift.Void)? = nil, handler: ((Swift.Result<Swift.Void, OCRError>) -> Swift.Void)?)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
   @objc deinit
