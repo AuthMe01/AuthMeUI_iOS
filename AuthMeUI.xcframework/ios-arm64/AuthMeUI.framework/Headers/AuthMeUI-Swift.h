@@ -197,6 +197,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import AVFoundation;
 @import CoreMedia;
+@import Foundation;
 @import ObjectiveC;
 @import UIKit;
 #endif
@@ -269,6 +270,14 @@ SWIFT_CLASS("_TtC8AuthMeUI13AuthMeManager")
 @interface AuthMeManager : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@class NSURLSession;
+@class NSURLAuthenticationChallenge;
+@class NSURLCredential;
+
+@interface AuthMeManager (SWIFT_EXTENSION(AuthMeUI)) <NSURLSessionDelegate>
+- (void)URLSession:(NSURLSession * _Nonnull)session didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
 @end
 
 

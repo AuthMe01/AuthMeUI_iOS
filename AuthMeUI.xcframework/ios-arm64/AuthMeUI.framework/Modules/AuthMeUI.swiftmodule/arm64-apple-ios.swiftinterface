@@ -5,6 +5,7 @@ import AVFoundation
 import AudioToolbox
 import AuthMe
 @_exported import AuthMeUI
+import CommonCrypto
 import Foundation
 import ImageIO
 import Swift
@@ -21,6 +22,9 @@ import _Concurrency
   public static var version: Swift.String {
     get
   }
+}
+extension AuthMeUI.AuthMeManager : Foundation.URLSessionDelegate {
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
 }
 extension AuthMeUI.AuthMeCaptureViewController : AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
   @_Concurrency.MainActor(unsafe) @objc dynamic public func captureOutput(_: AVFoundation.AVCaptureOutput, didOutput _: CoreMedia.CMSampleBuffer, from _: AVFoundation.AVCaptureConnection)
