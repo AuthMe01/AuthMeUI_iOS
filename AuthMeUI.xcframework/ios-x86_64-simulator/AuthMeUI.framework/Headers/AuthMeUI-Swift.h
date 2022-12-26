@@ -228,11 +228,18 @@ SWIFT_CLASS("_TtC8AuthMeUI30AntiFakeOCRIntroViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
+
+SWIFT_CLASS("_TtC8AuthMeUI18BaseViewController")
+@interface BaseViewController : UIViewController
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class AVCaptureOutput;
 @class AVCaptureConnection;
 
 SWIFT_CLASS("_TtC8AuthMeUI28AuthMeLivenessViewController")
-@interface AuthMeLivenessViewController : UIViewController <AVCaptureVideoDataOutputSampleBufferDelegate>
+@interface AuthMeLivenessViewController : BaseViewController <AVCaptureVideoDataOutputSampleBufferDelegate>
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ SWIFT_UNAVAILABLE;
 @property (nonatomic, readonly) UIInterfaceOrientationMask supportedInterfaceOrientations;
 - (void)viewDidLoad;
@@ -256,7 +263,7 @@ SWIFT_CLASS("_TtC8AuthMeUI13AuthMeManager")
 
 
 SWIFT_CLASS("_TtC8AuthMeUI23AuthMeOCRViewController")
-@interface AuthMeOCRViewController : UIViewController
+@interface AuthMeOCRViewController : BaseViewController
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ SWIFT_UNAVAILABLE;
 - (void)viewDidLoad;
 - (void)viewDidAppear:(BOOL)animated;
@@ -264,11 +271,30 @@ SWIFT_CLASS("_TtC8AuthMeUI23AuthMeOCRViewController")
 @end
 
 
-
-
 @interface AuthMeOCRViewController (SWIFT_EXTENSION(AuthMeUI)) <AVCaptureVideoDataOutputSampleBufferDelegate>
 - (void)captureOutput:(AVCaptureOutput * _Nonnull)_ didOutputSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer fromConnection:(AVCaptureConnection * _Nonnull)_;
 @end
+
+
+
+
+
+
+SWIFT_CLASS("_TtC8AuthMeUI32LivenessPlaygroundViewController")
+@interface LivenessPlaygroundViewController : BaseViewController <AVCaptureVideoDataOutputSampleBufferDelegate>
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ SWIFT_UNAVAILABLE;
+@property (nonatomic, readonly) UIInterfaceOrientationMask supportedInterfaceOrientations;
+- (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
+- (void)viewWillAppear:(BOOL)_;
+- (void)viewWillDisappear:(BOOL)_;
+- (void)viewDidLayoutSubviews;
+- (void)captureOutput:(AVCaptureOutput * _Nonnull)_ didOutputSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer fromConnection:(AVCaptureConnection * _Nonnull)_;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
 
 
 

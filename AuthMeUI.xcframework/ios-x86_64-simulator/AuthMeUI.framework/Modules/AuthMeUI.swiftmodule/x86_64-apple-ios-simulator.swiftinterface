@@ -25,6 +25,11 @@ import _Concurrency
   }
   @objc deinit
 }
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class BaseViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
 public protocol AuthMeAuthenticationDelegate : ObjectiveC.NSObjectProtocol {
   func authmeLivenessViewController(_ viewController: AuthMeUI.AuthMeLivenessViewController, didRecognize result: AuthMeUI.AuthMeLivenessViewController.LivenessResult)
   func authmeLivenessViewController(_ viewController: AuthMeUI.AuthMeLivenessViewController, didFinishVerifyWith result: AuthMeUI.AuthMeLivenessViewController.LivenessResult, isVerifyPass: Swift.Bool)
@@ -45,10 +50,13 @@ extension AuthMeUI.AuthMeAuthenticationDelegate {
   public func authMRZResult(result _: MRZResult?, error _: Swift.Error?)
   public func personalPrivacyResult(result _: Swift.Bool)
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AuthMeLivenessViewController : UIKit.UIViewController, AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
+public protocol AuthMePlaygroundDelegate : ObjectiveC.NSObjectProtocol {
+  func authmeLivenessViewControllerDidRecognize(result: AuthMeUI.AuthMeLivenessViewController.LivenessResult)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AuthMeLivenessViewController : AuthMeUI.BaseViewController, AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
   @_Concurrency.MainActor(unsafe) weak public var delegate: AuthMeUI.AuthMeAuthenticationDelegate?
   @_Concurrency.MainActor(unsafe) final public let action: Action
-  @_Concurrency.MainActor(unsafe) public init(action: Action = .register(true), type: AuthMeUI.AuthMeLivenessViewController.`Type`)
+  @_Concurrency.MainActor(unsafe) public init(action: Action = .register(waitResult: true), type: AuthMeUI.AuthMeLivenessViewController.`Type`)
   @_Concurrency.MainActor(unsafe) public func checkModel(progressHandler: ((Swift.Double) -> Swift.Void)? = nil, handler: ((Swift.Result<Swift.Void, FlowError>) -> Swift.Void)?)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
     @_Concurrency.MainActor(unsafe) @objc get
@@ -73,11 +81,10 @@ extension AuthMeUI.AuthMeLivenessViewController {
   }
 }
 extension AuthMeUI.AuthMeLivenessViewController : LivenessFlowDelegate {
-  @_Concurrency.MainActor(unsafe) public func livenessFlow(_ livenessFlow: LivenessFlow, didNotifyMessage message: Swift.String)
-  @_Concurrency.MainActor(unsafe) public func livenessFlow(_ livenessFlow: LivenessFlow, didUpdateReconize result: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) public func livenessFlow(_ livenessFlow: LivenessFlow, didFailureWith error: FlowError, retryHandler: @escaping (() -> Swift.Void))
-  @_Concurrency.MainActor(unsafe) public func livenessFlow_bak(_ livenessFlow: LivenessFlow, didRecognize image: UIKit.UIImage)
-  @_Concurrency.MainActor(unsafe) public func livenessFlow(_ livenessFlow: LivenessFlow, didRecognize image: UIKit.UIImage)
+  @_Concurrency.MainActor(unsafe) public func livenessDidNotifyMessage(message: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func livenessDidUpdateReconize(result: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func livenessDidFailureWith(error: FlowError, retryHandler: @escaping (() -> Swift.Void))
+  @_Concurrency.MainActor(unsafe) public func livenessDidRecognize(image: UIKit.UIImage)
 }
 extension AuthMeUI.AuthMeLivenessViewController {
   public enum LivenessResult {
@@ -100,7 +107,7 @@ extension AuthMeUI.AuthMeLivenessViewController {
     set
   }
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AuthMeOCRViewController : UIKit.UIViewController {
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AuthMeOCRViewController : AuthMeUI.BaseViewController {
   @_Concurrency.MainActor(unsafe) public var cardType: OCRCardType
   @_Concurrency.MainActor(unsafe) public var watermark: UIKit.UIImage?
   @_Concurrency.MainActor(unsafe) weak public var delegate: AuthMeUI.AuthMeAuthenticationDelegate?
@@ -118,6 +125,35 @@ extension AuthMeUI.AuthMeOCRViewController : AVFoundation.AVCaptureVideoDataOutp
 extension AuthMeUI.AuthMeOCRViewController : OCRFlowDelegate {
   @_Concurrency.MainActor(unsafe) public func didFailureWith(error: OCRError, retryHandler: @escaping (() -> Swift.Void))
 }
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class LivenessPlaygroundViewController : AuthMeUI.BaseViewController, AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: AuthMeUI.AuthMePlaygroundDelegate?
+  @objc dynamic public init()
+  @_Concurrency.MainActor(unsafe) public func checkModel(progressHandler: ((Swift.Double) -> Swift.Void)? = nil, handler: ((Swift.Result<Swift.Void, FlowError>) -> Swift.Void)?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc public func captureOutput(_: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from _: AVFoundation.AVCaptureConnection)
+  @objc deinit
+}
+extension AuthMeUI.LivenessPlaygroundViewController : LivenessPlaygroundFlowDelegate {
+  @_Concurrency.MainActor(unsafe) public func livenessDidNotifyMessage(message: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func livenessDidUpdateReconize(result: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func livenessDidFailureWith(error: FlowError, retryHandler: @escaping (() -> Swift.Void))
+  @_Concurrency.MainActor(unsafe) public func livenessDidRecognize(image: UIKit.UIImage)
+  @_Concurrency.MainActor(unsafe) public func livenessQueueDidUpload(currentCount: Swift.Int)
+}
+extension AuthMeUI.LivenessPlaygroundViewController {
+  public enum LivenessResult {
+    case succeed(UIKit.UIImage)
+    case failed
+    case canceled
+  }
+}
 public enum AuthMeLocalize : Swift.String {
   case en
   case zh_Hant
@@ -129,13 +165,13 @@ public enum AuthMeLocalize : Swift.String {
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class PersonalPrivacyViewController : UIKit.UIViewController {
   @objc dynamic public init()
-  @objc deinit
   @_Concurrency.MainActor(unsafe) public var url: Foundation.URL?
   @_Concurrency.MainActor(unsafe) weak public var delegate: AuthMeUI.AuthMeAuthenticationDelegate?
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor(unsafe) @objc override dynamic open var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
     @_Concurrency.MainActor(unsafe) @objc get
   }
+  @objc deinit
 }
 public struct AuthMeUIConfig {
   public struct Customized {
