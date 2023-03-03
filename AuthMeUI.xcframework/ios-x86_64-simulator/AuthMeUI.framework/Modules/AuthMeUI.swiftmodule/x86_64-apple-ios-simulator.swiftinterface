@@ -55,6 +55,7 @@ public protocol AuthMePlaygroundDelegate : ObjectiveC.NSObjectProtocol {
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AuthMeLivenessViewController : AuthMeUI.BaseViewController, AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
   @_Concurrency.MainActor(unsafe) weak public var delegate: AuthMeUI.AuthMeAuthenticationDelegate?
+  @_Concurrency.MainActor(unsafe) public var uiParams: AuthMeUI.AuthMeLivenessUIParams?
   @_Concurrency.MainActor(unsafe) final public let action: Action
   @_Concurrency.MainActor(unsafe) public init(action: Action = .register(waitResult: true), type: AuthMeUI.AuthMeLivenessViewController.`Type`)
   @_Concurrency.MainActor(unsafe) public func checkModel(progressHandler: ((Swift.Double) -> Swift.Void)? = nil, handler: ((Swift.Result<Swift.Void, FlowError>) -> Swift.Void)?)
@@ -110,6 +111,7 @@ extension AuthMeUI.AuthMeLivenessViewController {
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AuthMeOCRViewController : AuthMeUI.BaseViewController {
   @_Concurrency.MainActor(unsafe) public var cardType: OCRCardType
   @_Concurrency.MainActor(unsafe) public var watermark: UIKit.UIImage?
+  @_Concurrency.MainActor(unsafe) public var uiParams: AuthMeUI.AuthMeOCRUIParams?
   @_Concurrency.MainActor(unsafe) weak public var delegate: AuthMeUI.AuthMeAuthenticationDelegate?
   @_Concurrency.MainActor(unsafe) public var displayResultPage: Swift.Bool
   @_Concurrency.MainActor(unsafe) public var resultEditable: Swift.Bool
@@ -162,6 +164,14 @@ public enum AuthMeLocalize : Swift.String {
   public var rawValue: Swift.String {
     get
   }
+}
+@_hasMissingDesignatedInitializers final public class AuthMeOCRUIParams {
+  public static func setWith(block: (AuthMeUI.AuthMeOCRUIParams) -> Swift.Void) -> AuthMeUI.AuthMeOCRUIParams
+  @objc deinit
+}
+extension AuthMeUI.AuthMeOCRUIParams {
+  @discardableResult
+  final public func isColseButtonHidden(_ isHidden: Swift.Bool) -> Self
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class PersonalPrivacyViewController : UIKit.UIViewController {
   @objc dynamic public init()
@@ -220,6 +230,14 @@ public struct AuthMeUIConfig {
   public var customized: AuthMeUI.AuthMeUIConfig.Customized
   public var showStatement: Swift.Bool
   public init(customized: AuthMeUI.AuthMeUIConfig.Customized, showStatement: Swift.Bool)
+}
+@_hasMissingDesignatedInitializers final public class AuthMeLivenessUIParams {
+  public static func setWith(block: (AuthMeUI.AuthMeLivenessUIParams) -> Swift.Void) -> AuthMeUI.AuthMeLivenessUIParams
+  @objc deinit
+}
+extension AuthMeUI.AuthMeLivenessUIParams {
+  @discardableResult
+  final public func isColseButtonHidden(_ isHidden: Swift.Bool) -> Self
 }
 extension AuthMeUI.AuthMeLivenessViewController.`Type` : Swift.Equatable {}
 extension AuthMeUI.AuthMeLivenessViewController.`Type` : Swift.Hashable {}
