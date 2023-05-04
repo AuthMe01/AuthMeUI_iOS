@@ -1,0 +1,10 @@
+{
+  "List": [
+    {
+      "country": "TWN",
+      "Identities": [
+        "TWN_IDCard", "TWN_DriverLicense", "TWN_HealthCard", "TWN_ResidentCard", "Passport", "NFCPassport"
+      ]
+    }
+  ]
+}

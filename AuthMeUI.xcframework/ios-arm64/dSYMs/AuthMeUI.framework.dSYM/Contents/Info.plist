@@ -5,7 +5,7 @@
 		<key>CFBundleDevelopmentRegion</key>
 		<string>English</string>
 		<key>CFBundleIdentifier</key>
-		<string>com.apple.xcode.dsym.com.authme.sdk.AuthMeUI.AuthMeUI</string>
+		<string>com.apple.xcode.dsym.com.authme.sdk.AuthMeUI</string>
 		<key>CFBundleInfoDictionaryVersion</key>
 		<string>6.0</string>
 		<key>CFBundlePackageType</key>
@@ -13,8 +13,8 @@
 		<key>CFBundleSignature</key>
 		<string>????</string>
 		<key>CFBundleShortVersionString</key>
-		<string>2.2.5</string>
+		<string>2.3.0</string>
 		<key>CFBundleVersion</key>
-		<string>20230303172337</string>
+		<string>20230504163546</string>
 	</dict>
 </plist>

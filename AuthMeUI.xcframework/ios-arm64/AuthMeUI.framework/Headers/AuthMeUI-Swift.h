@@ -216,12 +216,21 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
-@class NSCoder;
 @class NSString;
 @class NSBundle;
+@class NSCoder;
+
+SWIFT_CLASS("_TtC8AuthMeUI18BaseViewController")
+@interface BaseViewController : UIViewController
+- (void)viewWillAppear:(BOOL)animated;
+- (void)viewWillDisappear:(BOOL)animated;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC8AuthMeUI30AntiFakeOCRIntroViewController")
-@interface AntiFakeOCRIntroViewController : UIViewController
+@interface AntiFakeOCRIntroViewController : BaseViewController
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ SWIFT_UNAVAILABLE;
 - (void)viewDidLoad;
 @property (nonatomic, readonly) UIInterfaceOrientationMask supportedInterfaceOrientations;
@@ -229,17 +238,8 @@ SWIFT_CLASS("_TtC8AuthMeUI30AntiFakeOCRIntroViewController")
 @end
 
 
-SWIFT_CLASS("_TtC8AuthMeUI18BaseViewController")
-@interface BaseViewController : UIViewController
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@class AVCaptureOutput;
-@class AVCaptureConnection;
-
 SWIFT_CLASS("_TtC8AuthMeUI28AuthMeLivenessViewController")
-@interface AuthMeLivenessViewController : BaseViewController <AVCaptureVideoDataOutputSampleBufferDelegate>
+@interface AuthMeLivenessViewController : BaseViewController
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ SWIFT_UNAVAILABLE;
 @property (nonatomic, readonly) UIInterfaceOrientationMask supportedInterfaceOrientations;
 - (void)viewDidLoad;
@@ -247,9 +247,16 @@ SWIFT_CLASS("_TtC8AuthMeUI28AuthMeLivenessViewController")
 - (void)viewWillAppear:(BOOL)_;
 - (void)viewWillDisappear:(BOOL)_;
 - (void)viewDidLayoutSubviews;
-- (void)captureOutput:(AVCaptureOutput * _Nonnull)_ didOutputSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer fromConnection:(AVCaptureConnection * _Nonnull)_;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
+
+@class AVCaptureOutput;
+@class AVCaptureConnection;
+
+@interface AuthMeLivenessViewController (SWIFT_EXTENSION(AuthMeUI)) <AVCaptureVideoDataOutputSampleBufferDelegate>
+- (void)captureOutput:(AVCaptureOutput * _Nonnull)_ didOutputSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer fromConnection:(AVCaptureConnection * _Nonnull)_;
+@end
+
 
 
 
@@ -262,6 +269,20 @@ SWIFT_CLASS("_TtC8AuthMeUI13AuthMeManager")
 @end
 
 
+SWIFT_CLASS("_TtC8AuthMeUI24AuthMeMenuViewController")
+@interface AuthMeMenuViewController : BaseViewController
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
+- (void)viewWillDisappear:(BOOL)animated;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
+
+
+
+
 SWIFT_CLASS("_TtC8AuthMeUI23AuthMeOCRViewController")
 @interface AuthMeOCRViewController : BaseViewController
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ SWIFT_UNAVAILABLE;
@@ -271,9 +292,11 @@ SWIFT_CLASS("_TtC8AuthMeUI23AuthMeOCRViewController")
 @end
 
 
+
 @interface AuthMeOCRViewController (SWIFT_EXTENSION(AuthMeUI)) <AVCaptureVideoDataOutputSampleBufferDelegate>
 - (void)captureOutput:(AVCaptureOutput * _Nonnull)_ didOutputSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer fromConnection:(AVCaptureConnection * _Nonnull)_;
 @end
+
 
 
 
@@ -297,17 +320,88 @@ SWIFT_CLASS("_TtC8AuthMeUI32LivenessPlaygroundViewController")
 
 
 
-
-SWIFT_CLASS("_TtC8AuthMeUI29PersonalPrivacyViewController")
-@interface PersonalPrivacyViewController : UIViewController
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+SWIFT_CLASS("_TtC8AuthMeUI21NFCFlowViewController") SWIFT_AVAILABILITY(ios,introduced=13)
+@interface NFCFlowViewController : UINavigationController
+- (nonnull instancetype)initWithRootViewController:(UIViewController * _Nonnull)rootViewController OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ SWIFT_UNAVAILABLE;
 - (void)viewDidLoad;
-@property (nonatomic, readonly) UIInterfaceOrientationMask supportedInterfaceOrientations;
+- (nonnull instancetype)initWithNavigationBarClass:(Class _Nullable)navigationBarClass toolbarClass:(Class _Nullable)toolbarClass SWIFT_UNAVAILABLE;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
 
+SWIFT_CLASS("_TtC8AuthMeUI17NFCViewController") SWIFT_AVAILABILITY(ios,introduced=13)
+@interface NFCViewController : BaseViewController
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ SWIFT_UNAVAILABLE;
+- (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
+
+
+
+
+SWIFT_CLASS("_TtC8AuthMeUI17OCRViewController")
+@interface OCRViewController : BaseViewController
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ SWIFT_UNAVAILABLE;
+- (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
+- (void)viewDidAppear:(BOOL)animated;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
+
+@interface OCRViewController (SWIFT_EXTENSION(AuthMeUI)) <AVCaptureVideoDataOutputSampleBufferDelegate>
+- (void)captureOutput:(AVCaptureOutput * _Nonnull)_ didOutputSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer fromConnection:(AVCaptureConnection * _Nonnull)_;
+@end
+
+
+
+
+
+SWIFT_CLASS("_TtC8AuthMeUI14PassportReader") SWIFT_AVAILABILITY(ios,introduced=13)
+@interface PassportReader : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SWIFT_CLASS("_TtC8AuthMeUI28VideoRecordingViewController")
+@interface VideoRecordingViewController : BaseViewController
+- (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class AVCaptureDepthDataOutput;
+@class AVDepthData;
+
+@interface VideoRecordingViewController (SWIFT_EXTENSION(AuthMeUI)) <AVCaptureDepthDataOutputDelegate>
+- (void)depthDataOutput:(AVCaptureDepthDataOutput * _Nonnull)output didOutputDepthData:(AVDepthData * _Nonnull)depthData timestamp:(CMTime)timestamp connection:(AVCaptureConnection * _Nonnull)connection;
+@end
+
+
+@interface VideoRecordingViewController (SWIFT_EXTENSION(AuthMeUI)) <AVCaptureVideoDataOutputSampleBufferDelegate>
+- (void)captureOutput:(AVCaptureOutput * _Nonnull)output didOutputSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer fromConnection:(AVCaptureConnection * _Nonnull)connection;
+@end
 
 
 
