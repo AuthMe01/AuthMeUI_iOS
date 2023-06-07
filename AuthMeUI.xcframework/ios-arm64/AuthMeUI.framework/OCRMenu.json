@@ -1,10 +1,28 @@
 {
-  "List": [
-    {
-      "country": "TWN",
-      "Identities": [
-        "TWN_IDCard", "TWN_DriverLicense", "TWN_HealthCard", "TWN_ResidentCard", "Passport", "NFCPassport"
-      ]
-    }
-  ]
+    "List": [
+        {
+            "country": "TWN",
+            "Identities": [
+                "TWN_IDCard", "TWN_DriverLicense", "TWN_HealthCard", "TWN_ResidentCard", "Passport", "NFCPassport"
+            ]
+        },
+        {
+            "country": "US",
+            "Identities": [
+                "USA_IDCard", "USA_DriverLicense", "USA_BorderCrossing", "Passport", "NFCPassport"
+            ]
+        },
+        {
+            "country": "JP",
+            "Identities": [
+                "JPN_IDCard", "JPN_DriverLicense", "Passport", "NFCPassport"
+            ]
+        },
+        {
+            "country": "Indonesia",
+            "Identities": [
+                "IDN_IDCard", "IDN_DriverLicense", "Passport", "NFCPassport"
+            ]
+        }
+    ]
 }

@@ -38,11 +38,8 @@ import _Concurrency
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
-extension AuthMeUI.VideoRecordingViewController : AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
-  @_Concurrency.MainActor(unsafe) @objc final public func captureOutput(_ output: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from connection: AVFoundation.AVCaptureConnection)
-}
-extension AuthMeUI.VideoRecordingViewController : AVFoundation.AVCaptureDepthDataOutputDelegate {
-  @_Concurrency.MainActor(unsafe) @objc final public func depthDataOutput(_ output: AVFoundation.AVCaptureDepthDataOutput, didOutput depthData: AVFoundation.AVDepthData, timestamp: CoreMedia.CMTime, connection: AVFoundation.AVCaptureConnection)
+extension AuthMeUI.VideoRecordingViewController : AVFoundation.AVCaptureDataOutputSynchronizerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func dataOutputSynchronizer(_ synchronizer: AVFoundation.AVCaptureDataOutputSynchronizer, didOutput synchronizedDataCollection: AVFoundation.AVCaptureSynchronizedDataCollection)
 }
 extension AuthMeUI.VideoRecordingViewController : LivenessPlaygroundRecordFlowDelegate {
   @_Concurrency.MainActor(unsafe) final public func livenessDidNotifyMessage(message: Swift.String)
@@ -91,9 +88,14 @@ public protocol AuthMeAuthenticationDelegate : ObjectiveC.NSObjectProtocol {
   func authTWLicenseResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWLicenseResult?, error: Swift.Error?)
   func authTWHealthResult(image: UIKit.UIImage?, result: TWHealthResult?, error: Swift.Error?)
   func authMRZResult(result: MRZResult?, error: Swift.Error?)
-  func authTWResidentResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWResidentResult?, error: Swift.Error?)
-  func authJPIDCardResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: JPIDCardResult?, error: Swift.Error?)
-  func authJPLicenseResult(image: UIKit.UIImage?, result: JPDriverLicenseResult?, error: Swift.Error?)
+  func authTWResidentResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWNResidentResult?, error: Swift.Error?)
+  func authJPIDCardResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: JPNIDCardResult?, error: Swift.Error?)
+  func authJPLicenseResult(image: UIKit.UIImage?, result: JPNDriverLicenseResult?, error: Swift.Error?)
+  func authUSIDCardResult(frontImage: UIKit.UIImage?, result: USAIDCardResult?, error: Swift.Error?)
+  func authUSLicenseResult(image: UIKit.UIImage?, result: USADriverLicenseResult?, error: Swift.Error?)
+  func authUSBorderCrossingResult(image: UIKit.UIImage?, result: USABorderCrossingCardResult?, error: Swift.Error?)
+  func authIDIDCardResult(frontImage: UIKit.UIImage?, result: IDNIDCardResult?, error: Swift.Error?)
+  func authIDLicenseResult(image: UIKit.UIImage?, result: IDNDriverLicenseResult?, error: Swift.Error?)
   func personalPrivacyResult(result: Swift.Bool)
 }
 extension AuthMeUI.AuthMeAuthenticationDelegate {
@@ -104,9 +106,14 @@ extension AuthMeUI.AuthMeAuthenticationDelegate {
   public func authTWLicenseResult(frontImage _: UIKit.UIImage?, backImage _: UIKit.UIImage?, result _: TWLicenseResult?, error _: Swift.Error?)
   public func authTWHealthResult(image _: UIKit.UIImage?, result _: TWHealthResult?, error _: Swift.Error?)
   public func authMRZResult(result _: MRZResult?, error _: Swift.Error?)
-  public func authTWResidentResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWResidentResult?, error: Swift.Error?)
-  public func authJPIDCardResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: JPIDCardResult?, error: Swift.Error?)
-  public func authJPLicenseResult(image: UIKit.UIImage?, result: JPDriverLicenseResult?, error: Swift.Error?)
+  public func authTWResidentResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWNResidentResult?, error: Swift.Error?)
+  public func authJPIDCardResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: JPNIDCardResult?, error: Swift.Error?)
+  public func authJPLicenseResult(image: UIKit.UIImage?, result: JPNDriverLicenseResult?, error: Swift.Error?)
+  public func authUSIDCardResult(frontImage: UIKit.UIImage?, result: USAIDCardResult?, error: Swift.Error?)
+  public func authUSLicenseResult(image: UIKit.UIImage?, result: USADriverLicenseResult?, error: Swift.Error?)
+  public func authUSBorderCrossingResult(image: UIKit.UIImage?, result: USABorderCrossingCardResult?, error: Swift.Error?)
+  public func authIDIDCardResult(frontImage: UIKit.UIImage?, result: IDNIDCardResult?, error: Swift.Error?)
+  public func authIDLicenseResult(image: UIKit.UIImage?, result: IDNDriverLicenseResult?, error: Swift.Error?)
   public func personalPrivacyResult(result _: Swift.Bool)
 }
 public protocol AuthMePlaygroundDelegate : ObjectiveC.NSObjectProtocol {
@@ -162,8 +169,8 @@ public class DataGroup1 : AuthMeUI.DataGroup {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
   @objc deinit
 }
-extension AuthMeUI.AuthMeOCRViewController : AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func captureOutput(_: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from _: AVFoundation.AVCaptureConnection)
+extension AuthMeUI.AuthMeOCRViewController : AVFoundation.AVCaptureDataOutputSynchronizerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func dataOutputSynchronizer(_ synchronizer: AVFoundation.AVCaptureDataOutputSynchronizer, didOutput synchronizedDataCollection: AVFoundation.AVCaptureSynchronizedDataCollection)
 }
 extension AuthMeUI.AuthMeOCRViewController : OCRFlowDelegate {
   @_Concurrency.MainActor(unsafe) public func didFailureWith(error: OCRError, retryHandler: @escaping (() -> Swift.Void))
@@ -197,6 +204,11 @@ public enum AuthMeFeatures {
   case ResidentCard
   case JPID
   case JPDriverLicense
+  case USID
+  case USDriverLicense
+  case USBorderCrossing
+  case IDID
+  case IDDriverLicense
   public static func == (a: AuthMeUI.AuthMeFeatures, b: AuthMeUI.AuthMeFeatures) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -220,10 +232,10 @@ public typealias AuthWithExternalDataSourceViewController = UIKit.UIViewControll
   @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AuthMeMenuViewController : AuthMeUI.BaseViewController {
+  @objc deinit
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
-  @objc deinit
 }
 @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
 public class SecurityInfo {
@@ -255,8 +267,8 @@ public class SimpleASN1DumpParser {
   public func test()
   @objc deinit
 }
-extension AuthMeUI.AuthMeLivenessViewController : AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func captureOutput(_: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from _: AVFoundation.AVCaptureConnection)
+extension AuthMeUI.AuthMeLivenessViewController : AVFoundation.AVCaptureDataOutputSynchronizerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func dataOutputSynchronizer(_ synchronizer: AVFoundation.AVCaptureDataOutputSynchronizer, didOutput synchronizedDataCollection: AVFoundation.AVCaptureSynchronizedDataCollection)
 }
 extension AuthMeUI.AuthMeLivenessViewController {
   public enum `Type` {
@@ -749,8 +761,10 @@ public class PACEHandler {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLayoutSubviews()
-  @_Concurrency.MainActor(unsafe) @objc public func captureOutput(_: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from _: AVFoundation.AVCaptureConnection)
   @objc deinit
+}
+extension AuthMeUI.LivenessPlaygroundViewController : AVFoundation.AVCaptureDataOutputSynchronizerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func dataOutputSynchronizer(_ synchronizer: AVFoundation.AVCaptureDataOutputSynchronizer, didOutput synchronizedDataCollection: AVFoundation.AVCaptureSynchronizedDataCollection)
 }
 extension AuthMeUI.LivenessPlaygroundViewController : LivenessPlaygroundFlowDelegate {
   @_Concurrency.MainActor(unsafe) public func livenessDidNotifyMessage(message: Swift.String)
@@ -789,8 +803,8 @@ public struct ResponseAPDU {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
   @objc deinit
 }
-extension AuthMeUI.OCRViewController : AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func captureOutput(_: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from _: AVFoundation.AVCaptureConnection)
+extension AuthMeUI.OCRViewController : AVFoundation.AVCaptureDataOutputSynchronizerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func dataOutputSynchronizer(_ synchronizer: AVFoundation.AVCaptureDataOutputSynchronizer, didOutput synchronizedDataCollection: AVFoundation.AVCaptureSynchronizedDataCollection)
 }
 extension AuthMeUI.OCRViewController : OCRFlowDelegate {
   @_Concurrency.MainActor(unsafe) public func didFailureWith(error: OCRError, retryHandler: @escaping (() -> Swift.Void))

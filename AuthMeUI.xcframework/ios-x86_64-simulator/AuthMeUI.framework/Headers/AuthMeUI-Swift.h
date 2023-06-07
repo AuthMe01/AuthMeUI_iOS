@@ -196,7 +196,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import AVFoundation;
-@import CoreMedia;
 @import ObjectiveC;
 @import UIKit;
 #endif
@@ -250,12 +249,13 @@ SWIFT_CLASS("_TtC8AuthMeUI28AuthMeLivenessViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
-@class AVCaptureOutput;
-@class AVCaptureConnection;
+@class AVCaptureDataOutputSynchronizer;
+@class AVCaptureSynchronizedDataCollection;
 
-@interface AuthMeLivenessViewController (SWIFT_EXTENSION(AuthMeUI)) <AVCaptureVideoDataOutputSampleBufferDelegate>
-- (void)captureOutput:(AVCaptureOutput * _Nonnull)_ didOutputSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer fromConnection:(AVCaptureConnection * _Nonnull)_;
+@interface AuthMeLivenessViewController (SWIFT_EXTENSION(AuthMeUI)) <AVCaptureDataOutputSynchronizerDelegate>
+- (void)dataOutputSynchronizer:(AVCaptureDataOutputSynchronizer * _Nonnull)synchronizer didOutputSynchronizedDataCollection:(AVCaptureSynchronizedDataCollection * _Nonnull)synchronizedDataCollection;
 @end
+
 
 
 
@@ -282,7 +282,6 @@ SWIFT_CLASS("_TtC8AuthMeUI24AuthMeMenuViewController")
 
 
 
-
 SWIFT_CLASS("_TtC8AuthMeUI23AuthMeOCRViewController")
 @interface AuthMeOCRViewController : BaseViewController
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ SWIFT_UNAVAILABLE;
@@ -293,8 +292,8 @@ SWIFT_CLASS("_TtC8AuthMeUI23AuthMeOCRViewController")
 
 
 
-@interface AuthMeOCRViewController (SWIFT_EXTENSION(AuthMeUI)) <AVCaptureVideoDataOutputSampleBufferDelegate>
-- (void)captureOutput:(AVCaptureOutput * _Nonnull)_ didOutputSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer fromConnection:(AVCaptureConnection * _Nonnull)_;
+@interface AuthMeOCRViewController (SWIFT_EXTENSION(AuthMeUI)) <AVCaptureDataOutputSynchronizerDelegate>
+- (void)dataOutputSynchronizer:(AVCaptureDataOutputSynchronizer * _Nonnull)synchronizer didOutputSynchronizedDataCollection:(AVCaptureSynchronizedDataCollection * _Nonnull)synchronizedDataCollection;
 @end
 
 
@@ -313,10 +312,14 @@ SWIFT_CLASS("_TtC8AuthMeUI32LivenessPlaygroundViewController")
 - (void)viewWillAppear:(BOOL)_;
 - (void)viewWillDisappear:(BOOL)_;
 - (void)viewDidLayoutSubviews;
-- (void)captureOutput:(AVCaptureOutput * _Nonnull)_ didOutputSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer fromConnection:(AVCaptureConnection * _Nonnull)_;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
+
+
+@interface LivenessPlaygroundViewController (SWIFT_EXTENSION(AuthMeUI)) <AVCaptureDataOutputSynchronizerDelegate>
+- (void)dataOutputSynchronizer:(AVCaptureDataOutputSynchronizer * _Nonnull)synchronizer didOutputSynchronizedDataCollection:(AVCaptureSynchronizedDataCollection * _Nonnull)synchronizedDataCollection;
+@end
 
 
 
@@ -354,8 +357,8 @@ SWIFT_CLASS("_TtC8AuthMeUI17OCRViewController")
 
 
 
-@interface OCRViewController (SWIFT_EXTENSION(AuthMeUI)) <AVCaptureVideoDataOutputSampleBufferDelegate>
-- (void)captureOutput:(AVCaptureOutput * _Nonnull)_ didOutputSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer fromConnection:(AVCaptureConnection * _Nonnull)_;
+@interface OCRViewController (SWIFT_EXTENSION(AuthMeUI)) <AVCaptureDataOutputSynchronizerDelegate>
+- (void)dataOutputSynchronizer:(AVCaptureDataOutputSynchronizer * _Nonnull)synchronizer didOutputSynchronizedDataCollection:(AVCaptureSynchronizedDataCollection * _Nonnull)synchronizedDataCollection;
 @end
 
 
@@ -391,16 +394,9 @@ SWIFT_CLASS("_TtC8AuthMeUI28VideoRecordingViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class AVCaptureDepthDataOutput;
-@class AVDepthData;
 
-@interface VideoRecordingViewController (SWIFT_EXTENSION(AuthMeUI)) <AVCaptureDepthDataOutputDelegate>
-- (void)depthDataOutput:(AVCaptureDepthDataOutput * _Nonnull)output didOutputDepthData:(AVDepthData * _Nonnull)depthData timestamp:(CMTime)timestamp connection:(AVCaptureConnection * _Nonnull)connection;
-@end
-
-
-@interface VideoRecordingViewController (SWIFT_EXTENSION(AuthMeUI)) <AVCaptureVideoDataOutputSampleBufferDelegate>
-- (void)captureOutput:(AVCaptureOutput * _Nonnull)output didOutputSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer fromConnection:(AVCaptureConnection * _Nonnull)connection;
+@interface VideoRecordingViewController (SWIFT_EXTENSION(AuthMeUI)) <AVCaptureDataOutputSynchronizerDelegate>
+- (void)dataOutputSynchronizer:(AVCaptureDataOutputSynchronizer * _Nonnull)synchronizer didOutputSynchronizedDataCollection:(AVCaptureSynchronizedDataCollection * _Nonnull)synchronizedDataCollection;
 @end
 
 
