@@ -636,6 +636,7 @@ public class NFCPassportModel {
 @objc @_hasMissingDesignatedInitializers @available(iOS 13, *)
 @_Concurrency.MainActor(unsafe) public class NFCFlowViewController : UIKit.UINavigationController {
   @_Concurrency.MainActor(unsafe) weak public var nfcDelegate: AuthMeUI.AuthMeNFCDelegate?
+  @_Concurrency.MainActor(unsafe) public var resultEditable: Swift.Bool
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(rootViewController: UIKit.UIViewController)
   @_Concurrency.MainActor(unsafe) convenience public init(flag: Swift.Bool = false)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
