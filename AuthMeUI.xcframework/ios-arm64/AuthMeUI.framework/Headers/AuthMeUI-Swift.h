@@ -300,6 +300,40 @@ SWIFT_CLASS("_TtC8AuthMeUI23AuthMeOCRViewController")
 
 
 
+SWIFT_CLASS("_TtC8AuthMeUI34AuthmeAuthenticationViewController")
+@interface AuthmeAuthenticationViewController : UIViewController
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
+
+
+
+
+
+
+
+SWIFT_CLASS("_TtC8AuthMeUI36AuthmeComponentableOCRViewController")
+@interface AuthmeComponentableOCRViewController : BaseViewController
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ SWIFT_UNAVAILABLE;
+- (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
+
+@interface AuthmeComponentableOCRViewController (SWIFT_EXTENSION(AuthMeUI)) <AVCaptureDataOutputSynchronizerDelegate>
+- (void)dataOutputSynchronizer:(AVCaptureDataOutputSynchronizer * _Nonnull)synchronizer didOutputSynchronizedDataCollection:(AVCaptureSynchronizedDataCollection * _Nonnull)synchronizedDataCollection;
+@end
+
+
+
+
+
 
 
 SWIFT_CLASS("_TtC8AuthMeUI32LivenessPlaygroundViewController")
@@ -320,6 +354,25 @@ SWIFT_CLASS("_TtC8AuthMeUI32LivenessPlaygroundViewController")
 @interface LivenessPlaygroundViewController (SWIFT_EXTENSION(AuthMeUI)) <AVCaptureDataOutputSynchronizerDelegate>
 - (void)dataOutputSynchronizer:(AVCaptureDataOutputSynchronizer * _Nonnull)synchronizer didOutputSynchronizedDataCollection:(AVCaptureSynchronizedDataCollection * _Nonnull)synchronizedDataCollection;
 @end
+
+
+
+SWIFT_CLASS("_TtC8AuthMeUI34NFCFlowComponentableViewController") SWIFT_AVAILABILITY(ios,introduced=13)
+@interface NFCFlowComponentableViewController : UINavigationController
+- (nonnull instancetype)initWithRootViewController:(UIViewController * _Nonnull)rootViewController OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ SWIFT_UNAVAILABLE;
+- (void)viewDidLoad;
+- (void)viewWillDisappear:(BOOL)animated;
+- (nonnull instancetype)initWithNavigationBarClass:(Class _Nullable)navigationBarClass toolbarClass:(Class _Nullable)toolbarClass SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_AVAILABILITY(ios,introduced=13)
+@interface NFCFlowComponentableViewController (SWIFT_EXTENSION(AuthMeUI))
+- (void)swizzledViewDidAppear;
+@end
+
 
 
 
