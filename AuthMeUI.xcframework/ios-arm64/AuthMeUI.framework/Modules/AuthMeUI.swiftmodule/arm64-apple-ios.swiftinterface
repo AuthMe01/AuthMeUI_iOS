@@ -1,12 +1,13 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
-// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AuthMeUI
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AuthMeUI
 import AVFoundation
 import AudioToolbox
 import AuthMe
 @_exported import AuthMeUI
 import CommonCrypto
 import CoreGraphics/*.CGFloat*/
+import CoreMotion
 import CoreNFC
 import CryptoKit
 import CryptoTokenKit
@@ -42,6 +43,7 @@ extension AuthMeUI.VideoRecordingViewController : AVFoundation.AVCaptureDataOutp
   @_Concurrency.MainActor(unsafe) @objc final public func dataOutputSynchronizer(_ synchronizer: AVFoundation.AVCaptureDataOutputSynchronizer, didOutput synchronizedDataCollection: AVFoundation.AVCaptureSynchronizedDataCollection)
 }
 extension AuthMeUI.VideoRecordingViewController : LivenessPlaygroundRecordFlowDelegate {
+  @_Concurrency.MainActor(unsafe) final public func livenessDidStart()
   @_Concurrency.MainActor(unsafe) final public func livenessDidNotifyMessage(message: Swift.String)
   @_Concurrency.MainActor(unsafe) final public func livenessDidUpdateReconize(result: Swift.Bool)
   @_Concurrency.MainActor(unsafe) final public func livenessDidFailureWith(error: FlowError, retryHandler: @escaping (() -> Swift.Void))
@@ -69,6 +71,28 @@ public class AuthMeAccessToken {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
+public protocol AuthmeComponentableOCRViewControllerDelegate : AnyObject {
+  func authenticationDidSuccess()
+  func authenticationDidFail()
+  func authenticationDidCancel()
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AuthmeComponentableOCRViewController : AuthMeUI.BaseViewController {
+  @_Concurrency.MainActor(unsafe) public var watermark: UIKit.UIImage?
+  @_Concurrency.MainActor(unsafe) public var uiParams: AuthMeUI.AuthMeOCRUIParams?
+  @_Concurrency.MainActor(unsafe) weak public var delegate: AuthMeUI.AuthmeComponentableOCRViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) public var eventTrackingEnable: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public init(flow: ScanDocProtocol)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc deinit
+}
+extension AuthMeUI.AuthmeComponentableOCRViewController : AVFoundation.AVCaptureDataOutputSynchronizerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func dataOutputSynchronizer(_ synchronizer: AVFoundation.AVCaptureDataOutputSynchronizer, didOutput synchronizedDataCollection: AVFoundation.AVCaptureSynchronizedDataCollection)
+}
+extension AuthMeUI.AuthmeComponentableOCRViewController : OCRFlowDelegate {
+  @_Concurrency.MainActor(unsafe) public func didFailureWith(error: OCRError, retryHandler: @escaping (() -> Swift.Void))
+  @_Concurrency.MainActor(unsafe) public func notifyAntiFraudWith(status: LogAntiFraud)
+}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
 public class DataGroup7 : AuthMeUI.DataGroup {
   public var imageData: [Swift.UInt8] {
@@ -88,15 +112,16 @@ public protocol AuthMeAuthenticationDelegate : ObjectiveC.NSObjectProtocol {
   func authTWLicenseResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWLicenseResult?, error: Swift.Error?)
   func authTWHealthResult(image: UIKit.UIImage?, result: TWHealthResult?, error: Swift.Error?)
   func authMRZResult(result: MRZResult?, error: Swift.Error?)
-  func authTWResidentResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWNResidentResult?, error: Swift.Error?)
-  func authJPIDCardResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: JPNIDCardResult?, error: Swift.Error?)
-  func authJPLicenseResult(image: UIKit.UIImage?, result: JPNDriverLicenseResult?, error: Swift.Error?)
-  func authUSIDCardResult(frontImage: UIKit.UIImage?, result: USAIDCardResult?, error: Swift.Error?)
-  func authUSLicenseResult(image: UIKit.UIImage?, result: USADriverLicenseResult?, error: Swift.Error?)
-  func authUSBorderCrossingResult(image: UIKit.UIImage?, result: USABorderCrossingCardResult?, error: Swift.Error?)
-  func authIDIDCardResult(frontImage: UIKit.UIImage?, result: IDNIDCardResult?, error: Swift.Error?)
-  func authIDLicenseResult(image: UIKit.UIImage?, result: IDNDriverLicenseResult?, error: Swift.Error?)
+  func authTWNResident(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWNResidentResult?, error: Swift.Error?)
+  func authJPNIDCard(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: JPNIDCardResult?, error: Swift.Error?)
+  func authJPNDriverLicense(image: UIKit.UIImage?, result: JPNDriverLicenseResult?, error: Swift.Error?)
+  func authUSAIDCard(image: UIKit.UIImage?, result: USAIDCardResult?, error: Swift.Error?)
+  func authUSADriverLicense(image: UIKit.UIImage?, result: USADriverLicenseResult?, error: Swift.Error?)
+  func authUSAVisitorVISA(image: UIKit.UIImage?, result: USAVisitorVISAResult?, error: Swift.Error?)
+  func authIDNIDCard(image: UIKit.UIImage?, result: IDNIDCardResult?, error: Swift.Error?)
+  func authIDNDriverLicense(image: UIKit.UIImage?, result: IDNDriverLicenseResult?, error: Swift.Error?)
   func personalPrivacyResult(result: Swift.Bool)
+  func authenticateCompleted()
 }
 extension AuthMeUI.AuthMeAuthenticationDelegate {
   public func authmeLivenessViewController(_ viewController: AuthMeUI.AuthMeLivenessViewController, didRecognize result: AuthMeUI.AuthMeLivenessViewController.LivenessResult)
@@ -106,15 +131,16 @@ extension AuthMeUI.AuthMeAuthenticationDelegate {
   public func authTWLicenseResult(frontImage _: UIKit.UIImage?, backImage _: UIKit.UIImage?, result _: TWLicenseResult?, error _: Swift.Error?)
   public func authTWHealthResult(image _: UIKit.UIImage?, result _: TWHealthResult?, error _: Swift.Error?)
   public func authMRZResult(result _: MRZResult?, error _: Swift.Error?)
-  public func authTWResidentResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWNResidentResult?, error: Swift.Error?)
-  public func authJPIDCardResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: JPNIDCardResult?, error: Swift.Error?)
-  public func authJPLicenseResult(image: UIKit.UIImage?, result: JPNDriverLicenseResult?, error: Swift.Error?)
-  public func authUSIDCardResult(frontImage: UIKit.UIImage?, result: USAIDCardResult?, error: Swift.Error?)
-  public func authUSLicenseResult(image: UIKit.UIImage?, result: USADriverLicenseResult?, error: Swift.Error?)
-  public func authUSBorderCrossingResult(image: UIKit.UIImage?, result: USABorderCrossingCardResult?, error: Swift.Error?)
-  public func authIDIDCardResult(frontImage: UIKit.UIImage?, result: IDNIDCardResult?, error: Swift.Error?)
-  public func authIDLicenseResult(image: UIKit.UIImage?, result: IDNDriverLicenseResult?, error: Swift.Error?)
+  public func authTWNResident(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWNResidentResult?, error: Swift.Error?)
+  public func authJPNIDCard(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: JPNIDCardResult?, error: Swift.Error?)
+  public func authJPNDriverLicense(image: UIKit.UIImage?, result: JPNDriverLicenseResult?, error: Swift.Error?)
+  public func authUSAIDCard(image: UIKit.UIImage?, result: USAIDCardResult?, error: Swift.Error?)
+  public func authUSADriverLicense(image: UIKit.UIImage?, result: USADriverLicenseResult?, error: Swift.Error?)
+  public func authUSAVisitorVISA(image: UIKit.UIImage?, result: USAVisitorVISAResult?, error: Swift.Error?)
+  public func authIDNIDCard(image: UIKit.UIImage?, result: IDNIDCardResult?, error: Swift.Error?)
+  public func authIDNDriverLicense(image: UIKit.UIImage?, result: IDNDriverLicenseResult?, error: Swift.Error?)
   public func personalPrivacyResult(result _: Swift.Bool)
+  public func authenticateCompleted()
 }
 public protocol AuthMePlaygroundDelegate : ObjectiveC.NSObjectProtocol {
   func authmeLivenessViewControllerDidRecognize(result: AuthMeUI.AuthMeLivenessViewController.LivenessResult)
@@ -136,6 +162,18 @@ public protocol AuthMeNFCDelegate : ObjectiveC.NSObjectProtocol {
     get
     set
   }
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class AuthmeAuthenticationViewController : UIKit.UIViewController {
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) weak final public var authenticationDelegate: AuthMeUI.AuthMeAuthenticationDelegate?
+  @_Concurrency.MainActor(unsafe) public init(scanType: ScanType, isNeedConfirm: Swift.Bool, isResultPageDisplayable: Swift.Bool, isResultEditable: Swift.Bool, isEventTrackingEnable: Swift.Bool, isFraudIntroEnable: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewWillAppear(_ animated: Swift.Bool)
+}
+extension AuthMeUI.AuthmeAuthenticationViewController : AuthMeUI.AuthmeComponentableOCRViewControllerDelegate {
+  @_Concurrency.MainActor(unsafe) final public func authenticationDidSuccess()
+  @_Concurrency.MainActor(unsafe) final public func authenticationDidFail()
+  @_Concurrency.MainActor(unsafe) final public func authenticationDidCancel()
 }
 @available(iOS 13, macOS 10.15, *)
 public enum DocTypeEnum : Swift.String {
@@ -195,7 +233,7 @@ public enum AuthMeMenuFeature {
     get
   }
 }
-public enum AuthMeFeatures {
+public enum AuthMeFeatures : Swift.String {
   case IDCardFraud
   case IDCard
   case Passport
@@ -209,9 +247,9 @@ public enum AuthMeFeatures {
   case USBorderCrossing
   case IDID
   case IDDriverLicense
-  public static func == (a: AuthMeUI.AuthMeFeatures, b: AuthMeUI.AuthMeFeatures) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
     get
   }
 }
@@ -287,6 +325,7 @@ extension AuthMeUI.AuthMeLivenessViewController {
   }
 }
 extension AuthMeUI.AuthMeLivenessViewController : LivenessFlowDelegate {
+  @_Concurrency.MainActor(unsafe) public func livenessDidStart()
   @_Concurrency.MainActor(unsafe) public func livenessDidNotifyMessage(message: Swift.String)
   @_Concurrency.MainActor(unsafe) public func livenessDidUpdateReconize(result: Swift.Bool)
   @_Concurrency.MainActor(unsafe) public func livenessDidFailureWith(error: FlowError, retryHandler: @escaping (() -> Swift.Void))
@@ -394,7 +433,6 @@ public class COM : AuthMeUI.DataGroup {
   @_Concurrency.MainActor(unsafe) final public let action: Action
   @_Concurrency.MainActor(unsafe) public var eventTrackingEnable: Swift.Bool
   @_Concurrency.MainActor(unsafe) public init(action: Action = .register(waitResult: true))
-  @_Concurrency.MainActor(unsafe) public func checkModel(progressHandler: ((Swift.Double) -> Swift.Void)? = nil, handler: ((Swift.Result<Swift.Void, FlowError>) -> Swift.Void)?)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
     @_Concurrency.MainActor(unsafe) @objc get
   }
@@ -728,6 +766,25 @@ extension AuthMeUI.AuthMeOCRUIParams {
   @discardableResult
   final public func isColseButtonHidden(_ isHidden: Swift.Bool) -> Self
 }
+@objc @_hasMissingDesignatedInitializers @available(iOS 13, *)
+@_Concurrency.MainActor(unsafe) public class NFCFlowComponentableViewController : UIKit.UINavigationController {
+  @_Concurrency.MainActor(unsafe) weak public var nfcDelegate: AuthMeUI.AuthMeNFCDelegate?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(rootViewController: UIKit.UIViewController)
+  @_Concurrency.MainActor(unsafe) convenience public init(flow: ScanDocProtocol)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @objc deinit
+}
+@available(iOS 13, *)
+extension AuthMeUI.NFCFlowComponentableViewController {
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func swizzledViewDidAppear()
+}
+@available(iOS 13, *)
+extension AuthMeUI.NFCFlowComponentableViewController : AuthMeUI.AuthmeComponentableOCRViewControllerDelegate {
+  @_Concurrency.MainActor(unsafe) public func authenticationDidSuccess()
+  @_Concurrency.MainActor(unsafe) public func authenticationDidFail()
+  @_Concurrency.MainActor(unsafe) public func authenticationDidCancel()
+}
 @_hasMissingDesignatedInitializers final public class AuthmeFeatureConfig {
   public static func setWith(_ block: (AuthMeUI.AuthmeFeatureConfig) -> Swift.Void) -> AuthMeUI.AuthmeFeatureConfig
   @objc deinit
@@ -743,11 +800,13 @@ extension AuthMeUI.AuthmeFeatureConfig {
   final public func isResultEditable(_ isResultEditable: Swift.Bool) -> Self
   @discardableResult
   final public func isEventTrackingEnable(_ isEventTrackingEnable: Swift.Bool) -> Self
+  @discardableResult
+  final public func isFraudIntroEnable(_ isFraudIntroEnable: Swift.Bool) -> Self
 }
 @available(iOS 13, *)
 public class PACEHandler {
   public init(cardAccess: AuthMeUI.CardAccess, tagReader: AuthMeUI.TagReader) throws
-  public func doPACE(mrzKey: Swift.String, completed: @escaping (Swift.Bool) -> ())
+  public func doPACE(mrzKey: Swift.String, completed: @escaping (Swift.Bool) -> Swift.Void)
   @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class LivenessPlaygroundViewController : AuthMeUI.BaseViewController, AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
@@ -768,6 +827,7 @@ extension AuthMeUI.LivenessPlaygroundViewController : AVFoundation.AVCaptureData
   @_Concurrency.MainActor(unsafe) @objc dynamic public func dataOutputSynchronizer(_ synchronizer: AVFoundation.AVCaptureDataOutputSynchronizer, didOutput synchronizedDataCollection: AVFoundation.AVCaptureSynchronizedDataCollection)
 }
 extension AuthMeUI.LivenessPlaygroundViewController : LivenessPlaygroundFlowDelegate {
+  @_Concurrency.MainActor(unsafe) public func livenessDidStart()
   @_Concurrency.MainActor(unsafe) public func livenessDidNotifyMessage(message: Swift.String)
   @_Concurrency.MainActor(unsafe) public func livenessDidUpdateReconize(result: Swift.Bool)
   @_Concurrency.MainActor(unsafe) public func livenessDidFailureWith(error: FlowError, retryHandler: @escaping (() -> Swift.Void))
@@ -818,7 +878,7 @@ public class BACHandler {
   public var kifd: [Swift.UInt8]
   public init()
   public init(tagReader: AuthMeUI.TagReader)
-  public func performBACAndGetSessionKeys(mrzKey: Swift.String, completed: @escaping (_ error: AuthMeUI.NFCPassportReaderError?) -> ())
+  public func performBACAndGetSessionKeys(mrzKey: Swift.String, completed: @escaping (_ error: AuthMeUI.NFCPassportReaderError?) -> Swift.Void)
   public func sessionKeys(data: [Swift.UInt8]) throws -> ([Swift.UInt8], [Swift.UInt8], [Swift.UInt8])
   @objc deinit
 }
@@ -1138,6 +1198,7 @@ extension AuthMeUI.AuthMeMenuFeature : Swift.Equatable {}
 extension AuthMeUI.AuthMeMenuFeature : Swift.Hashable {}
 extension AuthMeUI.AuthMeFeatures : Swift.Equatable {}
 extension AuthMeUI.AuthMeFeatures : Swift.Hashable {}
+extension AuthMeUI.AuthMeFeatures : Swift.RawRepresentable {}
 extension AuthMeUI.AuthMeLivenessViewController.`Type` : Swift.Equatable {}
 extension AuthMeUI.AuthMeLivenessViewController.`Type` : Swift.Hashable {}
 @available(iOS 13, macOS 10.15, *)
