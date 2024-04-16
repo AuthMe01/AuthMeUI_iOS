@@ -345,7 +345,6 @@ SWIFT_CLASS("_TtC8AuthMeUI13AuthMeManager")
 
 
 
-
 SWIFT_CLASS("_TtC8AuthMeUI32LivenessPlaygroundViewController")
 @interface LivenessPlaygroundViewController : BaseViewController <AVCaptureVideoDataOutputSampleBufferDelegate>
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -365,14 +364,6 @@ SWIFT_CLASS("_TtC8AuthMeUI32LivenessPlaygroundViewController")
 - (void)dataOutputSynchronizer:(AVCaptureDataOutputSynchronizer * _Nonnull)synchronizer didOutputSynchronizedDataCollection:(AVCaptureSynchronizedDataCollection * _Nonnull)synchronizedDataCollection;
 @end
 
-
-
-
-SWIFT_CLASS("_TtC8AuthMeUI14PassportReader")
-@interface PassportReader : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
 
 
 
