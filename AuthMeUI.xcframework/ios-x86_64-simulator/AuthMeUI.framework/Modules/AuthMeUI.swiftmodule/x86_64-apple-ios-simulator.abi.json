@@ -13433,112 +13433,112 @@
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 23114,
+      "offset": 23103,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "StringLiteral",
-      "offset": 23702,
+      "offset": 23691,
       "length": 22,
       "value": "\"sdk.ocr.verify.clear\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "StringLiteral",
-      "offset": 23767,
+      "offset": 23756,
       "length": 22,
       "value": "\"sdk.ocr.verify.retry\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "StringLiteral",
-      "offset": 26711,
+      "offset": 26421,
       "length": 25,
       "value": "\"sdk.general.error.retry\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 26758,
+      "offset": 26468,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 28069,
+      "offset": 27779,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 29125,
+      "offset": 28835,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 29355,
+      "offset": 29065,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 29621,
+      "offset": 29331,
       "length": 3,
       "value": "123"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 29686,
+      "offset": 29396,
       "length": 2,
       "value": "87"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 30191,
+      "offset": 29901,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 31312,
+      "offset": 31022,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 31381,
+      "offset": 31091,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 31389,
+      "offset": 31099,
       "length": 4,
       "value": "-1.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 31498,
+      "offset": 31208,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 31522,
+      "offset": 31232,
       "length": 4,
       "value": "true"
     },
@@ -19873,70 +19873,70 @@
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/NFCGeneralInfoViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2533,
+      "offset": 2504,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/NFCGeneralInfoViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2736,
+      "offset": 2707,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/NFCGeneralInfoViewController.swift",
       "kind": "StringLiteral",
-      "offset": 2766,
+      "offset": 2737,
       "length": 19,
       "value": "\"sdk.general.start\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/NFCGeneralInfoViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3210,
-      "length": 5,
-      "value": "false"
+      "offset": 3181,
+      "length": 4,
+      "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/NFCGeneralInfoViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3711,
+      "offset": 3681,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/NFCGeneralInfoViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3784,
+      "offset": 3754,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/NFCGeneralInfoViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3858,
+      "offset": 3828,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/NFCGeneralInfoViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3957,
+      "offset": 3927,
       "length": 2,
       "value": "59"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/NFCGeneralInfoViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 4140,
+      "offset": 4110,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/NFCGeneralInfoViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 4685,
+      "offset": 4655,
       "length": 2,
       "value": "20"
     },
@@ -19950,44 +19950,23 @@
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/NFCGeneralInfoViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 5124,
+      "offset": 5094,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/NFCGeneralInfoViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 5491,
+      "offset": 5461,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/NFCGeneralInfoViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 5574,
+      "offset": 5544,
       "length": 1,
       "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/NFCGeneralInfoViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5770,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/NFCGeneralInfoViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 5811,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/NFCGeneralInfoViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 5870,
-      "length": 5,
-      "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/Liveness\/PrepareLoadingView.swift",
@@ -22091,148 +22070,155 @@
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3832,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 4083,
+      "offset": 4189,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 4092,
+      "offset": 4198,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 4103,
+      "offset": 4209,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 4113,
+      "offset": 4219,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4164,
+      "offset": 4270,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4232,
+      "offset": 4338,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
       "kind": "StringLiteral",
-      "offset": 4338,
+      "offset": 4444,
       "length": 16,
       "value": "\"NFC_passport_1\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
       "kind": "StringLiteral",
-      "offset": 4400,
+      "offset": 4506,
       "length": 39,
       "value": "\"sdk.ocr.nfcPassport.guide.step1.title\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
       "kind": "StringLiteral",
-      "offset": 4494,
+      "offset": 4600,
       "length": 42,
       "value": "\"sdk.ocr.nfcPassport.guide.step1.subtitle\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4640,
+      "offset": 4746,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4735,
+      "offset": 4841,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
       "kind": "StringLiteral",
-      "offset": 4896,
+      "offset": 5002,
       "length": 16,
       "value": "\"NFC_passport_2\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
       "kind": "StringLiteral",
-      "offset": 4958,
+      "offset": 5064,
       "length": 39,
       "value": "\"sdk.ocr.nfcPassport.guide.step2.title\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
       "kind": "StringLiteral",
-      "offset": 5052,
+      "offset": 5158,
       "length": 42,
       "value": "\"sdk.ocr.nfcPassport.guide.step2.subtitle\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5198,
+      "offset": 5304,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5293,
+      "offset": 5399,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
       "kind": "StringLiteral",
-      "offset": 5454,
+      "offset": 5560,
       "length": 16,
       "value": "\"NFC_passport_3\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
       "kind": "StringLiteral",
-      "offset": 5516,
+      "offset": 5622,
       "length": 39,
       "value": "\"sdk.ocr.nfcPassport.guide.step3.title\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
       "kind": "StringLiteral",
-      "offset": 5610,
+      "offset": 5716,
       "length": 42,
       "value": "\"sdk.ocr.nfcPassport.guide.step3.subtitle\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5756,
+      "offset": 5862,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5851,
+      "offset": 5957,
       "length": 4,
       "value": "true"
     },
@@ -22246,51 +22232,37 @@
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
       "kind": "Dictionary",
-      "offset": 7880,
+      "offset": 7986,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
       "kind": "StringLiteral",
-      "offset": 9296,
+      "offset": 9402,
       "length": 10,
       "value": "\"yyyyMMdd\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
       "kind": "StringLiteral",
-      "offset": 9433,
+      "offset": 9539,
       "length": 12,
       "value": "\"yyyy-MM-dd\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
       "kind": "StringLiteral",
-      "offset": 10377,
+      "offset": 10483,
       "length": 33,
       "value": "\"sdk.general.error.alert.timeout\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 10432,
+      "offset": 10538,
       "length": 1,
       "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12967,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/Passport\/NFCComponentableViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 13022,
-      "length": 4,
-      "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/CameraCapture\/CameraCapture.swift",
