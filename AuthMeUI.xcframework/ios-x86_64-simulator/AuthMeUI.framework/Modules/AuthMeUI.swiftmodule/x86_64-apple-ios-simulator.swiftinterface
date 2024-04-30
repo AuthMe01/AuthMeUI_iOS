@@ -57,6 +57,22 @@ public protocol AuthMeAuthenticationDelegate : ObjectiveC.NSObjectProtocol {
   func authUSAVisitorVISA(image: UIKit.UIImage?, result: USAVisitorVISAResult?, error: (any Swift.Error)?)
   func authIDNIDCard(image: UIKit.UIImage?, result: IDNIDCardResult?, error: (any Swift.Error)?)
   func authIDNDriverLicense(image: UIKit.UIImage?, result: IDNDriverLicenseResult?, error: (any Swift.Error)?)
+  func authINDIDCard(image: UIKit.UIImage?, result: INDIDCardResult?, error: (any Swift.Error)?)
+  func authINDDriverLicense(image: UIKit.UIImage?, result: INDDriverLicenseResult?, error: (any Swift.Error)?)
+  func authMYIDCard(image: UIKit.UIImage?, result: MYIDCardResult?, error: (any Swift.Error)?)
+  func authMYDriverLicense(image: UIKit.UIImage?, result: MYDriverLicenseResult?, error: (any Swift.Error)?)
+  func authHKIDCard(image: UIKit.UIImage?, result: HKIDCardResult?, error: (any Swift.Error)?)
+  func authHKDriverLicense(image: UIKit.UIImage?, result: HKDriverLicenseResult?, error: (any Swift.Error)?)
+  func authUKIDCard(image: UIKit.UIImage?, result: UKIDCardResult?, error: (any Swift.Error)?)
+  func authUKDriverLicense(image: UIKit.UIImage?, result: UKDriverLicenseResult?, error: (any Swift.Error)?)
+  func authEGIDCard(image: UIKit.UIImage?, result: EGIDCardResult?, error: (any Swift.Error)?)
+  func authEGDriverLicense(image: UIKit.UIImage?, result: EGDriverLicenseResult?, error: (any Swift.Error)?)
+  func authSAIDCard(image: UIKit.UIImage?, result: SAIDCardResult?, error: (any Swift.Error)?)
+  func authSADriverLicense(image: UIKit.UIImage?, result: SADriverLicenseResult?, error: (any Swift.Error)?)
+  func authNLIDCard(image: UIKit.UIImage?, result: NLIDCardResult?, error: (any Swift.Error)?)
+  func authNLDriverLicense(image: UIKit.UIImage?, result: NLDriverLicenseResult?, error: (any Swift.Error)?)
+  func authSGIDCard(image: UIKit.UIImage?, result: SGIDCardResult?, error: (any Swift.Error)?)
+  func authSGDriverLicense(image: UIKit.UIImage?, result: SGDriverLicenseResult?, error: (any Swift.Error)?)
   func authMRZResultAndPlaceOfBirthConfirmed(result: MRZResult?, confirmed: Swift.Bool, error: (any Swift.Error)?)
   func personalPrivacyResult(result: Swift.Bool)
   func authenticateCompleted()
@@ -80,6 +96,22 @@ extension AuthMeUI.AuthMeAuthenticationDelegate {
   public func authUSAVisitorVISA(image: UIKit.UIImage?, result: USAVisitorVISAResult?, error: (any Swift.Error)?)
   public func authIDNIDCard(image: UIKit.UIImage?, result: IDNIDCardResult?, error: (any Swift.Error)?)
   public func authIDNDriverLicense(image: UIKit.UIImage?, result: IDNDriverLicenseResult?, error: (any Swift.Error)?)
+  public func authINDIDCard(image: UIKit.UIImage?, result: INDIDCardResult?, error: (any Swift.Error)?)
+  public func authINDDriverLicense(image: UIKit.UIImage?, result: INDDriverLicenseResult?, error: (any Swift.Error)?)
+  public func authMYIDCard(image: UIKit.UIImage?, result: MYIDCardResult?, error: (any Swift.Error)?)
+  public func authMYDriverLicense(image: UIKit.UIImage?, result: MYDriverLicenseResult?, error: (any Swift.Error)?)
+  public func authHKIDCard(image: UIKit.UIImage?, result: HKIDCardResult?, error: (any Swift.Error)?)
+  public func authHKDriverLicense(image: UIKit.UIImage?, result: HKDriverLicenseResult?, error: (any Swift.Error)?)
+  public func authUKIDCard(image: UIKit.UIImage?, result: UKIDCardResult?, error: (any Swift.Error)?)
+  public func authUKDriverLicense(image: UIKit.UIImage?, result: UKDriverLicenseResult?, error: (any Swift.Error)?)
+  public func authEGIDCard(image: UIKit.UIImage?, result: EGIDCardResult?, error: (any Swift.Error)?)
+  public func authEGDriverLicense(image: UIKit.UIImage?, result: EGDriverLicenseResult?, error: (any Swift.Error)?)
+  public func authSAIDCard(image: UIKit.UIImage?, result: SAIDCardResult?, error: (any Swift.Error)?)
+  public func authSADriverLicense(image: UIKit.UIImage?, result: SADriverLicenseResult?, error: (any Swift.Error)?)
+  public func authNLIDCard(image: UIKit.UIImage?, result: NLIDCardResult?, error: (any Swift.Error)?)
+  public func authNLDriverLicense(image: UIKit.UIImage?, result: NLDriverLicenseResult?, error: (any Swift.Error)?)
+  public func authSGIDCard(image: UIKit.UIImage?, result: SGIDCardResult?, error: (any Swift.Error)?)
+  public func authSGDriverLicense(image: UIKit.UIImage?, result: SGDriverLicenseResult?, error: (any Swift.Error)?)
   public func authMRZResultAndPlaceOfBirthConfirmed(result: MRZResult?, comfirmed: Swift.Bool, error: (any Swift.Error)?)
   public func personalPrivacyResult(result _: Swift.Bool)
   public func authenticateCompleted()
@@ -134,6 +166,23 @@ public enum AuthmeFeature : Swift.String {
   case IDDriverLicense
   case Liveness
   case PassportWithVIZ
+  case INDID
+  case INDDriverLicense
+  case MYID
+  case MYDriverLicense
+  case HKID
+  case HKIDFront
+  case HKDriverLicense
+  case UKID
+  case UKDriverLicense
+  case EGID
+  case EGDriverLicense
+  case SAID
+  case SADriverLicense
+  case NLID
+  case NLDriverLicense
+  case SGID
+  case SGDriverLicense
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
