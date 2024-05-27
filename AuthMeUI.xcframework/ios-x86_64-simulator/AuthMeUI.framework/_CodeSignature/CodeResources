@@ -34,7 +34,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		eytSu5ik2AraVChx1hHCPGLzIs4=
+		HRHsBgMwIqXLIyigcRkSqob/8+o=
 		</data>
 		<key>AuthMeLivenessViewController.nib</key>
 		<data>
@@ -86,11 +86,11 @@
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		KMkWS37c8XM7yEZdMgpeJ5Dk4JY=
+		Xq1UPa+mBDcEeiA3pERD9bA3Elc=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		HLtbqtZiOXPSMN3YGvxtTRi3W2o=
+		zP0q3BCysOCsYXIKhKObFQw7kzs=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -98,27 +98,15 @@
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		HLtbqtZiOXPSMN3YGvxtTRi3W2o=
+		zP0q3BCysOCsYXIKhKObFQw7kzs=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		PHmjqEhv1JzxcOmOMmeowhTbtR8=
+		McXFSiiEEecvwBnu7M/q7V/zdj4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		kfO36FK1E5KGJu7fKxneqsLwUpw=
-		</data>
-		<key>NFC.storyboardc/Info.plist</key>
-		<data>
-		0JDaaVXkS9au3GfBEeUsEYrvnh0=
-		</data>
-		<key>NFC.storyboardc/NFCInfoViewController.nib</key>
-		<data>
-		FSNF7xVQKkbQT/pOJqNcOZykAD0=
-		</data>
-		<key>NFC.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
-		<data>
-		bQPFoOFROp5gzpUYXeX6JQEkjc4=
 		</data>
 		<key>NFCComponentableViewController.nib</key>
 		<data>
@@ -262,7 +250,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rlHf6jR24uMhQoXwUp3040cYTeA=
+			3zMhtB4CO7Wm7s6Rstd+3JNkOYk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -323,7 +311,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			raLndroVW1x2iTW7u7oLJf4eG3bOPtUmotm28n53dWc=
+			XfrtHWDHzqxpy13rbhD18yJvZbiaDlBReXPKteE+cLo=
 			</data>
 		</dict>
 		<key>AuthMeLivenessViewController.nib</key>
@@ -407,14 +395,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			B6TNIqO+mXxpnnTS9mBL5xwp3WDeXjbGRiWkqeDDxTA=
+			5SjI8i6tRlZRqqLO0g962YsuK46Yu61IGwptgn0iEZs=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nwIJBo55NE3EbrqHFFVLqtzd9dShmSLlmM6RLNr2lgY=
+			aEAOy8fPoX+W7FVBP1riCJsiVpA/9QeHG22twtDituk=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -428,14 +416,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nwIJBo55NE3EbrqHFFVLqtzd9dShmSLlmM6RLNr2lgY=
+			aEAOy8fPoX+W7FVBP1riCJsiVpA/9QeHG22twtDituk=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XVZ0gocFufAyWsg00/N8zsDxaCMjsBs1V83TTXRdm1Y=
+			E1pK55wBPwNEb3kM8pUnWqx7Ww/eLD2j2ZEB06/SFFY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -443,27 +431,6 @@
 			<key>hash2</key>
 			<data>
 			O7Jz4Jd61Co6+D+YtxU3Y1uslJeEnKGHiBERsyNl/fE=
-			</data>
-		</dict>
-		<key>NFC.storyboardc/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			b7KYyo50Lu2nEWbCnnNirN+5cas+E6OLj6aBcX19rWg=
-			</data>
-		</dict>
-		<key>NFC.storyboardc/NFCInfoViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			2D3LUsBTGr0RLUsDqJc6MKcSzXfRNmLv23UFWIyaTSw=
-			</data>
-		</dict>
-		<key>NFC.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			/GgPv728yilLd7ePySzQ5UeHpc95aQYKjTRVDw0Iz0U=
 			</data>
 		</dict>
 		<key>NFCComponentableViewController.nib</key>
@@ -698,7 +665,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9MjEaDNf5q7y3rlKI0xdHOG+E9aYxDgdtot/fKv1C8Q=
+			pXVEVljT66A9fXcUZCoMaCay0IIuqa8dqGk+UgnVsF8=
 			</data>
 			<key>optional</key>
 			<true/>

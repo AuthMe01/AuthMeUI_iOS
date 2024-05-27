@@ -51,6 +51,7 @@ public protocol AuthMeAuthenticationDelegate : ObjectiveC.NSObjectProtocol {
   func authJPNIDCard(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: JPNIDCardResult?, error: (any Swift.Error)?)
   func authJPNIDCardNFC(_ result: JPNIDCardNFCResult?, error: (any Swift.Error)?)
   func authJPNDriverLicense(image: UIKit.UIImage?, result: JPNDriverLicenseResult?, error: (any Swift.Error)?)
+  func authJPNDriverLicenseNFC(_ result: JPNDriverLicenseNFCResult?, error: (any Swift.Error)?)
   func authJPNResidentCard(image: UIKit.UIImage?, result: JPNResidentCardResult?, error: (any Swift.Error)?)
   func authUSAIDCard(image: UIKit.UIImage?, result: USAIDCardResult?, error: (any Swift.Error)?)
   func authUSADriverLicense(image: UIKit.UIImage?, result: USADriverLicenseResult?, error: (any Swift.Error)?)
@@ -90,6 +91,7 @@ extension AuthMeUI.AuthMeAuthenticationDelegate {
   public func authJPNIDCard(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: JPNIDCardResult?, error: (any Swift.Error)?)
   public func authJPNIDCardNFC(_ result: JPNIDCardNFCResult?, error: (any Swift.Error)?)
   public func authJPNDriverLicense(image: UIKit.UIImage?, result: JPNDriverLicenseResult?, error: (any Swift.Error)?)
+  public func authJPNDriverLicenseNFC(_ result: JPNDriverLicenseNFCResult?, error: (any Swift.Error)?)
   public func authJPNResidentCard(image: UIKit.UIImage?, result: JPNResidentCardResult?, error: (any Swift.Error)?)
   public func authUSAIDCard(image: UIKit.UIImage?, result: USAIDCardResult?, error: (any Swift.Error)?)
   public func authUSADriverLicense(image: UIKit.UIImage?, result: USADriverLicenseResult?, error: (any Swift.Error)?)
@@ -158,6 +160,7 @@ public enum AuthmeFeature : Swift.String {
   case JPID
   case JPNFCID
   case JPDriverLicense
+  case JPNNFCDriverLicense
   case JPResidentCard
   case USID
   case USDriverLicense
