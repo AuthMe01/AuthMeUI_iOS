@@ -5138,7 +5138,7 @@
           {
             "kind": "Function",
             "name": "authMRZResultAndPlaceOfBirthConfirmed",
-            "printedName": "authMRZResultAndPlaceOfBirthConfirmed(result:comfirmed:error:)",
+            "printedName": "authMRZResultAndPlaceOfBirthConfirmed(result:confirmed:error:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5181,8 +5181,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:8AuthMeUI0aB22AuthenticationDelegatePAAE37authMRZResultAndPlaceOfBirthConfirmed6result9comfirmed5errory0aB00G0CSg_Sbs5Error_pSgtF",
-            "mangledName": "$s8AuthMeUI0aB22AuthenticationDelegatePAAE37authMRZResultAndPlaceOfBirthConfirmed6result9comfirmed5errory0aB00G0CSg_Sbs5Error_pSgtF",
+            "usr": "s:8AuthMeUI0aB22AuthenticationDelegatePAAE37authMRZResultAndPlaceOfBirthConfirmed6result9confirmed5errory0aB00G0CSg_Sbs5Error_pSgtF",
+            "mangledName": "$s8AuthMeUI0aB22AuthenticationDelegatePAAE37authMRZResultAndPlaceOfBirthConfirmed6result9confirmed5errory0aB00G0CSg_Sbs5Error_pSgtF",
             "moduleName": "AuthMeUI",
             "genericSig": "<τ_0_0 where τ_0_0 : AuthMeUI.AuthMeAuthenticationDelegate>",
             "sugared_genericSig": "<Self where Self : AuthMeUI.AuthMeAuthenticationDelegate>",
@@ -24606,98 +24606,98 @@
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/JPNDriverLicense\/JPNDriverLicenseNFCViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 17764,
+      "offset": 17762,
       "length": 3,
       "value": "0.3"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/JPNDriverLicense\/JPNDriverLicenseNFCViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 17900,
+      "offset": 17898,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/JPNDriverLicense\/JPNDriverLicenseNFCViewController.swift",
       "kind": "StringLiteral",
-      "offset": 18051,
+      "offset": 18049,
       "length": 9,
       "value": "\"#EBEBEB\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/JPNDriverLicense\/JPNDriverLicenseNFCViewController.swift",
       "kind": "StringLiteral",
-      "offset": 18112,
+      "offset": 18110,
       "length": 9,
       "value": "\"#EBEBEB\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/JPNDriverLicense\/JPNDriverLicenseNFCViewController.swift",
       "kind": "StringLiteral",
-      "offset": 18278,
+      "offset": 18276,
       "length": 8,
       "value": "\"[^0-9]\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/JPNDriverLicense\/JPNDriverLicenseNFCViewController.swift",
       "kind": "Array",
-      "offset": 18297,
+      "offset": 18295,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/JPNDriverLicense\/JPNDriverLicenseNFCViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 18343,
+      "offset": 18341,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/JPNDriverLicense\/JPNDriverLicenseNFCViewController.swift",
       "kind": "Array",
-      "offset": 18430,
+      "offset": 18428,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/JPNDriverLicense\/JPNDriverLicenseNFCViewController.swift",
       "kind": "StringLiteral",
-      "offset": 18491,
+      "offset": 18489,
       "length": 45,
       "value": "\"Error creating regular expression: \""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/JPNDriverLicense\/JPNDriverLicenseNFCViewController.swift",
       "kind": "StringLiteral",
-      "offset": 18535,
+      "offset": 18533,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/JPNDriverLicense\/JPNDriverLicenseNFCViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 18557,
+      "offset": 18555,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/JPNDriverLicense\/JPNDriverLicenseNFCViewController.swift",
       "kind": "StringLiteral",
-      "offset": 18638,
+      "offset": 18636,
       "length": 12,
       "value": "\"yyyy-MM-dd\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/JPNDriverLicense\/JPNDriverLicenseNFCViewController.swift",
       "kind": "StringLiteral",
-      "offset": 18708,
+      "offset": 18706,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/NFC\/JPNDriverLicense\/JPNDriverLicenseNFCViewController.swift",
       "kind": "StringLiteral",
-      "offset": 18932,
+      "offset": 18930,
       "length": 12,
       "value": "\"Asia\/Tokyo\""
     },

@@ -116,7 +116,7 @@ extension AuthMeUI.AuthMeAuthenticationDelegate {
   public func authNLDriverLicense(image: UIKit.UIImage?, result: NLDriverLicenseResult?, error: (any Swift.Error)?)
   public func authSGIDCard(image: UIKit.UIImage?, result: SGIDCardResult?, error: (any Swift.Error)?)
   public func authSGDriverLicense(image: UIKit.UIImage?, result: SGDriverLicenseResult?, error: (any Swift.Error)?)
-  public func authMRZResultAndPlaceOfBirthConfirmed(result: MRZResult?, comfirmed: Swift.Bool, error: (any Swift.Error)?)
+  public func authMRZResultAndPlaceOfBirthConfirmed(result: MRZResult?, confirmed: Swift.Bool, error: (any Swift.Error)?)
   public func personalPrivacyResult(result _: Swift.Bool)
   public func authenticateCompleted()
 }
