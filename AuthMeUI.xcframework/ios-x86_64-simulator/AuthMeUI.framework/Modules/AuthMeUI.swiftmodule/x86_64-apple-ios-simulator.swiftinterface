@@ -152,13 +152,13 @@ public enum AuthMeLocalize : Swift.String {
   }
 }
 public enum AuthmeFeature : Swift.String {
-  case IDCardFraud
-  case IDCard
+  case TWNIDCardFraud
+  case TWNIDCard
   case Passport
   case NFCPassport
-  case DriverLicense
-  case HealthCard
-  case ResidentCard
+  case TWNDriverLicense
+  case TWNHealthCard
+  case TWNResidentCard
   case JPNID
   case JPNNFCID
   case JPNDriverLicense
