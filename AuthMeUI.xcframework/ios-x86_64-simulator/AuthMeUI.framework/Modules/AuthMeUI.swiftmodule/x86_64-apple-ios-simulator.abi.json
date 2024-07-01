@@ -26048,7 +26048,7 @@
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 25840,
+      "offset": 25774,
       "length": 5,
       "value": "false"
     },
@@ -26062,133 +26062,133 @@
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewController.swift",
       "kind": "StringLiteral",
-      "offset": 28338,
+      "offset": 28272,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewController.swift",
       "kind": "StringLiteral",
-      "offset": 28504,
+      "offset": 28438,
       "length": 35,
       "value": "\"sdk.guard.verify.guide.idCardFlip\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewController.swift",
       "kind": "StringLiteral",
-      "offset": 28715,
+      "offset": 28649,
       "length": 6,
       "value": "\"Left\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewController.swift",
       "kind": "StringLiteral",
-      "offset": 28787,
+      "offset": 28721,
       "length": 7,
       "value": "\"Right\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewController.swift",
       "kind": "StringLiteral",
-      "offset": 28857,
+      "offset": 28791,
       "length": 4,
       "value": "\"Up\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewController.swift",
       "kind": "StringLiteral",
-      "offset": 28924,
+      "offset": 28858,
       "length": 6,
       "value": "\"Down\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewController.swift",
       "kind": "StringLiteral",
-      "offset": 29060,
+      "offset": 28994,
       "length": 35,
       "value": "\"sdk.guard.verify.guide.idCardFlip\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 29440,
+      "offset": 29374,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 29872,
+      "offset": 29806,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 30928,
+      "offset": 30862,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 31158,
+      "offset": 31092,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 31424,
+      "offset": 31358,
       "length": 3,
       "value": "123"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 31489,
+      "offset": 31423,
       "length": 2,
       "value": "87"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 31994,
+      "offset": 31928,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 33115,
+      "offset": 33049,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 33184,
+      "offset": 33118,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 33192,
+      "offset": 33126,
       "length": 4,
       "value": "-1.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 33301,
+      "offset": 33235,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 33325,
+      "offset": 33259,
       "length": 4,
       "value": "true"
     },
@@ -33447,644 +33447,644 @@
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "StringLiteral",
-      "offset": 3628,
+      "offset": 3692,
       "length": 36,
       "value": "\"sdk.general.verify.error.stagePass\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 4222,
+      "offset": 4335,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 4877,
+      "offset": 5063,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 5045,
+      "offset": 5231,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 5099,
+      "offset": 5285,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 5776,
+      "offset": 6029,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "FloatLiteral",
-      "offset": 7192,
+      "offset": 7512,
       "length": 3,
       "value": "6.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 7198,
+      "offset": 7518,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 7205,
+      "offset": 7525,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 8641,
+      "offset": 8961,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 8860,
+      "offset": 9180,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 9939,
+      "offset": 10259,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 10561,
+      "offset": 10863,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 11080,
+      "offset": 11408,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "FloatLiteral",
-      "offset": 12118,
+      "offset": 12528,
       "length": 3,
       "value": "3.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 12130,
+      "offset": 12540,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 12268,
+      "offset": 12678,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 12609,
+      "offset": 13072,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 12677,
+      "offset": 13144,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "StringLiteral",
-      "offset": 12840,
+      "offset": 13319,
       "length": 22,
       "value": "\"sdk.ocr.verify.clear\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "StringLiteral",
-      "offset": 12905,
+      "offset": 13388,
       "length": 22,
       "value": "\"sdk.ocr.verify.retry\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 13841,
+      "offset": 14388,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 14763,
+      "offset": 15392,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 14980,
+      "offset": 15609,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "StringLiteral",
-      "offset": 16544,
+      "offset": 17173,
       "length": 25,
       "value": "\"sdk.general.error.retry\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 16591,
+      "offset": 17220,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 19440,
+      "offset": 20069,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 20220,
+      "offset": 20849,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 20351,
+      "offset": 20980,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 20892,
+      "offset": 21521,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 20901,
+      "offset": 21530,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 21377,
+      "offset": 22006,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 21386,
+      "offset": 22015,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 22051,
+      "offset": 22680,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 22060,
+      "offset": 22689,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 22530,
+      "offset": 23159,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 22539,
+      "offset": 23168,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 24918,
+      "offset": 25547,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 24965,
+      "offset": 25594,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 25284,
+      "offset": 25913,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 25366,
+      "offset": 25995,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 25562,
+      "offset": 26191,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "StringLiteral",
-      "offset": 25881,
+      "offset": 26510,
       "length": 35,
       "value": "\"sdk.general.error.timeout.content\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 25938,
+      "offset": 26567,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 27941,
+      "offset": 28570,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 28016,
+      "offset": 28645,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "FloatLiteral",
-      "offset": 28422,
+      "offset": 29051,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29058,
+      "offset": 29687,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29063,
+      "offset": 29692,
       "length": 3,
       "value": "500"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29308,
+      "offset": 29937,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29312,
+      "offset": 29941,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29315,
+      "offset": 29944,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29318,
+      "offset": 29947,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29409,
+      "offset": 30038,
       "length": 3,
       "value": "-30"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29415,
+      "offset": 30044,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29418,
+      "offset": 30047,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29421,
+      "offset": 30050,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29535,
+      "offset": 30164,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29539,
+      "offset": 30168,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29542,
+      "offset": 30171,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29545,
+      "offset": 30174,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29636,
+      "offset": 30265,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29641,
+      "offset": 30270,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29644,
+      "offset": 30273,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29647,
+      "offset": 30276,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29758,
+      "offset": 30387,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29762,
+      "offset": 30391,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29765,
+      "offset": 30394,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29768,
+      "offset": 30397,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29859,
+      "offset": 30488,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29864,
+      "offset": 30493,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29867,
+      "offset": 30496,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29870,
+      "offset": 30499,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29983,
+      "offset": 30612,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29987,
+      "offset": 30616,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29990,
+      "offset": 30619,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 29993,
+      "offset": 30622,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 30084,
+      "offset": 30713,
       "length": 3,
       "value": "-30"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 30090,
+      "offset": 30719,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 30093,
+      "offset": 30722,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 30096,
+      "offset": 30725,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "StringLiteral",
-      "offset": 30179,
+      "offset": 30808,
       "length": 11,
       "value": "\"transform\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "Array",
-      "offset": 30389,
+      "offset": 31018,
       "length": 15,
       "value": "[0.0, 0.5, 1.0]"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "FloatLiteral",
-      "offset": 30442,
+      "offset": 31071,
       "length": 4,
       "value": "2.15"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 30497,
+      "offset": 31126,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 30590,
+      "offset": 31219,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "StringLiteral",
-      "offset": 30809,
+      "offset": 31438,
       "length": 19,
       "value": "\"rotationAnimation\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 30939,
+      "offset": 31568,
       "length": 3,
       "value": "180"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "FloatLiteral",
-      "offset": 31118,
+      "offset": 31747,
       "length": 3,
       "value": "0.2"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "FloatLiteral",
-      "offset": 31257,
+      "offset": 31886,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "IntegerLiteral",
-      "offset": 31754,
+      "offset": 32383,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanComponentableViewControllerExt.swift",
       "kind": "BooleanLiteral",
-      "offset": 31843,
+      "offset": 32472,
       "length": 5,
       "value": "false"
     },
