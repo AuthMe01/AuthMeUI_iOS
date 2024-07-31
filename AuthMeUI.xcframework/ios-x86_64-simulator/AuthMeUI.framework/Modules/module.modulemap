@@ -1,0 +1,11 @@
+framework module AuthMeUI {
+  umbrella header "AuthMeUI.h"
+  export *
+
+  module * { export * }
+}
+
+module AuthMeUI.Swift {
+  header "AuthMeUI-Swift.h"
+  requires objc
+}
