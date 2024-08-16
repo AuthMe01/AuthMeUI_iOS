@@ -1,7 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
-// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AuthMeUI
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name AuthMeUI
 import AVFoundation
 import AudioToolbox
 import AuthMe
@@ -9,7 +8,6 @@ import AuthMe
 import AuthmeNFCKit
 import CoreGraphics/*.CGFloat*/
 import CoreMotion
-import CoreNFC
 import CryptoKit
 import DeveloperToolsSupport
 import Foundation
@@ -19,6 +17,7 @@ import Swift
 import SwiftUI
 import UIKit
 import _Concurrency
+import _CoreNFC_UIKit
 import _StringProcessing
 import _SwiftConcurrencyShims
 public class AuthMeAccessToken {
@@ -42,40 +41,40 @@ public protocol AuthMeAuthenticationDelegate : ObjectiveC.NSObjectProtocol {
   func authmeLivenessViewController(_ viewController: AuthMeUI.AuthMeLivenessViewController, didRecognize result: AuthMeUI.AuthMeLivenessViewController.LivenessResult)
   func authmeLivenessViewController(didRecognize result: AuthMeUI.AuthMeLivenessViewController.LivenessResult)
   func authmeLivenessViewController(_ viewController: AuthMeUI.AuthMeLivenessViewController, didFinishVerifyWith result: AuthMeUI.AuthMeLivenessViewController.LivenessResult, isVerifyPass: Swift.Bool)
-  func authTWIDFraudResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWIDResult?, error: (any Swift.Error)?)
-  func authTWIDResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWIDResult?, error: (any Swift.Error)?)
-  func authTWLicenseResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWLicenseResult?, error: (any Swift.Error)?)
-  func authTWHealthResult(image: UIKit.UIImage?, result: TWHealthResult?, error: (any Swift.Error)?)
-  func authMRZResult(result: MRZResult?, error: (any Swift.Error)?)
-  func authTWNResident(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWNResidentResult?, error: (any Swift.Error)?)
-  func authJPNIDCard(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: JPNIDCardResult?, error: (any Swift.Error)?)
-  func authJPNIDCardNFC(_ result: JPNIDCardNFCResult?, error: (any Swift.Error)?)
-  func authJPNDriverLicense(image: UIKit.UIImage?, result: JPNDriverLicenseResult?, error: (any Swift.Error)?)
-  func authJPNDriverLicenseNFC(_ result: JPNDriverLicenseNFCResult?, error: (any Swift.Error)?)
-  func authJPNResidentCard(image: UIKit.UIImage?, result: JPNResidentCardResult?, error: (any Swift.Error)?)
-  func authJPNResidentCardNFC(cardImage: UIKit.UIImage?, result: JPNResidentCardNFCResult?, error: (any Swift.Error)?)
-  func authUSAIDCard(image: UIKit.UIImage?, result: USAIDCardResult?, error: (any Swift.Error)?)
-  func authUSADriverLicense(image: UIKit.UIImage?, result: USADriverLicenseResult?, error: (any Swift.Error)?)
-  func authUSAVisitorVISA(image: UIKit.UIImage?, result: USAVisitorVISAResult?, error: (any Swift.Error)?)
-  func authIDNIDCard(image: UIKit.UIImage?, result: IDNIDCardResult?, error: (any Swift.Error)?)
-  func authIDNDriverLicense(image: UIKit.UIImage?, result: IDNDriverLicenseResult?, error: (any Swift.Error)?)
-  func authINDIDCard(image: UIKit.UIImage?, result: INDIDCardResult?, error: (any Swift.Error)?)
-  func authINDDriverLicense(image: UIKit.UIImage?, result: INDDriverLicenseResult?, error: (any Swift.Error)?)
-  func authMYIDCard(image: UIKit.UIImage?, result: MYIDCardResult?, error: (any Swift.Error)?)
-  func authMYDriverLicense(image: UIKit.UIImage?, result: MYDriverLicenseResult?, error: (any Swift.Error)?)
-  func authHKIDCard(image: UIKit.UIImage?, result: HKIDCardResult?, error: (any Swift.Error)?)
-  func authHKDriverLicense(image: UIKit.UIImage?, result: HKDriverLicenseResult?, error: (any Swift.Error)?)
-  func authUKIDCard(image: UIKit.UIImage?, result: UKIDCardResult?, error: (any Swift.Error)?)
-  func authUKDriverLicense(image: UIKit.UIImage?, result: UKDriverLicenseResult?, error: (any Swift.Error)?)
-  func authEGIDCard(image: UIKit.UIImage?, result: EGIDCardResult?, error: (any Swift.Error)?)
-  func authEGDriverLicense(image: UIKit.UIImage?, result: EGDriverLicenseResult?, error: (any Swift.Error)?)
-  func authSAIDCard(image: UIKit.UIImage?, result: SAIDCardResult?, error: (any Swift.Error)?)
-  func authSADriverLicense(image: UIKit.UIImage?, result: SADriverLicenseResult?, error: (any Swift.Error)?)
-  func authNLIDCard(image: UIKit.UIImage?, result: NLIDCardResult?, error: (any Swift.Error)?)
-  func authNLDriverLicense(image: UIKit.UIImage?, result: NLDriverLicenseResult?, error: (any Swift.Error)?)
-  func authSGIDCard(image: UIKit.UIImage?, result: SGIDCardResult?, error: (any Swift.Error)?)
-  func authSGDriverLicense(image: UIKit.UIImage?, result: SGDriverLicenseResult?, error: (any Swift.Error)?)
-  func authMRZResultAndPlaceOfBirthConfirmed(result: MRZResult?, confirmed: Swift.Bool, error: (any Swift.Error)?)
+  func authTWIDFraudResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: AuthMe.TWIDResult?, error: (any Swift.Error)?)
+  func authTWIDResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: AuthMe.TWIDResult?, error: (any Swift.Error)?)
+  func authTWLicenseResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: AuthMe.TWLicenseResult?, error: (any Swift.Error)?)
+  func authTWHealthResult(image: UIKit.UIImage?, result: AuthMe.TWHealthResult?, error: (any Swift.Error)?)
+  func authMRZResult(result: AuthMe.MRZResult?, error: (any Swift.Error)?)
+  func authTWNResident(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: AuthMe.TWNResidentResult?, error: (any Swift.Error)?)
+  func authJPNIDCard(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: AuthMe.JPNIDCardResult?, error: (any Swift.Error)?)
+  func authJPNIDCardNFC(_ result: AuthMe.JPNIDCardNFCResult?, error: (any Swift.Error)?)
+  func authJPNDriverLicense(image: UIKit.UIImage?, result: AuthMe.JPNDriverLicenseResult?, error: (any Swift.Error)?)
+  func authJPNDriverLicenseNFC(_ result: AuthMe.JPNDriverLicenseNFCResult?, error: (any Swift.Error)?)
+  func authJPNResidentCard(image: UIKit.UIImage?, result: AuthMe.JPNResidentCardResult?, error: (any Swift.Error)?)
+  func authJPNResidentCardNFC(cardImage: UIKit.UIImage?, result: AuthMe.JPNResidentCardNFCResult?, error: (any Swift.Error)?)
+  func authUSAIDCard(image: UIKit.UIImage?, result: AuthMe.USAIDCardResult?, error: (any Swift.Error)?)
+  func authUSADriverLicense(image: UIKit.UIImage?, result: AuthMe.USADriverLicenseResult?, error: (any Swift.Error)?)
+  func authUSAVisitorVISA(image: UIKit.UIImage?, result: AuthMe.USAVisitorVISAResult?, error: (any Swift.Error)?)
+  func authIDNIDCard(image: UIKit.UIImage?, result: AuthMe.IDNIDCardResult?, error: (any Swift.Error)?)
+  func authIDNDriverLicense(image: UIKit.UIImage?, result: AuthMe.IDNDriverLicenseResult?, error: (any Swift.Error)?)
+  func authINDIDCard(image: UIKit.UIImage?, result: AuthMe.INDIDCardResult?, error: (any Swift.Error)?)
+  func authINDDriverLicense(image: UIKit.UIImage?, result: AuthMe.INDDriverLicenseResult?, error: (any Swift.Error)?)
+  func authMYIDCard(image: UIKit.UIImage?, result: AuthMe.MYIDCardResult?, error: (any Swift.Error)?)
+  func authMYDriverLicense(image: UIKit.UIImage?, result: AuthMe.MYDriverLicenseResult?, error: (any Swift.Error)?)
+  func authHKIDCard(image: UIKit.UIImage?, result: AuthMe.HKIDCardResult?, error: (any Swift.Error)?)
+  func authHKDriverLicense(image: UIKit.UIImage?, result: AuthMe.HKDriverLicenseResult?, error: (any Swift.Error)?)
+  func authUKIDCard(image: UIKit.UIImage?, result: AuthMe.UKIDCardResult?, error: (any Swift.Error)?)
+  func authUKDriverLicense(image: UIKit.UIImage?, result: AuthMe.UKDriverLicenseResult?, error: (any Swift.Error)?)
+  func authEGIDCard(image: UIKit.UIImage?, result: AuthMe.EGIDCardResult?, error: (any Swift.Error)?)
+  func authEGDriverLicense(image: UIKit.UIImage?, result: AuthMe.EGDriverLicenseResult?, error: (any Swift.Error)?)
+  func authSAIDCard(image: UIKit.UIImage?, result: AuthMe.SAIDCardResult?, error: (any Swift.Error)?)
+  func authSADriverLicense(image: UIKit.UIImage?, result: AuthMe.SADriverLicenseResult?, error: (any Swift.Error)?)
+  func authNLIDCard(image: UIKit.UIImage?, result: AuthMe.NLIDCardResult?, error: (any Swift.Error)?)
+  func authNLDriverLicense(image: UIKit.UIImage?, result: AuthMe.NLDriverLicenseResult?, error: (any Swift.Error)?)
+  func authSGIDCard(image: UIKit.UIImage?, result: AuthMe.SGIDCardResult?, error: (any Swift.Error)?)
+  func authSGDriverLicense(image: UIKit.UIImage?, result: AuthMe.SGDriverLicenseResult?, error: (any Swift.Error)?)
+  func authMRZResultAndPlaceOfBirthConfirmed(result: AuthMe.MRZResult?, confirmed: Swift.Bool, error: (any Swift.Error)?)
   func personalPrivacyResult(result: Swift.Bool)
   func authenticateCompleted()
 }
@@ -83,40 +82,40 @@ extension AuthMeUI.AuthMeAuthenticationDelegate {
   public func authmeLivenessViewController(_ viewController: AuthMeUI.AuthMeLivenessViewController, didRecognize result: AuthMeUI.AuthMeLivenessViewController.LivenessResult)
   public func authmeLivenessViewController(didRecognize result: AuthMeUI.AuthMeLivenessViewController.LivenessResult)
   public func authmeLivenessViewController(_ viewController: AuthMeUI.AuthMeLivenessViewController, didFinishVerifyWith result: AuthMeUI.AuthMeLivenessViewController.LivenessResult, isVerifyPass: Swift.Bool)
-  public func authTWIDFraudResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWIDResult?, error: (any Swift.Error)?)
-  public func authTWIDResult(frontImage _: UIKit.UIImage?, backImage _: UIKit.UIImage?, result _: TWIDResult?, error _: (any Swift.Error)?)
-  public func authTWLicenseResult(frontImage _: UIKit.UIImage?, backImage _: UIKit.UIImage?, result _: TWLicenseResult?, error _: (any Swift.Error)?)
-  public func authTWHealthResult(image _: UIKit.UIImage?, result _: TWHealthResult?, error _: (any Swift.Error)?)
-  public func authMRZResult(result _: MRZResult?, error _: (any Swift.Error)?)
-  public func authTWNResident(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWNResidentResult?, error: (any Swift.Error)?)
-  public func authJPNIDCard(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: JPNIDCardResult?, error: (any Swift.Error)?)
-  public func authJPNIDCardNFC(_ result: JPNIDCardNFCResult?, error: (any Swift.Error)?)
-  public func authJPNDriverLicense(image: UIKit.UIImage?, result: JPNDriverLicenseResult?, error: (any Swift.Error)?)
-  public func authJPNDriverLicenseNFC(_ result: JPNDriverLicenseNFCResult?, error: (any Swift.Error)?)
-  public func authJPNResidentCard(image: UIKit.UIImage?, result: JPNResidentCardResult?, error: (any Swift.Error)?)
-  public func authJPNResidentCardNFC(cardImage: UIKit.UIImage?, result: JPNResidentCardNFCResult?, error: (any Swift.Error)?)
-  public func authUSAIDCard(image: UIKit.UIImage?, result: USAIDCardResult?, error: (any Swift.Error)?)
-  public func authUSADriverLicense(image: UIKit.UIImage?, result: USADriverLicenseResult?, error: (any Swift.Error)?)
-  public func authUSAVisitorVISA(image: UIKit.UIImage?, result: USAVisitorVISAResult?, error: (any Swift.Error)?)
-  public func authIDNIDCard(image: UIKit.UIImage?, result: IDNIDCardResult?, error: (any Swift.Error)?)
-  public func authIDNDriverLicense(image: UIKit.UIImage?, result: IDNDriverLicenseResult?, error: (any Swift.Error)?)
-  public func authINDIDCard(image: UIKit.UIImage?, result: INDIDCardResult?, error: (any Swift.Error)?)
-  public func authINDDriverLicense(image: UIKit.UIImage?, result: INDDriverLicenseResult?, error: (any Swift.Error)?)
-  public func authMYIDCard(image: UIKit.UIImage?, result: MYIDCardResult?, error: (any Swift.Error)?)
-  public func authMYDriverLicense(image: UIKit.UIImage?, result: MYDriverLicenseResult?, error: (any Swift.Error)?)
-  public func authHKIDCard(image: UIKit.UIImage?, result: HKIDCardResult?, error: (any Swift.Error)?)
-  public func authHKDriverLicense(image: UIKit.UIImage?, result: HKDriverLicenseResult?, error: (any Swift.Error)?)
-  public func authUKIDCard(image: UIKit.UIImage?, result: UKIDCardResult?, error: (any Swift.Error)?)
-  public func authUKDriverLicense(image: UIKit.UIImage?, result: UKDriverLicenseResult?, error: (any Swift.Error)?)
-  public func authEGIDCard(image: UIKit.UIImage?, result: EGIDCardResult?, error: (any Swift.Error)?)
-  public func authEGDriverLicense(image: UIKit.UIImage?, result: EGDriverLicenseResult?, error: (any Swift.Error)?)
-  public func authSAIDCard(image: UIKit.UIImage?, result: SAIDCardResult?, error: (any Swift.Error)?)
-  public func authSADriverLicense(image: UIKit.UIImage?, result: SADriverLicenseResult?, error: (any Swift.Error)?)
-  public func authNLIDCard(image: UIKit.UIImage?, result: NLIDCardResult?, error: (any Swift.Error)?)
-  public func authNLDriverLicense(image: UIKit.UIImage?, result: NLDriverLicenseResult?, error: (any Swift.Error)?)
-  public func authSGIDCard(image: UIKit.UIImage?, result: SGIDCardResult?, error: (any Swift.Error)?)
-  public func authSGDriverLicense(image: UIKit.UIImage?, result: SGDriverLicenseResult?, error: (any Swift.Error)?)
-  public func authMRZResultAndPlaceOfBirthConfirmed(result: MRZResult?, confirmed: Swift.Bool, error: (any Swift.Error)?)
+  public func authTWIDFraudResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: AuthMe.TWIDResult?, error: (any Swift.Error)?)
+  public func authTWIDResult(frontImage _: UIKit.UIImage?, backImage _: UIKit.UIImage?, result _: AuthMe.TWIDResult?, error _: (any Swift.Error)?)
+  public func authTWLicenseResult(frontImage _: UIKit.UIImage?, backImage _: UIKit.UIImage?, result _: AuthMe.TWLicenseResult?, error _: (any Swift.Error)?)
+  public func authTWHealthResult(image _: UIKit.UIImage?, result _: AuthMe.TWHealthResult?, error _: (any Swift.Error)?)
+  public func authMRZResult(result _: AuthMe.MRZResult?, error _: (any Swift.Error)?)
+  public func authTWNResident(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: AuthMe.TWNResidentResult?, error: (any Swift.Error)?)
+  public func authJPNIDCard(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: AuthMe.JPNIDCardResult?, error: (any Swift.Error)?)
+  public func authJPNIDCardNFC(_ result: AuthMe.JPNIDCardNFCResult?, error: (any Swift.Error)?)
+  public func authJPNDriverLicense(image: UIKit.UIImage?, result: AuthMe.JPNDriverLicenseResult?, error: (any Swift.Error)?)
+  public func authJPNDriverLicenseNFC(_ result: AuthMe.JPNDriverLicenseNFCResult?, error: (any Swift.Error)?)
+  public func authJPNResidentCard(image: UIKit.UIImage?, result: AuthMe.JPNResidentCardResult?, error: (any Swift.Error)?)
+  public func authJPNResidentCardNFC(cardImage: UIKit.UIImage?, result: AuthMe.JPNResidentCardNFCResult?, error: (any Swift.Error)?)
+  public func authUSAIDCard(image: UIKit.UIImage?, result: AuthMe.USAIDCardResult?, error: (any Swift.Error)?)
+  public func authUSADriverLicense(image: UIKit.UIImage?, result: AuthMe.USADriverLicenseResult?, error: (any Swift.Error)?)
+  public func authUSAVisitorVISA(image: UIKit.UIImage?, result: AuthMe.USAVisitorVISAResult?, error: (any Swift.Error)?)
+  public func authIDNIDCard(image: UIKit.UIImage?, result: AuthMe.IDNIDCardResult?, error: (any Swift.Error)?)
+  public func authIDNDriverLicense(image: UIKit.UIImage?, result: AuthMe.IDNDriverLicenseResult?, error: (any Swift.Error)?)
+  public func authINDIDCard(image: UIKit.UIImage?, result: AuthMe.INDIDCardResult?, error: (any Swift.Error)?)
+  public func authINDDriverLicense(image: UIKit.UIImage?, result: AuthMe.INDDriverLicenseResult?, error: (any Swift.Error)?)
+  public func authMYIDCard(image: UIKit.UIImage?, result: AuthMe.MYIDCardResult?, error: (any Swift.Error)?)
+  public func authMYDriverLicense(image: UIKit.UIImage?, result: AuthMe.MYDriverLicenseResult?, error: (any Swift.Error)?)
+  public func authHKIDCard(image: UIKit.UIImage?, result: AuthMe.HKIDCardResult?, error: (any Swift.Error)?)
+  public func authHKDriverLicense(image: UIKit.UIImage?, result: AuthMe.HKDriverLicenseResult?, error: (any Swift.Error)?)
+  public func authUKIDCard(image: UIKit.UIImage?, result: AuthMe.UKIDCardResult?, error: (any Swift.Error)?)
+  public func authUKDriverLicense(image: UIKit.UIImage?, result: AuthMe.UKDriverLicenseResult?, error: (any Swift.Error)?)
+  public func authEGIDCard(image: UIKit.UIImage?, result: AuthMe.EGIDCardResult?, error: (any Swift.Error)?)
+  public func authEGDriverLicense(image: UIKit.UIImage?, result: AuthMe.EGDriverLicenseResult?, error: (any Swift.Error)?)
+  public func authSAIDCard(image: UIKit.UIImage?, result: AuthMe.SAIDCardResult?, error: (any Swift.Error)?)
+  public func authSADriverLicense(image: UIKit.UIImage?, result: AuthMe.SADriverLicenseResult?, error: (any Swift.Error)?)
+  public func authNLIDCard(image: UIKit.UIImage?, result: AuthMe.NLIDCardResult?, error: (any Swift.Error)?)
+  public func authNLDriverLicense(image: UIKit.UIImage?, result: AuthMe.NLDriverLicenseResult?, error: (any Swift.Error)?)
+  public func authSGIDCard(image: UIKit.UIImage?, result: AuthMe.SGIDCardResult?, error: (any Swift.Error)?)
+  public func authSGDriverLicense(image: UIKit.UIImage?, result: AuthMe.SGDriverLicenseResult?, error: (any Swift.Error)?)
+  public func authMRZResultAndPlaceOfBirthConfirmed(result: AuthMe.MRZResult?, confirmed: Swift.Bool, error: (any Swift.Error)?)
   public func personalPrivacyResult(result _: Swift.Bool)
   public func authenticateCompleted()
 }
@@ -124,7 +123,7 @@ public protocol AuthMePlaygroundDelegate : ObjectiveC.NSObjectProtocol {
   func authmeLivenessViewControllerDidRecognize(result: AuthMeUI.AuthMeLivenessViewController.LivenessResult)
 }
 public protocol AuthMeNFCDelegate : ObjectiveC.NSObjectProtocol {
-  func authmeNFCDidRecognize(result: MRZResult?, error: (any Swift.Error)?)
+  func authmeNFCDidRecognize(result: AuthMe.MRZResult?, error: (any Swift.Error)?)
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AuthMeManager : ObjectiveC.NSObject {
   @objc deinit
@@ -199,10 +198,10 @@ public protocol AuthMeUICoordinatorDelegate : AnyObject {
   func coordinatorDidFinishScanWithErrorSetting()
   func coordinatorDidFinishScan()
 }
-final public class AuthMeUICoordinator<T> where T : FrameworkMode {
+final public class AuthMeUICoordinator<T> where T : AuthMe.FrameworkMode {
   weak final public var authDelegate: (any AuthMeUI.AuthMeAuthenticationDelegate)?
   weak final public var delegate: (any AuthMeUI.AuthMeUICoordinatorDelegate)?
-  public init(presenter: UIKit.UIViewController, flows: [[any EKYCType]])
+  public init(presenter: UIKit.UIViewController, flows: [[any AuthMe.EKYCType]])
   @objc deinit
 }
 extension AuthMeUI.AuthMeLivenessViewController : AVFoundation.AVCaptureDataOutputSynchronizerDelegate {
@@ -224,23 +223,23 @@ extension AuthMeUI.AuthMeLivenessViewController {
     case canceled
   }
 }
-extension AuthMeUI.AuthMeLivenessViewController : LivenessFlowDelegate {
+extension AuthMeUI.AuthMeLivenessViewController : AuthMe.LivenessFlowDelegate {
   @_Concurrency.MainActor(unsafe) public func livenessDidStart()
-  @_Concurrency.MainActor(unsafe) public func livenessDidNotifyMessage(status: LivenessDetectStatus)
+  @_Concurrency.MainActor(unsafe) public func livenessDidNotifyMessage(status: AuthMe.LivenessDetectStatus)
   @_Concurrency.MainActor(unsafe) public func livenessDidUpdateReconize(result: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) public func livenessDidFailureWith(error: FlowError, retryHandler: @escaping (() -> Swift.Void))
+  @_Concurrency.MainActor(unsafe) public func livenessDidFailureWith(error: AuthMe.FlowError, retryHandler: @escaping (() -> Swift.Void))
   @_Concurrency.MainActor(unsafe) public func livenessDidRecognize(image: UIKit.UIImage)
-  @_Concurrency.MainActor(unsafe) public func livenessDidFaceScale(direction: LivenessFlow.FaceScaleDirection.Direction)
-  @_Concurrency.MainActor(unsafe) public func livenessNotifyStage(log: LogFAS)
-  @_Concurrency.MainActor(unsafe) public func livenessNotifyUpload(log: LogUpload)
+  @_Concurrency.MainActor(unsafe) public func livenessDidFaceScale(direction: AuthMe.LivenessFlow.FaceScaleDirection.Direction)
+  @_Concurrency.MainActor(unsafe) public func livenessNotifyStage(log: AuthMe.LogFAS)
+  @_Concurrency.MainActor(unsafe) public func livenessNotifyUpload(log: AuthMe.LogUpload)
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AuthMeLivenessViewController : AuthMeUI.BaseViewController {
   @_Concurrency.MainActor(unsafe) weak public var delegate: (any AuthMeUI.AuthMeAuthenticationDelegate)?
   @_Concurrency.MainActor(unsafe) public var uiParams: AuthMeUI.AuthMeLivenessUIParams?
   @_Concurrency.MainActor(unsafe) public var isInfoPageEnabled: Swift.Bool
-  @_Concurrency.MainActor(unsafe) final public let action: Action
+  @_Concurrency.MainActor(unsafe) final public let action: AuthMe.Action
   @_Concurrency.MainActor(unsafe) public var eventTrackingEnable: Swift.Bool
-  @_Concurrency.MainActor(unsafe) public init(action: Action = .register(waitResult: true))
+  @_Concurrency.MainActor(unsafe) public init(action: AuthMe.Action = .register(waitResult: true))
   @_Concurrency.MainActor(unsafe) @objc override dynamic public var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
     @objc get
   }
@@ -283,13 +282,11 @@ extension AuthMeUI.AuthmeFeatureConfig {
   final public func isFraudHintAnimationEnable(_ isFraudHintAnimationEnable: Swift.Bool) -> Self
   @discardableResult
   final public func isNFCOffline(_ isNFCOffline: Swift.Bool) -> Self
-  @discardableResult
-  final public func isAutoDetectThicknessEnable(_ isAutoDetectThicknessEnable: Swift.Bool) -> Self
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class LivenessPlaygroundViewController : AuthMeUI.BaseViewController, AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
   @_Concurrency.MainActor(unsafe) weak public var delegate: (any AuthMeUI.AuthMePlaygroundDelegate)?
   @_Concurrency.MainActor(unsafe) @objc dynamic public init()
-  @_Concurrency.MainActor(unsafe) public func checkModel(progressHandler: ((Swift.Double) -> Swift.Void)? = nil, handler: ((Swift.Result<Swift.Void, FlowError>) -> Swift.Void)?)
+  @_Concurrency.MainActor(unsafe) public func checkModel(progressHandler: ((Swift.Double) -> Swift.Void)? = nil, handler: ((Swift.Result<Swift.Void, AuthMe.FlowError>) -> Swift.Void)?)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
     @objc get
   }
@@ -303,16 +300,16 @@ extension AuthMeUI.AuthmeFeatureConfig {
 extension AuthMeUI.LivenessPlaygroundViewController : AVFoundation.AVCaptureDataOutputSynchronizerDelegate {
   @_Concurrency.MainActor(unsafe) @objc dynamic public func dataOutputSynchronizer(_ synchronizer: AVFoundation.AVCaptureDataOutputSynchronizer, didOutput synchronizedDataCollection: AVFoundation.AVCaptureSynchronizedDataCollection)
 }
-extension AuthMeUI.LivenessPlaygroundViewController : LivenessPlaygroundFlowDelegate {
+extension AuthMeUI.LivenessPlaygroundViewController : AuthMe.LivenessPlaygroundFlowDelegate {
   @_Concurrency.MainActor(unsafe) public func livenessDidStart()
-  @_Concurrency.MainActor(unsafe) public func livenessDidNotifyMessage(status: LivenessDetectStatus)
+  @_Concurrency.MainActor(unsafe) public func livenessDidNotifyMessage(status: AuthMe.LivenessDetectStatus)
   @_Concurrency.MainActor(unsafe) public func livenessDidUpdateReconize(result: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) public func livenessDidFailureWith(error: FlowError, retryHandler: @escaping (() -> Swift.Void))
+  @_Concurrency.MainActor(unsafe) public func livenessDidFailureWith(error: AuthMe.FlowError, retryHandler: @escaping (() -> Swift.Void))
   @_Concurrency.MainActor(unsafe) public func livenessDidRecognize(image: UIKit.UIImage)
   @_Concurrency.MainActor(unsafe) public func livenessQueueDidUpload(currentCount: Swift.Int)
-  @_Concurrency.MainActor(unsafe) public func livenessDidFaceScale(direction: LivenessFlow.FaceScaleDirection.Direction)
-  @_Concurrency.MainActor(unsafe) public func livenessNotifyStage(log: LogFAS)
-  @_Concurrency.MainActor(unsafe) public func livenessNotifyUpload(log: LogUpload)
+  @_Concurrency.MainActor(unsafe) public func livenessDidFaceScale(direction: AuthMe.LivenessFlow.FaceScaleDirection.Direction)
+  @_Concurrency.MainActor(unsafe) public func livenessNotifyStage(log: AuthMe.LogFAS)
+  @_Concurrency.MainActor(unsafe) public func livenessNotifyUpload(log: AuthMe.LogUpload)
 }
 extension AuthMeUI.LivenessPlaygroundViewController {
   public enum LivenessResult {
@@ -418,7 +415,7 @@ extension AuthMeUI.AuthmeKYCConfig {
   @discardableResult
   final public func isUploadFullFrameEnabaled(_ enabled: Swift.Bool) -> Self
 }
-extension AuthMeUI.AuthMeUICoordinator where T == OfflineMode {
+extension AuthMeUI.AuthMeUICoordinator where T == AuthMe.OfflineMode {
   final public func start(with transitionStyle: AuthMeUI.TransitionStyle, animated: Swift.Bool)
 }
 extension AuthMeUI.AuthMeLocalize : Swift.Equatable {}
