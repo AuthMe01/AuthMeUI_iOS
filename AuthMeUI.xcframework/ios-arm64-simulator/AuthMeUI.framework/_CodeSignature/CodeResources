@@ -86,7 +86,7 @@
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		qhPryHks7BkKTunACJtVKDPqvsg=
+		28NSqWC5r2Mg3myVw2ERV92Xmbs=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -102,7 +102,7 @@
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		FE0VFCXHgnDloFxHLay2twDXjks=
+		yqnNfBa6RSJt//aHr0ZqEoJNSyc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -144,37 +144,9 @@
 		<data>
 		a5b3ugzf3xnqdMDvHoKTWQwpzo4=
 		</data>
-		<key>arrow_down.json</key>
-		<data>
-		K7MhOL6O91vIMFXvf+yp4bbIjLo=
-		</data>
-		<key>arrow_left.json</key>
-		<data>
-		wp6x7bGWMKhuHHOeHnU4C6l7xHQ=
-		</data>
-		<key>arrow_right.json</key>
-		<data>
-		uwj9S76POEBOhMgG2z0P40F0wj0=
-		</data>
-		<key>arrow_up.json</key>
-		<data>
-		GnlsFVhVhxjJnfwddoeg7XGQ/Xg=
-		</data>
-		<key>circle_554_554.json</key>
-		<data>
-		XbPxDqZRkeXibjffB99oJNhTOPE=
-		</data>
-		<key>circle_large_to_sm.json</key>
-		<data>
-		cXoeD9qDT6EjtY2hKWLMonzMgJA=
-		</data>
 		<key>circle_large_to_sm_80.json</key>
 		<data>
 		YC/Gjqiztl8mdAnw4Dwgcyb+C9g=
-		</data>
-		<key>circle_sm_to_large.json</key>
-		<data>
-		4Sb7pAvMyW0VV/l6gh4kvaJ/oB0=
 		</data>
 		<key>circle_sm_to_large_80.json</key>
 		<data>
@@ -198,49 +170,13 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>large_circle_green.json</key>
-		<data>
-		4a/jQXQKrZNJTBNsO19GQEFP1s8=
-		</data>
-		<key>large_circle_red.json</key>
-		<data>
-		jMizNCC34nC8qMrJLwgT2O0bxAg=
-		</data>
-		<key>large_to_small_circle.json</key>
-		<data>
-		ZFB81CQuTgi2vVfRvXzmXbANEWQ=
-		</data>
-		<key>liveness_circle.json</key>
-		<data>
-		YEMpUGieLv+GoaeD817jFdij0gA=
-		</data>
 		<key>loading_indicator.json</key>
 		<data>
 		q7Jb9vq2M8t0lGojZooGXBGhG0s=
 		</data>
-		<key>onlycircle.json</key>
-		<data>
-		Ug7w5ja+7jF1cowRsMEVhCgYcTY=
-		</data>
 		<key>scan_line.json</key>
 		<data>
 		/7wS4TP6bKpiY9kmrbBupOuEutU=
-		</data>
-		<key>small_circle.json</key>
-		<data>
-		aBODFCySK/JCrzdRaN7DOYkGywM=
-		</data>
-		<key>small_circle_green.json</key>
-		<data>
-		RWwPqyCINqNVwv4f09PrzrdOBHY=
-		</data>
-		<key>small_circle_red.json</key>
-		<data>
-		lPiyurh41pRANl6zzBa2L9xxPlk=
-		</data>
-		<key>small_to_large_circle.json</key>
-		<data>
-		jKMmj26rVZwVh0EIRVdWSiOGQLU=
 		</data>
 		<key>step01.json</key>
 		<data>
@@ -395,7 +331,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rH8/9eqkvd9VKMpIgdggP8fXZsK0O03Knmwrrqkg+s8=
+			H//hb3A7/Tp5DmrJHUDEP4EOE1mYTgFc7clwDbOyX5w=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -423,7 +359,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pgP6JJvMS/wYN5q68UfthCc3by3KsMqSx1veeZoStJ8=
+			2+nW4ct0IBXnfzx3SHXoLTA37m7ArZSrvqP4O9yIHoI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -496,60 +432,11 @@
 			6AuQab4bMsx6hbE8FYnQnZGjxyaq+CoZeybSBZkEw8c=
 			</data>
 		</dict>
-		<key>arrow_down.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			dHyhkcASs3Ogd4X0O2U7SUnS/m9Io1+zEtgeelqJ25g=
-			</data>
-		</dict>
-		<key>arrow_left.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Uk0d3rEJUMcJXNo68boftJ2AWlD+e1TuWy4gWEIMIms=
-			</data>
-		</dict>
-		<key>arrow_right.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			nrUuTOkUBmEbv/2BhIG0YGaGX6eof860Y001b5B68Hw=
-			</data>
-		</dict>
-		<key>arrow_up.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			UXGKPQR+lygEUu51qnmUTcseC1DeRpVwWGVVcxAG0PU=
-			</data>
-		</dict>
-		<key>circle_554_554.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			fJYV61ZEdVNlAGhnL/dPk+eG5Z+++liRC3BHl+bJhsY=
-			</data>
-		</dict>
-		<key>circle_large_to_sm.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ImMuntoTPnDTPVipQcHMw1XW9Yk2mIWrWowk0C652gI=
-			</data>
-		</dict>
 		<key>circle_large_to_sm_80.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			lHXg2MuRpkMOAOSDREQvQNS0aftBaGG8gI1HpYpfsFw=
-			</data>
-		</dict>
-		<key>circle_sm_to_large.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			fJfeRVYjzI5tCIY2kkHWUZlEpAAsM9osU/LiGl3xXBY=
 			</data>
 		</dict>
 		<key>circle_sm_to_large_80.json</key>
@@ -577,34 +464,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>large_circle_green.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			1HrH1RR93MfLLT7Gfjkw+/644R/9Dn04Md/k/fR+rWs=
-			</data>
-		</dict>
-		<key>large_circle_red.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			JkqQjAMp2lN+yEF2/VGXzUxQG0QBNA/B6JbWJcwCYlM=
-			</data>
-		</dict>
-		<key>large_to_small_circle.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			IwB9Q9eB28h5Ve9qAMRKm/4XIJ9KdZfoWlNdDX2JNSQ=
-			</data>
-		</dict>
-		<key>liveness_circle.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			cEnLlKU4IggJwLviFMianyA5HrmzH02h7vmoVjMsE/E=
-			</data>
-		</dict>
 		<key>loading_indicator.json</key>
 		<dict>
 			<key>hash2</key>
@@ -612,46 +471,11 @@
 			LkYkoLPhlWsBOo6LVvAm4CQEVb2WU7TItfDuecwVNfw=
 			</data>
 		</dict>
-		<key>onlycircle.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			WoP7pYw3VIQlAYdfOKglX+tTRHGcqS31b5XRZOcmTbQ=
-			</data>
-		</dict>
 		<key>scan_line.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			skXMSIMmrBe7cpgzcjFzR+sNiJO1L36qhU/eVsryzwU=
-			</data>
-		</dict>
-		<key>small_circle.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Fgr/SQIM4JrqK40MGJaBO0Ku88Ri6ag0h8WygrmP1Nc=
-			</data>
-		</dict>
-		<key>small_circle_green.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			MKzqDzjwst1DC/5Hu1inZSJ0IfvfQMru7JzRSbDr7kM=
-			</data>
-		</dict>
-		<key>small_circle_red.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			wv7uL8udlzfUosjdrByPsOI7+cGR6QnFWAEw+GIFngE=
-			</data>
-		</dict>
-		<key>small_to_large_circle.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			12zdiMtBDOuL1T4xhRSnXnHVtBwMI1PM5LTTPR+ZaqM=
 			</data>
 		</dict>
 		<key>step01.json</key>
