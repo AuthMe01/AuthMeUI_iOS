@@ -60715,14 +60715,14 @@
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3355,
+      "offset": 3485,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3438,
+      "offset": 3568,
       "length": 1,
       "value": "0"
     },
@@ -60736,189 +60736,189 @@
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3766,
+      "offset": 3896,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3951,
+      "offset": 4081,
       "length": 38,
       "value": "\"AuthmeComponentableOCRViewController\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4157,
+      "offset": 4287,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "StringLiteral",
-      "offset": 4255,
+      "offset": 4385,
       "length": 39,
       "value": "\"init(coder:) has not been implemented\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6275,
+      "offset": 6405,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "StringLiteral",
-      "offset": 7087,
+      "offset": 7217,
       "length": 40,
       "value": "\"sdk.general.error.cameraNotFound.title\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "StringLiteral",
-      "offset": 7179,
+      "offset": 7309,
       "length": 42,
       "value": "\"sdk.general.error.cameraNotFound.content\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "StringLiteral",
-      "offset": 7281,
+      "offset": 7411,
       "length": 20,
       "value": "\"sdk.general.accept\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 7519,
+      "offset": 7649,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 8874,
+      "offset": 9004,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 8949,
+      "offset": 9079,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 9058,
+      "offset": 9188,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "StringLiteral",
-      "offset": 9271,
+      "offset": 9401,
       "length": 27,
       "value": "\"sdk.general.manualCapture\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 9357,
+      "offset": 9487,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 9739,
+      "offset": 9869,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 9749,
+      "offset": 9879,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 9758,
+      "offset": 9888,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 9768,
+      "offset": 9898,
       "length": 4,
       "value": "0.44"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 10432,
+      "offset": 10562,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 10927,
+      "offset": 11057,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 11413,
+      "offset": 11543,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 12400,
+      "offset": 12530,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "StringLiteral",
-      "offset": 14513,
+      "offset": 14643,
       "length": 25,
       "value": "\"sdk.general.error.retry\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 14560,
+      "offset": 14690,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "StringLiteral",
-      "offset": 15294,
+      "offset": 15424,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 15960,
+      "offset": 16090,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 16238,
+      "offset": 16368,
       "length": 5,
       "value": "false"
     },
@@ -60932,301 +60932,301 @@
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 16674,
+      "offset": 16804,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 16880,
+      "offset": 17010,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 16991,
+      "offset": 17121,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 17153,
+      "offset": 17283,
       "length": 3,
       "value": "3.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 17208,
+      "offset": 17338,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 17247,
+      "offset": 17377,
       "length": 3,
       "value": "2.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 17279,
+      "offset": 17409,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 17418,
+      "offset": 17548,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 17649,
+      "offset": 17779,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "StringLiteral",
-      "offset": 17677,
+      "offset": 17807,
       "length": 11,
       "value": "\"scan_line\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 17911,
+      "offset": 18041,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 18433,
+      "offset": 18563,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "StringLiteral",
-      "offset": 18649,
+      "offset": 18779,
       "length": 43,
       "value": "\"**.Shape Layer 1.Rectangle 1.Fill 1.Color\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "StringLiteral",
-      "offset": 19117,
+      "offset": 19247,
       "length": 43,
       "value": "\"**.Shape Layer 1.Rectangle 1.Fill 1.Color\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 19964,
+      "offset": 20094,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "StringLiteral",
-      "offset": 20034,
+      "offset": 20164,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "StringLiteral",
-      "offset": 20083,
+      "offset": 20213,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "StringLiteral",
-      "offset": 20140,
+      "offset": 20270,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 21285,
+      "offset": 21415,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 21380,
+      "offset": 21510,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 24479,
+      "offset": 24609,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 24553,
+      "offset": 24683,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 25386,
+      "offset": 25516,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 25801,
+      "offset": 25931,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 25884,
+      "offset": 26014,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 26025,
+      "offset": 26155,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 26128,
+      "offset": 26258,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 27481,
+      "offset": 27611,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "StringLiteral",
-      "offset": 27992,
+      "offset": 28122,
       "length": 22,
       "value": "\"sdk.ocr.verify.clear\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "StringLiteral",
-      "offset": 28053,
+      "offset": 28183,
       "length": 22,
       "value": "\"sdk.ocr.verify.retry\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "StringLiteral",
-      "offset": 30883,
+      "offset": 30907,
       "length": 25,
       "value": "\"sdk.general.error.retry\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 30930,
+      "offset": 30954,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 32355,
+      "offset": 32270,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 33411,
+      "offset": 33326,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 33641,
+      "offset": 33556,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 33907,
+      "offset": 33822,
       "length": 3,
       "value": "123"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 33972,
+      "offset": 33887,
       "length": 2,
       "value": "87"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 34477,
+      "offset": 34392,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 35598,
+      "offset": 35513,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 35667,
+      "offset": 35582,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 35675,
+      "offset": 35590,
       "length": 4,
       "value": "-1.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 35784,
+      "offset": 35699,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeComponentableOCRViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 35808,
+      "offset": 35723,
       "length": 4,
       "value": "true"
     },
