@@ -1560,11 +1560,21 @@ public protocol AuthmeCoordinatorDataSource : AnyObject {
   func flow(accessTokenFor feature: AuthMeUI.AuthmeFeature, completion: ((Swift.String) -> Swift.Void)?)
   func flow(featureConfigFor feature: AuthMeUI.AuthmeFeature) -> AuthMeUI.AuthmeFeatureConfig
 }
+public enum AuthmeCoordinatorError {
+  case controllerIsMissing
+  case viewIsMissing
+  public static func == (a: AuthMeUI.AuthmeCoordinatorError, b: AuthMeUI.AuthmeCoordinatorError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 final public class AuthmeCoordinator {
   @objc deinit
   weak final public var authDelegate: (any AuthMeUI.AuthMeAuthenticationDelegate)?
   weak final public var delegate: (any AuthMeUI.AuthmeCoordinatorDelegate)?
   weak final public var dataSource: (any AuthMeUI.AuthmeCoordinatorDataSource)?
+  final public var exception: ((AuthMeUI.AuthmeCoordinatorError) -> Swift.Void)?
   public init(presenter: UIKit.UIViewController, flowControl: AuthMeUI.FlowControl)
   final public func start(with transitionStyle: AuthMeUI.TransitionStyle, animated: Swift.Bool)
 }
@@ -1896,6 +1906,8 @@ extension AuthMeUI.SizeValueProvider : AuthMeUI.AnyValueProvider {}
 extension AuthMeUI.GradientValueProvider : AuthMeUI.AnyValueProvider {}
 extension AuthMeUI.TransitionStyle : Swift.Equatable {}
 extension AuthMeUI.TransitionStyle : Swift.Hashable {}
+extension AuthMeUI.AuthmeCoordinatorError : Swift.Equatable {}
+extension AuthMeUI.AuthmeCoordinatorError : Swift.Hashable {}
 extension AuthMeUI.PointValueProvider : AuthMeUI.AnyValueProvider {}
 extension AuthMeUI.LottieView : SwiftUI.View {}
 extension AuthMeUI.NFCDeviceError : Swift.Equatable {}
