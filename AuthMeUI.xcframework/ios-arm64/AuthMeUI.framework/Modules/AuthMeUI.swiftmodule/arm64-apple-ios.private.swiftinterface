@@ -351,6 +351,7 @@ public protocol AuthMeAuthenticationDelegate : ObjectiveC.NSObjectProtocol {
   func authMRZResultAndPlaceOfBirthConfirmed(result: MRZResult?, confirmed: Swift.Bool, error: (any Swift.Error)?)
   func personalPrivacyResult(result: Swift.Bool)
   func authenticateCompleted()
+  func authenticateCompletedAndCoordinatorIsMissing()
 }
 extension AuthMeUI.AuthMeAuthenticationDelegate {
   public func authmeLivenessViewController(_ viewController: AuthMeUI.AuthMeLivenessViewController, didRecognize result: AuthMeUI.AuthMeLivenessViewController.LivenessResult)
@@ -392,6 +393,7 @@ extension AuthMeUI.AuthMeAuthenticationDelegate {
   public func authMRZResultAndPlaceOfBirthConfirmed(result: MRZResult?, confirmed: Swift.Bool, error: (any Swift.Error)?)
   public func personalPrivacyResult(result _: Swift.Bool)
   public func authenticateCompleted()
+  public func authenticateCompletedAndCoordinatorIsMissing()
 }
 public protocol AuthMePlaygroundDelegate : ObjectiveC.NSObjectProtocol {
   func authmeLivenessViewControllerDidRecognize(result: AuthMeUI.AuthMeLivenessViewController.LivenessResult)
