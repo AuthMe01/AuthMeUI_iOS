@@ -34,7 +34,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		RDV4alJiVRNtiBSg4sgAQNPzF98=
+		dutgy2Q9WHgVlbmplm7cgME3bxE=
 		</data>
 		<key>AuthMeLivenessViewController.nib</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		hmZZuKGxHXZUYjwiRrplCy/WZcg=
+		oxBiWbvW8RYuvo562SK+rlr6w+8=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		hmZZuKGxHXZUYjwiRrplCy/WZcg=
+		oxBiWbvW8RYuvo562SK+rlr6w+8=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -267,7 +267,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IOE8P8V7RwGT1ogtnrN3lN4JOevZ9j9eai0Z245lGEc=
+			eEGrmOP3yOosG82ZBf/3arg6CC5YDEY1UeedQ5gUAhI=
 			</data>
 		</dict>
 		<key>AuthMeLivenessViewController.nib</key>
@@ -351,7 +351,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			14vpNvN91gnu7aQYsO9NEdzMyMJklgVae5BiBYv4nzk=
+			/PpIzZuUAuCP4+ZrKf5YCk1VqE2IHtJ2O6vxrYF99KA=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -386,7 +386,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			14vpNvN91gnu7aQYsO9NEdzMyMJklgVae5BiBYv4nzk=
+			/PpIzZuUAuCP4+ZrKf5YCk1VqE2IHtJ2O6vxrYF99KA=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
