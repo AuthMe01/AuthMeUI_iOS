@@ -34,7 +34,7 @@
 		</data>
 		<key>ios-arm64/AuthMeUI.framework/Assets.car</key>
 		<data>
-		dutgy2Q9WHgVlbmplm7cgME3bxE=
+		DmGy8SIp8Je4Qvqx3Bj/7X7QV2E=
 		</data>
 		<key>ios-arm64/AuthMeUI.framework/AuthMeLivenessViewController.nib</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>ios-arm64/AuthMeUI.framework/AuthMeUI</key>
 		<data>
-		IWJRrmcckrhTxXLhr+WtBE9vbhs=
+		qB6LZJo/TnrNyVy2c006E7RwoSU=
 		</data>
 		<key>ios-arm64/AuthMeUI.framework/AuthMeUI-Info.plist</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>ios-arm64/AuthMeUI.framework/Info.plist</key>
 		<data>
-		ecj6hLQns7Sn9GaIQ2JwScNH528=
+		C8rS28kUTBdMkSm58zNxJQkL2g8=
 		</data>
 		<key>ios-arm64/AuthMeUI.framework/LivenessPlaygroundViewController.nib</key>
 		<data>
@@ -90,7 +90,7 @@
 		</data>
 		<key>ios-arm64/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		WdKsC+nls9WD+2zOXU2YwmzZptM=
+		BVeYgE+IcD4nPxjy3E85hyB59sM=
 		</data>
 		<key>ios-arm64/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -237,7 +237,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/AuthMeUI</key>
 		<data>
-		DJgYXin22EzoLQs79vW3WhnP85c=
+		ATnBS2sgIIw2WJJAaSsOwOSpe9A=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/AuthMeUI-Info.plist</key>
 		<data>
@@ -269,7 +269,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Info.plist</key>
 		<data>
-		MslP7VVNpVmSR+YQx8kXmpnyQM8=
+		Z7zm+WJRly3NKPZG/HtlqYoCYzE=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/LivenessPlaygroundViewController.nib</key>
 		<data>
@@ -277,7 +277,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		oxBiWbvW8RYuvo562SK+rlr6w+8=
+		Re/P99VvUjIAXaZWTL5BWQG21Ik=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -293,7 +293,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		oxBiWbvW8RYuvo562SK+rlr6w+8=
+		Re/P99VvUjIAXaZWTL5BWQG21Ik=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -349,7 +349,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/_CodeSignature/CodeResources</key>
 		<data>
-		gY1UHFzZNDmO+fYfyEct3xfL5d0=
+		RIm2bSYz4B5t/2s6LwqUFNuerYY=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/circle_large_to_sm_80.json</key>
 		<data>
@@ -482,11 +482,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dutgy2Q9WHgVlbmplm7cgME3bxE=
+			DmGy8SIp8Je4Qvqx3Bj/7X7QV2E=
 			</data>
 			<key>hash2</key>
 			<data>
-			eEGrmOP3yOosG82ZBf/3arg6CC5YDEY1UeedQ5gUAhI=
+			lP8BQuL2gAyE7QW5Bj6H+rq0YgOWZ3GLoKNxwCobOZc=
 			</data>
 		</dict>
 		<key>ios-arm64/AuthMeUI.framework/AuthMeLivenessViewController.nib</key>
@@ -526,11 +526,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			IWJRrmcckrhTxXLhr+WtBE9vbhs=
+			qB6LZJo/TnrNyVy2c006E7RwoSU=
 			</data>
 			<key>hash2</key>
 			<data>
-			1bDdKQMgdT/m8PPdT3nHd4GPa5IGoX+NOfjqKrxqxXA=
+			nzjCV/N7e9iKoGejlbjySgw2r3A0pCuon09IBvKChGc=
 			</data>
 		</dict>
 		<key>ios-arm64/AuthMeUI.framework/AuthMeUI-Info.plist</key>
@@ -614,11 +614,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ecj6hLQns7Sn9GaIQ2JwScNH528=
+			C8rS28kUTBdMkSm58zNxJQkL2g8=
 			</data>
 			<key>hash2</key>
 			<data>
-			c0KAl49cewTE7zwDfpRipJmvuErqsSg3w/rdBDR6YqQ=
+			aCAp59W51IvA2ixYN2FXuBtJwIsEceEx23vYF6mzwl4=
 			</data>
 		</dict>
 		<key>ios-arm64/AuthMeUI.framework/LivenessPlaygroundViewController.nib</key>
@@ -636,11 +636,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WdKsC+nls9WD+2zOXU2YwmzZptM=
+			BVeYgE+IcD4nPxjy3E85hyB59sM=
 			</data>
 			<key>hash2</key>
 			<data>
-			d7TGK67Ss5h1Uvqzjjh5yiNZ/hF2WAmh+5jE5ymNCDo=
+			8it4Ky3KVwxLCjYu+cr2UVlqCWO0rsyVgP/H6vePBac=
 			</data>
 		</dict>
 		<key>ios-arm64/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -1005,11 +1005,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DJgYXin22EzoLQs79vW3WhnP85c=
+			ATnBS2sgIIw2WJJAaSsOwOSpe9A=
 			</data>
 			<key>hash2</key>
 			<data>
-			nOBsAawxjdG7gzmIBNaV/ZXfxUOvKaFBiFWGoqeSvrw=
+			gloS7Rmhn2P+TGrMKqr9cKkdGK4AoMXO4RrsLhtSswk=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/AuthMeUI-Info.plist</key>
@@ -1093,11 +1093,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			MslP7VVNpVmSR+YQx8kXmpnyQM8=
+			Z7zm+WJRly3NKPZG/HtlqYoCYzE=
 			</data>
 			<key>hash2</key>
 			<data>
-			5tbZSTGM+4O2IR0PkUn7q7ELatL7YxRF1dkxkHckFZI=
+			4sJGtiRhFqQ4UmB+K/adc8LR4weCrA5C4GoU2wa5lXI=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/LivenessPlaygroundViewController.nib</key>
@@ -1115,11 +1115,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oxBiWbvW8RYuvo562SK+rlr6w+8=
+			Re/P99VvUjIAXaZWTL5BWQG21Ik=
 			</data>
 			<key>hash2</key>
 			<data>
-			/PpIzZuUAuCP4+ZrKf5YCk1VqE2IHtJ2O6vxrYF99KA=
+			/uSQorLHkdVwoCI7IJO50/EVwDwOadg2CLbLntHaQqw=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -1159,11 +1159,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oxBiWbvW8RYuvo562SK+rlr6w+8=
+			Re/P99VvUjIAXaZWTL5BWQG21Ik=
 			</data>
 			<key>hash2</key>
 			<data>
-			/PpIzZuUAuCP4+ZrKf5YCk1VqE2IHtJ2O6vxrYF99KA=
+			/uSQorLHkdVwoCI7IJO50/EVwDwOadg2CLbLntHaQqw=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -1313,11 +1313,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gY1UHFzZNDmO+fYfyEct3xfL5d0=
+			RIm2bSYz4B5t/2s6LwqUFNuerYY=
 			</data>
 			<key>hash2</key>
 			<data>
-			7Yom+JV3IIT80rz43pBsSxz4gegB63kqqStP2ZzvjiU=
+			L4/l6NwUXnUTcv6llaa54b8JNOflHk3gYJDOIF4f2cc=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/circle_large_to_sm_80.json</key>

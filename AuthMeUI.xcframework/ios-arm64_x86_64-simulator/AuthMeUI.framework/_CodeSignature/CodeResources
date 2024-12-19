@@ -78,7 +78,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		MslP7VVNpVmSR+YQx8kXmpnyQM8=
+		Z7zm+WJRly3NKPZG/HtlqYoCYzE=
 		</data>
 		<key>LivenessPlaygroundViewController.nib</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		oxBiWbvW8RYuvo562SK+rlr6w+8=
+		Re/P99VvUjIAXaZWTL5BWQG21Ik=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		oxBiWbvW8RYuvo562SK+rlr6w+8=
+		Re/P99VvUjIAXaZWTL5BWQG21Ik=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -351,7 +351,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/PpIzZuUAuCP4+ZrKf5YCk1VqE2IHtJ2O6vxrYF99KA=
+			/uSQorLHkdVwoCI7IJO50/EVwDwOadg2CLbLntHaQqw=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -386,7 +386,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/PpIzZuUAuCP4+ZrKf5YCk1VqE2IHtJ2O6vxrYF99KA=
+			/uSQorLHkdVwoCI7IJO50/EVwDwOadg2CLbLntHaQqw=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
