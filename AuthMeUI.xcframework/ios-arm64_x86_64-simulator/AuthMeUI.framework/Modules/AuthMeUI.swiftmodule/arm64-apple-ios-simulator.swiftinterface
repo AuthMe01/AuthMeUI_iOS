@@ -1499,46 +1499,16 @@ extension AuthMeUI.AuthmeFeatureConfig {
   public func updateAnimationForForegroundState(wasWaitingToPlayAnimation: Swift.Bool)
   @objc deinit
 }
+extension AuthMeUI.AuthmeCoordinator {
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func getCustomerState(waitingTime: Swift.Int = 3, retryTimes: Swift.Int = 2) async throws -> VerificationState
+  #endif
+}
 @objc final public class CompatibleAnimationKeypath : ObjectiveC.NSObject {
   @objc public init(keypath: Swift.String)
   @objc public init(keys: [Swift.String])
   final public let animationKeypath: AuthMeUI.AnimationKeypath
   @objc deinit
-}
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class LivenessPlaygroundViewController : AuthMeUI.BaseViewController, AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
-  @_Concurrency.MainActor(unsafe) weak public var delegate: (any AuthMeUI.AuthMePlaygroundDelegate)?
-  @_Concurrency.MainActor(unsafe) @objc dynamic public init()
-  @_Concurrency.MainActor(unsafe) public func checkModel(progressHandler: ((Swift.Double) -> Swift.Void)? = nil, handler: ((Swift.Result<Swift.Void, FlowError>) -> Swift.Void)?)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
-    @objc get
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLayoutSubviews()
-  @objc deinit
-}
-extension AuthMeUI.LivenessPlaygroundViewController : AVFoundation.AVCaptureDataOutputSynchronizerDelegate {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func dataOutputSynchronizer(_ synchronizer: AVFoundation.AVCaptureDataOutputSynchronizer, didOutput synchronizedDataCollection: AVFoundation.AVCaptureSynchronizedDataCollection)
-}
-extension AuthMeUI.LivenessPlaygroundViewController : LivenessPlaygroundFlowDelegate {
-  @_Concurrency.MainActor(unsafe) public func livenessDidStart()
-  @_Concurrency.MainActor(unsafe) public func livenessDidNotifyMessage(status: LivenessDetectStatus)
-  @_Concurrency.MainActor(unsafe) public func livenessDidUpdateReconize(result: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) public func livenessDidFailureWith(error: FlowError, retryHandler: @escaping (() -> Swift.Void))
-  @_Concurrency.MainActor(unsafe) public func livenessDidRecognize(image: UIKit.UIImage)
-  @_Concurrency.MainActor(unsafe) public func livenessQueueDidUpload(currentCount: Swift.Int)
-  @_Concurrency.MainActor(unsafe) public func livenessDidFaceScale(direction: LivenessFlow.FaceScaleDirection.Direction)
-  @_Concurrency.MainActor(unsafe) public func livenessNotifyStage(log: LogFAS)
-  @_Concurrency.MainActor(unsafe) public func livenessNotifyUpload(log: LogUpload)
-}
-extension AuthMeUI.LivenessPlaygroundViewController {
-  public enum LivenessResult {
-    case succeed(UIKit.UIImage)
-    case failed
-    case canceled
-  }
 }
 public typealias LottieCompletionBlock = (_ completed: Swift.Bool) -> Swift.Void
 public enum TransitionStyle {
