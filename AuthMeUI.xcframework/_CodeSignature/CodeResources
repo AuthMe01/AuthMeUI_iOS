@@ -34,7 +34,7 @@
 		</data>
 		<key>ios-arm64/AuthMeUI.framework/Assets.car</key>
 		<data>
-		7mwcu6BVyHlAhAw49Q+myWA8zLE=
+		DmGy8SIp8Je4Qvqx3Bj/7X7QV2E=
 		</data>
 		<key>ios-arm64/AuthMeUI.framework/AuthMeLivenessViewController.nib</key>
 		<data>
@@ -221,7 +221,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Assets.car</key>
 		<data>
-		dutgy2Q9WHgVlbmplm7cgME3bxE=
+		DmGy8SIp8Je4Qvqx3Bj/7X7QV2E=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/AuthMeLivenessViewController.nib</key>
 		<data>
@@ -237,7 +237,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/AuthMeUI</key>
 		<data>
-		Y1m2UwLOYEIYExAR3p1bgSnJhmA=
+		i9KGtlkMfD6urM0mXkNcvvgp4mI=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/AuthMeUI-Info.plist</key>
 		<data>
@@ -349,7 +349,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/_CodeSignature/CodeResources</key>
 		<data>
-		csSbvcWMfRsJLQqnq7TD4IQpeiY=
+		f5XnXVb/tmiQ+e7z5XOWTJ1/gdU=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/circle_large_to_sm_80.json</key>
 		<data>
@@ -482,11 +482,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7mwcu6BVyHlAhAw49Q+myWA8zLE=
+			DmGy8SIp8Je4Qvqx3Bj/7X7QV2E=
 			</data>
 			<key>hash2</key>
 			<data>
-			M6khK7viTGlzd/culf5eIi7j8Wh0hPRNnGkL4cQQCak=
+			lP8BQuL2gAyE7QW5Bj6H+rq0YgOWZ3GLoKNxwCobOZc=
 			</data>
 		</dict>
 		<key>ios-arm64/AuthMeUI.framework/AuthMeLivenessViewController.nib</key>
@@ -961,11 +961,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dutgy2Q9WHgVlbmplm7cgME3bxE=
+			DmGy8SIp8Je4Qvqx3Bj/7X7QV2E=
 			</data>
 			<key>hash2</key>
 			<data>
-			eEGrmOP3yOosG82ZBf/3arg6CC5YDEY1UeedQ5gUAhI=
+			lP8BQuL2gAyE7QW5Bj6H+rq0YgOWZ3GLoKNxwCobOZc=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/AuthMeLivenessViewController.nib</key>
@@ -1005,11 +1005,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Y1m2UwLOYEIYExAR3p1bgSnJhmA=
+			i9KGtlkMfD6urM0mXkNcvvgp4mI=
 			</data>
 			<key>hash2</key>
 			<data>
-			OgCYwog51jSpETSx1rN7RiZtaoY41IKFP7eEUccMGTM=
+			XFjP6lY/qC8h4FnseRq/mRhsqiXck6UO8B/ChapvNAQ=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/AuthMeUI-Info.plist</key>
@@ -1313,11 +1313,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			csSbvcWMfRsJLQqnq7TD4IQpeiY=
+			f5XnXVb/tmiQ+e7z5XOWTJ1/gdU=
 			</data>
 			<key>hash2</key>
 			<data>
-			5IyUIZ4wGV/XPoQ4jYJ/0/sTa3G4sNZ8nfthQjPmweU=
+			4cVncGsVG/OcIcCXIS9o7p4yunufhuAljNzkd9e48cI=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/circle_large_to_sm_80.json</key>
