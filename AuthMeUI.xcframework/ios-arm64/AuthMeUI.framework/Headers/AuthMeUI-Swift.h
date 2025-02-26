@@ -590,6 +590,27 @@ typedef SWIFT_ENUM(NSInteger, CompatibleRenderingEngineOption, open) {
 
 
 
+SWIFT_CLASS("_TtC8AuthMeUI32LivenessPlaygroundViewController")
+@interface LivenessPlaygroundViewController : BaseViewController <AVCaptureVideoDataOutputSampleBufferDelegate>
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ SWIFT_UNAVAILABLE;
+@property (nonatomic, readonly) UIInterfaceOrientationMask supportedInterfaceOrientations;
+- (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
+- (void)viewWillAppear:(BOOL)_;
+- (void)viewWillDisappear:(BOOL)_;
+- (void)viewDidLayoutSubviews;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
+
+@interface LivenessPlaygroundViewController (SWIFT_EXTENSION(AuthMeUI)) <AVCaptureDataOutputSynchronizerDelegate>
+- (void)dataOutputSynchronizer:(AVCaptureDataOutputSynchronizer * _Nonnull)synchronizer didOutputSynchronizedDataCollection:(AVCaptureSynchronizedDataCollection * _Nonnull)synchronizedDataCollection;
+@end
+
+
+
 /// A CALayer subclass for rendering Lottie animations.
 /// <ul>
 ///   <li>
