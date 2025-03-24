@@ -1372,6 +1372,8 @@ extension AuthMeUI.AuthmeFeatureConfig {
   final public func isFraudHintAnimationEnable(_ isFraudHintAnimationEnable: Swift.Bool) -> Self
   @discardableResult
   final public func isNFCOffline(_ isNFCOffline: Swift.Bool) -> Self
+  @discardableResult
+  final public func captureTimeout(_ sec: Swift.Int) -> Self
 }
 @objc @_hasMissingDesignatedInitializers public class LottieAnimationLayer : QuartzCore.CALayer {
   public init(animation: AuthMeUI.LottieAnimation?, imageProvider: (any AuthMeUI.AnimationImageProvider)? = nil, textProvider: any AuthMeUI.AnimationKeypathTextProvider = DefaultTextProvider(), fontProvider: any AuthMeUI.AnimationFontProvider = DefaultFontProvider(), configuration: AuthMeUI.LottieConfiguration = .shared, logger: AuthMeUI.LottieLogger = .shared)

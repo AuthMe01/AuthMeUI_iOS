@@ -34,7 +34,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		dutgy2Q9WHgVlbmplm7cgME3bxE=
+		DmGy8SIp8Je4Qvqx3Bj/7X7QV2E=
 		</data>
 		<key>AuthMeLivenessViewController.nib</key>
 		<data>
@@ -78,7 +78,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Z7zm+WJRly3NKPZG/HtlqYoCYzE=
+		eD2hoVF6QWSlO3xna7iaxh2rT/M=
 		</data>
 		<key>LivenessPlaygroundViewController.nib</key>
 		<data>
@@ -86,11 +86,11 @@
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		Re/P99VvUjIAXaZWTL5BWQG21Ik=
+		rXYsvauutXcxaMMNoyTq9bo6vdA=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		FP0qeGMlTmD9uop0bAq58nQfx7E=
+		Qi3UOx4umyR3W0vua95mNEUQIdY=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -98,19 +98,19 @@
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		FP0qeGMlTmD9uop0bAq58nQfx7E=
+		Qi3UOx4umyR3W0vua95mNEUQIdY=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		QP8hEa09VOiGs5AWrpZsmeXJsA0=
+		+VYzgLfbQojLtGz/Itb+yxNFoEw=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		Re/P99VvUjIAXaZWTL5BWQG21Ik=
+		rXYsvauutXcxaMMNoyTq9bo6vdA=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		r9ygJUtTSjOj6gmNxWHf/nQ6oQM=
+		P+PRtxFwo3875ie5hPjeprILtNc=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -118,11 +118,11 @@
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		r9ygJUtTSjOj6gmNxWHf/nQ6oQM=
+		P+PRtxFwo3875ie5hPjeprILtNc=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		x0M1X2Hh4hSkv9OC67+Xedp2mvY=
+		qpAu/fGAKzybwvgVypv2r8P2Reg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -267,7 +267,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eEGrmOP3yOosG82ZBf/3arg6CC5YDEY1UeedQ5gUAhI=
+			lP8BQuL2gAyE7QW5Bj6H+rq0YgOWZ3GLoKNxwCobOZc=
 			</data>
 		</dict>
 		<key>AuthMeLivenessViewController.nib</key>
@@ -351,14 +351,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/uSQorLHkdVwoCI7IJO50/EVwDwOadg2CLbLntHaQqw=
+			zMAdoKSO1rCd48As2xI3RipNeUvS/JHCBw4wjw3W40I=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vFZbfVc14z6MW7kWieI5neDeUV+kKWJEUf6lbqCrGBc=
+			SQIobm64Mg1WKzcKS/xmR6KN3ELSUXibOV8NbkBrdPE=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -372,28 +372,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vFZbfVc14z6MW7kWieI5neDeUV+kKWJEUf6lbqCrGBc=
+			SQIobm64Mg1WKzcKS/xmR6KN3ELSUXibOV8NbkBrdPE=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FIoyVmfQY40ghgbNFc/x0egsYHI4vZbKrAPkTibQc00=
+			A1kILz5iixxcJBAy4MQrc6QRLYb4c418VqsaLqWRPyk=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/uSQorLHkdVwoCI7IJO50/EVwDwOadg2CLbLntHaQqw=
+			zMAdoKSO1rCd48As2xI3RipNeUvS/JHCBw4wjw3W40I=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7R/qPvvUVk2WVX+TubthoI0god7l9nqOQVxWKjVcUfw=
+			alehR+RrumwHzKeEZx5EsQWH1+BWaOmjoGKC+W3L3v8=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -407,14 +407,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7R/qPvvUVk2WVX+TubthoI0god7l9nqOQVxWKjVcUfw=
+			alehR+RrumwHzKeEZx5EsQWH1+BWaOmjoGKC+W3L3v8=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eO2Mt8D+VJbobvnIrFObPUoaq7Sp4vUAKmbqSo7snUM=
+			JiNwqqhastqvDtCY8dWf0F1EWUvT1/vHccU5plyTGKc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
