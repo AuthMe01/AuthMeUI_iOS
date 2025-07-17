@@ -366,6 +366,13 @@ SWIFT_CLASS("_TtC8AuthMeUI16AnimationSubview")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC8AuthMeUI13AuthMeManager")
+@interface AuthMeManager : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 @class NSString;
 @class NSBundle;
 
@@ -376,38 +383,6 @@ SWIFT_CLASS("_TtC8AuthMeUI18BaseViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
-
-
-SWIFT_CLASS("_TtC8AuthMeUI28AuthMeLivenessViewController")
-@interface AuthMeLivenessViewController : BaseViewController
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ SWIFT_UNAVAILABLE;
-@property (nonatomic, readonly) UIInterfaceOrientationMask supportedInterfaceOrientations;
-- (void)viewDidLoad;
-- (void)viewDidAppear:(BOOL)animated;
-- (void)viewWillDisappear:(BOOL)_;
-- (void)viewDidLayoutSubviews;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
-@end
-
-@class AVCaptureDataOutputSynchronizer;
-@class AVCaptureSynchronizedDataCollection;
-
-@interface AuthMeLivenessViewController (SWIFT_EXTENSION(AuthMeUI)) <AVCaptureDataOutputSynchronizerDelegate>
-- (void)dataOutputSynchronizer:(AVCaptureDataOutputSynchronizer * _Nonnull)synchronizer didOutputSynchronizedDataCollection:(AVCaptureSynchronizedDataCollection * _Nonnull)synchronizedDataCollection;
-@end
-
-
-
-
-
-
-
-SWIFT_CLASS("_TtC8AuthMeUI13AuthMeManager")
-@interface AuthMeManager : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
 
 
 
@@ -590,24 +565,27 @@ typedef SWIFT_ENUM(NSInteger, CompatibleRenderingEngineOption, open) {
 
 
 
-SWIFT_CLASS("_TtC8AuthMeUI32LivenessPlaygroundViewController")
-@interface LivenessPlaygroundViewController : BaseViewController <AVCaptureVideoDataOutputSampleBufferDelegate>
+SWIFT_CLASS("_TtC8AuthMeUI22LivenessViewController")
+@interface LivenessViewController : BaseViewController
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ SWIFT_UNAVAILABLE;
 @property (nonatomic, readonly) UIInterfaceOrientationMask supportedInterfaceOrientations;
 - (void)viewDidLoad;
 - (void)viewDidAppear:(BOOL)animated;
-- (void)viewWillAppear:(BOOL)_;
 - (void)viewWillDisappear:(BOOL)_;
 - (void)viewDidLayoutSubviews;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
+@class AVCaptureDataOutputSynchronizer;
+@class AVCaptureSynchronizedDataCollection;
 
-
-@interface LivenessPlaygroundViewController (SWIFT_EXTENSION(AuthMeUI)) <AVCaptureDataOutputSynchronizerDelegate>
+@interface LivenessViewController (SWIFT_EXTENSION(AuthMeUI)) <AVCaptureDataOutputSynchronizerDelegate>
 - (void)dataOutputSynchronizer:(AVCaptureDataOutputSynchronizer * _Nonnull)synchronizer didOutputSynchronizedDataCollection:(AVCaptureSynchronizedDataCollection * _Nonnull)synchronizedDataCollection;
 @end
+
+
+
 
 
 
@@ -653,6 +631,7 @@ SWIFT_CLASS("_TtC8AuthMeUI19LottieAnimationView")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @property (nonatomic, readonly) CGSize intrinsicContentSize;
 @end
+
 
 
 

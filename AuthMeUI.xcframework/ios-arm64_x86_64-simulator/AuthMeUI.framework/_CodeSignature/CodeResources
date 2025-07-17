@@ -4,69 +4,17 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>AlertDialog.storyboardc/Info.plist</key>
-		<data>
-		K28N0VMseL2USzHx9CptQ2dBNL4=
-		</data>
-		<key>AlertDialog.storyboardc/OneButtonAlert.nib</key>
-		<data>
-		fRosSgA9+wenY3DXW8NtboU94NQ=
-		</data>
-		<key>AlertDialog.storyboardc/OwU-XY-zj2-view-sQu-pF-euw.nib</key>
-		<data>
-		XWMClBmVwKPd9UTE0q0qk1Q7ChM=
-		</data>
-		<key>AlertDialog.storyboardc/TwoButtonAlert.nib</key>
-		<data>
-		5egMTTpQJnJ7d4NVkuD0NqhXyA8=
-		</data>
-		<key>AlertDialog.storyboardc/ZB1-bQ-qRz-view-sbw-Va-KPv.nib</key>
-		<data>
-		bZb14I+EhFQUH8xv1FScFdRsbwY=
-		</data>
-		<key>AntiFakeOCRIntroComponentableViewController.nib</key>
-		<data>
-		7lQzOCWIBS+b/DBcW5p6q+H8/m8=
-		</data>
-		<key>AntiFakeOCRScanComponentableViewController.nib</key>
-		<data>
-		uRpv66KZlNQS2+pmS8JENL0Sj4k=
-		</data>
 		<key>Assets.car</key>
 		<data>
-		DmGy8SIp8Je4Qvqx3Bj/7X7QV2E=
-		</data>
-		<key>AuthMeLivenessViewController.nib</key>
-		<data>
-		HQoOrEWPd+x5V8ezsuCeqitNGXc=
-		</data>
-		<key>AuthMeOCRDataTableViewCell.nib</key>
-		<data>
-		JQDw5YNOAaUX6ugo0cYJaRsTy9E=
-		</data>
-		<key>AuthMeOCRDataViewController.nib</key>
-		<data>
-		GeziavIs1YZnWSf/j4Vm+pJRmwE=
+		32xPUWKeXObOhcRr1v4iAKTtnDY=
 		</data>
 		<key>AuthMeUI-Info.plist</key>
 		<data>
 		XpLQNrdAQ4NZ3ZPV8K7ab2YI0rY=
 		</data>
-		<key>AuthmeComponentableMRZViewController.nib</key>
-		<data>
-		qNUIJZMzYKlEC7vPzQCqIkzXM6s=
-		</data>
-		<key>AuthmeComponentableOCRViewController.nib</key>
-		<data>
-		sktZIJ0/Z6lQIivwn5BcfyQ2Slo=
-		</data>
-		<key>BottomSheet.nib</key>
-		<data>
-		gHYWG1vcdGYW4sjr1ElzlJHcT+I=
-		</data>
 		<key>Headers/AuthMeUI-Swift.h</key>
 		<data>
-		feIovRofIWVCSxxSCNqtlhwdBQs=
+		3XoqQpvrLsUrrdWZpT+EwnWBqlw=
 		</data>
 		<key>Headers/AuthMeUI.h</key>
 		<data>
@@ -80,49 +28,45 @@
 		<data>
 		eab6DUpFoLhpYm0hgUxEbdq8jeQ=
 		</data>
-		<key>LivenessPlaygroundViewController.nib</key>
-		<data>
-		20ccp6UscCrKwtIncO2hlBBl/Qc=
-		</data>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		rXYsvauutXcxaMMNoyTq9bo6vdA=
+		xNzfSlc6+OgDCsrLIJBlPBOdDjY=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Qi3UOx4umyR3W0vua95mNEUQIdY=
+		/BH0p+KtzoGwr5UaYmfQCR/NL4w=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		91w+P8uSmOSgrBXNffQTdvJWA3s=
+		8Bkq3LyMeGzCJAxXiwPFizwh5UM=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Qi3UOx4umyR3W0vua95mNEUQIdY=
+		/BH0p+KtzoGwr5UaYmfQCR/NL4w=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		+VYzgLfbQojLtGz/Itb+yxNFoEw=
+		J8yj8HprLunVIKKZ2yJg4Xnhq3E=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		rXYsvauutXcxaMMNoyTq9bo6vdA=
+		xNzfSlc6+OgDCsrLIJBlPBOdDjY=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		P+PRtxFwo3875ie5hPjeprILtNc=
+		j1o5Kyw4QbFpTGOCd0hnYYc4CtE=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		MMON/M3B2L0fNxf1GJ5PiIXKFHI=
+		0l/wf4zXBRCfr+HEa0uYy/gnLOg=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		P+PRtxFwo3875ie5hPjeprILtNc=
+		j1o5Kyw4QbFpTGOCd0hnYYc4CtE=
 		</data>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		qpAu/fGAKzybwvgVypv2r8P2Reg=
+		mp4YmzNC5CTmD2vNyQqvq6CWtXE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -139,10 +83,6 @@
 		<key>NFCInfoTableViewCell.nib</key>
 		<data>
 		UCuduFrJZ4pj22h77CmqRQGSFJ4=
-		</data>
-		<key>OfflineMrzVizController.nib</key>
-		<data>
-		qNUIJZMzYKlEC7vPzQCqIkzXM6s=
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
@@ -164,19 +104,11 @@
 		<data>
 		a5b3ugzf3xnqdMDvHoKTWQwpzo4=
 		</data>
-		<key>circle_large_to_sm_80.json</key>
-		<data>
-		YC/Gjqiztl8mdAnw4Dwgcyb+C9g=
-		</data>
-		<key>circle_sm_to_large_80.json</key>
-		<data>
-		gwvbgBacVAJpEzvwNx5rFrhZmyE=
-		</data>
 		<key>en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			8E1sr3wOvrN4ldqBM8yw8TjF4g4=
+			wbSBpGebAYaAkZ1raRI7xXurGuw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -185,7 +117,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			N+3zjGfNsFPsK2cUVX9BG2RnJek=
+			LDW9rXEvjXvUGHAO/ZTCpLtKGrg=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -206,7 +138,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			wm8VMx23JbjwKdVfX9Bl8wGK6HU=
+			RAe1UXFQVtUgf4ojn9x6x4lEjKI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -214,81 +146,11 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>AlertDialog.storyboardc/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Q1k6m/L/uNs2Y/sZCLlqmdL9fKsulwrjlWPSC62zqxo=
-			</data>
-		</dict>
-		<key>AlertDialog.storyboardc/OneButtonAlert.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ni95DPO3k3QdT609vZUwrrD+B0DkrhH16NCtunRBshk=
-			</data>
-		</dict>
-		<key>AlertDialog.storyboardc/OwU-XY-zj2-view-sQu-pF-euw.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			trMPfaf0No8sRQxmrLkWbsOhaYrV0+BxIXtoTNK1Dak=
-			</data>
-		</dict>
-		<key>AlertDialog.storyboardc/TwoButtonAlert.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			yuuP5tJAgAF/Pf9r2/CqSf7u8zs3LHzuJEuPjFK1SZ4=
-			</data>
-		</dict>
-		<key>AlertDialog.storyboardc/ZB1-bQ-qRz-view-sbw-Va-KPv.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			e4VRzDcntMUODHvjulUhVtFV2LosaumKeBLhiShOmy8=
-			</data>
-		</dict>
-		<key>AntiFakeOCRIntroComponentableViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			2cCuaZc6x25UmEqYFO4eZCveL0/SIyA5yJjezPrPzyg=
-			</data>
-		</dict>
-		<key>AntiFakeOCRScanComponentableViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			eMNqOXG+Ck4u/1r8/Ep7cdMSLu3pZDLTTpdvVKYx6q8=
-			</data>
-		</dict>
 		<key>Assets.car</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lP8BQuL2gAyE7QW5Bj6H+rq0YgOWZ3GLoKNxwCobOZc=
-			</data>
-		</dict>
-		<key>AuthMeLivenessViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			dGmLG5wE/vLFYdSPEbmG6kI101psw6wYDSj93apSNME=
-			</data>
-		</dict>
-		<key>AuthMeOCRDataTableViewCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			7tLVyLHlwh6m3wrc9ppWOSlWTzKX2vD++Ql00uSQZSo=
-			</data>
-		</dict>
-		<key>AuthMeOCRDataViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Z7pF0xcyH0IjKkdAucG5ehcvrNDl5RM+RzyIpuXt5N0=
+			apoWcZjTbzZtujnh+Lb1+tmEyHVkZHkEtBJpYpAPCJk=
 			</data>
 		</dict>
 		<key>AuthMeUI-Info.plist</key>
@@ -298,32 +160,11 @@
 			0OIdHEiG6v42pO/BOtBornHciqUuI5l+CcfY/AwGLMk=
 			</data>
 		</dict>
-		<key>AuthmeComponentableMRZViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			NdVYhziReYrYYtHISLwkDFRr2fGHv3NySaUyzrrerIM=
-			</data>
-		</dict>
-		<key>AuthmeComponentableOCRViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			yzJwivVAD2XVZknuAW6kwun7m79i96gVzM+8ooqb+VY=
-			</data>
-		</dict>
-		<key>BottomSheet.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			QQou/7VkaD3gp2L6kfsqcF36Ozhx+ANlw2qyr2WTOn8=
-			</data>
-		</dict>
 		<key>Headers/AuthMeUI-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/6yAfJGhSlW/rDXhknVvl9F3vhniVOwpuQivw/SDUjA=
+			hJ01NPgw7RAPB7hoBIJr+fquM6z9Adb3RVk+Odaan4w=
 			</data>
 		</dict>
 		<key>Headers/AuthMeUI.h</key>
@@ -340,81 +181,74 @@
 			UWjvB8YZw2NFu1U+Fh7OVreiNhf07brwFhgN0bscnik=
 			</data>
 		</dict>
-		<key>LivenessPlaygroundViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			CLFLsYgdjA8ZlnhRKRD5tao5tFcG15prkf0wGOoFW1s=
-			</data>
-		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zMAdoKSO1rCd48As2xI3RipNeUvS/JHCBw4wjw3W40I=
+			k4hjbkXowhsz0eDGttfV2PQjI4q5QnIHCsob2e37yqE=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SQIobm64Mg1WKzcKS/xmR6KN3ELSUXibOV8NbkBrdPE=
+			Z1Ukhl5rgYn+LeznJg7YXsA/xhPj6/qJPmmBa7KOfLI=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4dCOx60ugoWO3jOjkb10uluSMHRsqNv3xWwPIZlHq3s=
+			aX/GgxSqMMmqA8+aOBUdihvft2tFBUyeehtWhGLY3jQ=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SQIobm64Mg1WKzcKS/xmR6KN3ELSUXibOV8NbkBrdPE=
+			Z1Ukhl5rgYn+LeznJg7YXsA/xhPj6/qJPmmBa7KOfLI=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			A1kILz5iixxcJBAy4MQrc6QRLYb4c418VqsaLqWRPyk=
+			7aoG9X9rqP0x6byJemt0N089/rmJFARM/5x3I18S9SM=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zMAdoKSO1rCd48As2xI3RipNeUvS/JHCBw4wjw3W40I=
+			k4hjbkXowhsz0eDGttfV2PQjI4q5QnIHCsob2e37yqE=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			alehR+RrumwHzKeEZx5EsQWH1+BWaOmjoGKC+W3L3v8=
+			JRbVzxlv7Up1ibIMx5KjrrMRFzXs/ToFn9U88V10Qe8=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eXgOlJZulNyJFIG48L6SRoyjHZl4eAwCOCrz9CyMO7c=
+			J+hGQe0gZ4wHQvPlcCrrbgidxgS1VI9+oUvMvjKMkV4=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			alehR+RrumwHzKeEZx5EsQWH1+BWaOmjoGKC+W3L3v8=
+			JRbVzxlv7Up1ibIMx5KjrrMRFzXs/ToFn9U88V10Qe8=
 			</data>
 		</dict>
 		<key>Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JiNwqqhastqvDtCY8dWf0F1EWUvT1/vHccU5plyTGKc=
+			WS8wEtgIXNmlIYxpMZbu0TbNlmduvC1tEnCTfS0dwfw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -443,13 +277,6 @@
 			<key>hash2</key>
 			<data>
 			1xo/AAFSjpg7j9aBdThZ/N4NNKx6gzaNfQN0mAU3si0=
-			</data>
-		</dict>
-		<key>OfflineMrzVizController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			NdVYhziReYrYYtHISLwkDFRr2fGHv3NySaUyzrrerIM=
 			</data>
 		</dict>
 		<key>PrivacyInfo.xcprivacy</key>
@@ -487,25 +314,11 @@
 			6AuQab4bMsx6hbE8FYnQnZGjxyaq+CoZeybSBZkEw8c=
 			</data>
 		</dict>
-		<key>circle_large_to_sm_80.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			lHXg2MuRpkMOAOSDREQvQNS0aftBaGG8gI1HpYpfsFw=
-			</data>
-		</dict>
-		<key>circle_sm_to_large_80.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Aw/TG3fvIDrH0KGErKbiZd/IKCe6SUClWcW93yOZM3Y=
-			</data>
-		</dict>
 		<key>en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			INZ89xPe+deDz78ADRsVc9rlMldMCEPiBGmtYcBqS+g=
+			Ph0XyfBw3o61/4Vliti/X65JZtGMxTLMIyWNqY0ldmk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -514,7 +327,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IWVocdFTZEAr24eSG6xdr6fQZXqwS1HVtEGDfhzZXnA=
+			djA9ix0Q5HMtpWbTalvTCL36TgacjHp8uPVkDMYtEYc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -544,7 +357,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qPXkJEsQZktF2Z/4BUik3pDnvnvLZzHpDqnyGwzt8zw=
+			/y0mpgTCDumpe/muLDRmsVDeMFzzwVGOZp+VHlAoOKk=
 			</data>
 			<key>optional</key>
 			<true/>
