@@ -312,7 +312,9 @@ extension AuthMeUI.LottieLogger {
   }
 }
 public protocol AuthMeAuthenticationDelegate : ObjectiveC.NSObjectProtocol {
-  func authmeLivenessViewController(didRecognize result: AuthMeUI.LivenessResult, error: (any Swift.Error)?)
+  func authmeLivenessViewController(_ viewController: AuthMeUI.AuthMeLivenessViewController, didRecognize result: AuthMeUI.AuthMeLivenessViewController.LivenessResult)
+  func authmeLivenessViewController(didRecognize result: AuthMeUI.AuthMeLivenessViewController.LivenessResult)
+  func authmeLivenessViewController(_ viewController: AuthMeUI.AuthMeLivenessViewController, didFinishVerifyWith result: AuthMeUI.AuthMeLivenessViewController.LivenessResult, isVerifyPass: Swift.Bool)
   func authTWIDFraudResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWIDResult?, error: (any Swift.Error)?)
   func authTWIDResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWIDResult?, error: (any Swift.Error)?)
   func authTWLicenseResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWLicenseResult?, error: (any Swift.Error)?)
@@ -352,7 +354,9 @@ public protocol AuthMeAuthenticationDelegate : ObjectiveC.NSObjectProtocol {
   func authenticateCompletedAndCoordinatorIsMissing()
 }
 extension AuthMeUI.AuthMeAuthenticationDelegate {
-  public func authmeLivenessViewController(didRecognize result: AuthMeUI.LivenessResult, error: (any Swift.Error)?)
+  public func authmeLivenessViewController(_ viewController: AuthMeUI.AuthMeLivenessViewController, didRecognize result: AuthMeUI.AuthMeLivenessViewController.LivenessResult)
+  public func authmeLivenessViewController(didRecognize result: AuthMeUI.AuthMeLivenessViewController.LivenessResult)
+  public func authmeLivenessViewController(_ viewController: AuthMeUI.AuthMeLivenessViewController, didFinishVerifyWith result: AuthMeUI.AuthMeLivenessViewController.LivenessResult, isVerifyPass: Swift.Bool)
   public func authTWIDFraudResult(frontImage: UIKit.UIImage?, backImage: UIKit.UIImage?, result: TWIDResult?, error: (any Swift.Error)?)
   public func authTWIDResult(frontImage _: UIKit.UIImage?, backImage _: UIKit.UIImage?, result _: TWIDResult?, error _: (any Swift.Error)?)
   public func authTWLicenseResult(frontImage _: UIKit.UIImage?, backImage _: UIKit.UIImage?, result _: TWLicenseResult?, error _: (any Swift.Error)?)
@@ -392,7 +396,7 @@ extension AuthMeUI.AuthMeAuthenticationDelegate {
   public func authenticateCompletedAndCoordinatorIsMissing()
 }
 public protocol AuthMePlaygroundDelegate : ObjectiveC.NSObjectProtocol {
-  func authmeLivenessViewControllerDidRecognize(result: AuthMeUI.LivenessResult, error: (any Swift.Error)?)
+  func authmeLivenessViewControllerDidRecognize(result: AuthMeUI.AuthMeLivenessViewController.LivenessResult)
 }
 public protocol AuthMeNFCDelegate : ObjectiveC.NSObjectProtocol {
   func authmeNFCDidRecognize(result: MRZResult?, error: (any Swift.Error)?)
@@ -415,6 +419,15 @@ public protocol AnimationCacheProvider : AnyObject, Swift.Sendable {
   public var localize: AuthMeUI.AuthMeLocalize {
     get
     set
+  }
+}
+public enum NFCError : Swift.String, Swift.Codable, Foundation.LocalizedError {
+  case imageNotAvailable
+  case dataNotAvailable
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
   }
 }
 public enum ColorFormatDenominator : Swift.Hashable {
@@ -800,6 +813,35 @@ public enum LottieMarkerPosition : Swift.Hashable {
     get
   }
 }
+extension AuthMeUI.AuthMeLivenessViewController : AVFoundation.AVCaptureDataOutputSynchronizerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func dataOutputSynchronizer(_ synchronizer: AVFoundation.AVCaptureDataOutputSynchronizer, didOutput synchronizedDataCollection: AVFoundation.AVCaptureSynchronizedDataCollection)
+}
+extension AuthMeUI.AuthMeLivenessViewController {
+  public enum `Type` {
+    case passive
+    case active
+    public static func == (a: AuthMeUI.AuthMeLivenessViewController.`Type`, b: AuthMeUI.AuthMeLivenessViewController.`Type`) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum LivenessResult {
+    case succeed(UIKit.UIImage)
+    case failed
+    case canceled
+  }
+}
+extension AuthMeUI.AuthMeLivenessViewController : LivenessFlowDelegate {
+  @_Concurrency.MainActor(unsafe) public func livenessDidStart()
+  @_Concurrency.MainActor(unsafe) public func livenessDidNotifyMessage(status: LivenessDetectStatus)
+  @_Concurrency.MainActor(unsafe) public func livenessDidUpdateReconize(result: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func livenessDidFailureWith(error: FlowError, retryHandler: @escaping (() -> Swift.Void))
+  @_Concurrency.MainActor(unsafe) public func livenessDidRecognize(image: UIKit.UIImage)
+  @_Concurrency.MainActor(unsafe) public func livenessDidFaceScale(direction: LivenessFlow.FaceScaleDirection.Direction)
+  @_Concurrency.MainActor(unsafe) public func livenessNotifyStage(log: LogFAS)
+  @_Concurrency.MainActor(unsafe) public func livenessNotifyUpload(log: LogUpload)
+}
 extension UIKit.UIColor {
   public var lottieColorValue: AuthMeUI.LottieColor {
     get
@@ -894,6 +936,22 @@ extension AuthMeUI.FilepathImageProvider : Swift.Equatable {
 }
 extension QuartzCore.CALayer {
   @nonobjc public func logLayerTree(withIndent: Swift.Int = 0)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AuthMeLivenessViewController : AuthMeUI.BaseViewController {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: (any AuthMeUI.AuthMeAuthenticationDelegate)?
+  @_Concurrency.MainActor(unsafe) public var uiParams: AuthMeUI.AuthMeLivenessUIParams?
+  @_Concurrency.MainActor(unsafe) public var isInfoPageEnabled: Swift.Bool
+  @_Concurrency.MainActor(unsafe) final public let action: Action
+  @_Concurrency.MainActor(unsafe) public var eventTrackingEnable: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public init(action: Action = .register(waitResult: true))
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLayoutSubviews()
+  @objc deinit
 }
 public protocol AnimationImageProvider {
   var cacheEligible: Swift.Bool { get }
@@ -1324,7 +1382,7 @@ extension AuthMeUI.AuthmeFeatureConfig {
   @discardableResult
   final public func isNFCOffline(_ isNFCOffline: Swift.Bool) -> Self
   @discardableResult
-  final public func setCustomParameters(_ customParameters: Swift.String) -> Self
+  final public func captureTimeout(_ sec: Swift.Int) -> Self
 }
 @objc @_hasMissingDesignatedInitializers public class LottieAnimationLayer : QuartzCore.CALayer {
   public init(animation: AuthMeUI.LottieAnimation?, imageProvider: (any AuthMeUI.AnimationImageProvider)? = nil, textProvider: any AuthMeUI.AnimationKeypathTextProvider = DefaultTextProvider(), fontProvider: any AuthMeUI.AnimationFontProvider = DefaultFontProvider(), configuration: AuthMeUI.LottieConfiguration = .shared, logger: AuthMeUI.LottieLogger = .shared)
@@ -1452,16 +1510,46 @@ extension AuthMeUI.AuthmeFeatureConfig {
   public func updateAnimationForForegroundState(wasWaitingToPlayAnimation: Swift.Bool)
   @objc deinit
 }
-extension AuthMeUI.AuthmeCoordinator {
-  #if compiler(>=5.3) && $AsyncAwait
-  public static func getCustomerState(waitingTime: Swift.Int = 3, retryTimes: Swift.Int = 2) async throws -> VerificationState
-  #endif
-}
 @objc final public class CompatibleAnimationKeypath : ObjectiveC.NSObject {
   @objc public init(keypath: Swift.String)
   @objc public init(keys: [Swift.String])
   final public let animationKeypath: AuthMeUI.AnimationKeypath
   @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class LivenessPlaygroundViewController : AuthMeUI.BaseViewController, AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: (any AuthMeUI.AuthMePlaygroundDelegate)?
+  @_Concurrency.MainActor(unsafe) @objc dynamic public init()
+  @_Concurrency.MainActor(unsafe) public func checkModel(progressHandler: ((Swift.Double) -> Swift.Void)? = nil, handler: ((Swift.Result<Swift.Void, FlowError>) -> Swift.Void)?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLayoutSubviews()
+  @objc deinit
+}
+extension AuthMeUI.LivenessPlaygroundViewController : AVFoundation.AVCaptureDataOutputSynchronizerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func dataOutputSynchronizer(_ synchronizer: AVFoundation.AVCaptureDataOutputSynchronizer, didOutput synchronizedDataCollection: AVFoundation.AVCaptureSynchronizedDataCollection)
+}
+extension AuthMeUI.LivenessPlaygroundViewController : LivenessPlaygroundFlowDelegate {
+  @_Concurrency.MainActor(unsafe) public func livenessDidStart()
+  @_Concurrency.MainActor(unsafe) public func livenessDidNotifyMessage(status: LivenessDetectStatus)
+  @_Concurrency.MainActor(unsafe) public func livenessDidUpdateReconize(result: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func livenessDidFailureWith(error: FlowError, retryHandler: @escaping (() -> Swift.Void))
+  @_Concurrency.MainActor(unsafe) public func livenessDidRecognize(image: UIKit.UIImage)
+  @_Concurrency.MainActor(unsafe) public func livenessQueueDidUpload(currentCount: Swift.Int)
+  @_Concurrency.MainActor(unsafe) public func livenessDidFaceScale(direction: LivenessFlow.FaceScaleDirection.Direction)
+  @_Concurrency.MainActor(unsafe) public func livenessNotifyStage(log: LogFAS)
+  @_Concurrency.MainActor(unsafe) public func livenessNotifyUpload(log: LogUpload)
+}
+extension AuthMeUI.LivenessPlaygroundViewController {
+  public enum LivenessResult {
+    case succeed(UIKit.UIImage)
+    case failed
+    case canceled
+  }
 }
 public typealias LottieCompletionBlock = (_ completed: Swift.Bool) -> Swift.Void
 public enum TransitionStyle {
@@ -1749,37 +1837,9 @@ final public class FloatValueProvider {
 extension AuthMeUI.FloatValueProvider : Swift.Equatable {
   public static func == (lhs: AuthMeUI.FloatValueProvider, rhs: AuthMeUI.FloatValueProvider) -> Swift.Bool
 }
-extension AuthMeUI.LivenessViewController : AVFoundation.AVCaptureDataOutputSynchronizerDelegate {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func dataOutputSynchronizer(_ synchronizer: AVFoundation.AVCaptureDataOutputSynchronizer, didOutput synchronizedDataCollection: AVFoundation.AVCaptureSynchronizedDataCollection)
-}
-extension AuthMeUI.LivenessViewController : LivenessFlowDelegate {
-  @_Concurrency.MainActor(unsafe) public func livenessDidStart()
-  @_Concurrency.MainActor(unsafe) public func livenessDidNotifyMessage(status: LivenessDetectStatus)
-  @_Concurrency.MainActor(unsafe) public func livenessDidUpdateReconize(result: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) public func livenessDidFailureWith(error: FlowError, retryHandler: @escaping (() -> Swift.Void))
-  @_Concurrency.MainActor(unsafe) public func livenessDidRecognize(image: UIKit.UIImage)
-  @_Concurrency.MainActor(unsafe) public func livenessDidFaceScale(direction: LivenessFlow.FaceScaleDirection.Direction)
-}
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class AnimationSubview : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
-}
-public enum LivenessResult {
-  case succeed(UIKit.UIImage)
-  case failed
-  case canceled
-}
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class LivenessViewController : AuthMeUI.BaseViewController {
-  @_Concurrency.MainActor(unsafe) public var uiParams: AuthMeUI.AuthMeLivenessUIParams?
-  @_Concurrency.MainActor(unsafe) @objc dynamic public init()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
-    @objc get
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLayoutSubviews()
   @objc deinit
 }
 extension AuthMeUI.AuthMeUICoordinator where T == OfflineMode {
@@ -1827,6 +1887,9 @@ extension AuthMeUI.LottieBackgroundBehavior : Swift.Hashable {}
 extension AuthMeUI.CoordinateSpace : Swift.Equatable {}
 extension AuthMeUI.CoordinateSpace : Swift.Hashable {}
 extension AuthMeUI.CoordinateSpace : Swift.RawRepresentable {}
+extension AuthMeUI.NFCError : Swift.Equatable {}
+extension AuthMeUI.NFCError : Swift.Hashable {}
+extension AuthMeUI.NFCError : Swift.RawRepresentable {}
 extension AuthMeUI.CompatibleRenderingEngineOption : Swift.Equatable {}
 extension AuthMeUI.CompatibleRenderingEngineOption : Swift.Hashable {}
 extension AuthMeUI.CompatibleRenderingEngineOption : Swift.RawRepresentable {}
@@ -1840,6 +1903,8 @@ extension AuthMeUI.ColorValueProvider : AuthMeUI.AnyValueProvider {}
 extension AuthMeUI.AuthmeFeature : Swift.Equatable {}
 extension AuthMeUI.AuthmeFeature : Swift.Hashable {}
 extension AuthMeUI.AuthmeFeature : Swift.RawRepresentable {}
+extension AuthMeUI.AuthMeLivenessViewController.`Type` : Swift.Equatable {}
+extension AuthMeUI.AuthMeLivenessViewController.`Type` : Swift.Hashable {}
 extension AuthMeUI.LottieButton : SwiftUI.View {}
 extension AuthMeUI.LottieSwitch : SwiftUI.View {}
 extension AuthMeUI.LayerType : Swift.Equatable {}
