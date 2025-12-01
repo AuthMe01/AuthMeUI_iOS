@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
-// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AuthMeUI
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AuthMeUI
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
 import AVFoundation
 import AudioToolbox
 import AuthMe
@@ -24,6 +24,7 @@ import Swift
 import SwiftUI
 import UIKit
 import _Concurrency
+import _CoreNFC_UIKit
 import _StringProcessing
 import _SwiftConcurrencyShims
 import zlib
@@ -54,133 +55,133 @@ public enum LottieLoopMode : Swift.Hashable {
 extension AuthMeUI.LottieLoopMode : Swift.Equatable {
   public static func == (lhs: AuthMeUI.LottieLoopMode, rhs: AuthMeUI.LottieLoopMode) -> Swift.Bool
 }
-@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class LottieAnimationView : AuthMeUI.LottieAnimationViewBase {
-  @_Concurrency.MainActor(unsafe) public init(animation: AuthMeUI.LottieAnimation?, imageProvider: (any AuthMeUI.AnimationImageProvider)? = nil, textProvider: any AuthMeUI.AnimationKeypathTextProvider = DefaultTextProvider(), fontProvider: any AuthMeUI.AnimationFontProvider = DefaultFontProvider(), configuration: AuthMeUI.LottieConfiguration = .shared, logger: AuthMeUI.LottieLogger = .shared)
-  @_Concurrency.MainActor(unsafe) public init(dotLottie: AuthMeUI.DotLottieFile?, animationId: Swift.String? = nil, textProvider: any AuthMeUI.AnimationKeypathTextProvider = DefaultTextProvider(), fontProvider: any AuthMeUI.AnimationFontProvider = DefaultFontProvider(), configuration: AuthMeUI.LottieConfiguration = .shared, logger: AuthMeUI.LottieLogger = .shared)
-  @_Concurrency.MainActor(unsafe) public init(configuration: AuthMeUI.LottieConfiguration = .shared, logger: AuthMeUI.LottieLogger = .shared)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) open func play(_ mode: AuthMeUI.LottiePlaybackMode.PlaybackMode, completion: AuthMeUI.LottieCompletionBlock? = nil)
-  @_Concurrency.MainActor(unsafe) open func play(completion: AuthMeUI.LottieCompletionBlock? = nil)
-  @_Concurrency.MainActor(unsafe) open func play(fromProgress: AuthMeUI.AnimationProgressTime? = nil, toProgress: AuthMeUI.AnimationProgressTime, loopMode: AuthMeUI.LottieLoopMode? = nil, completion: AuthMeUI.LottieCompletionBlock? = nil)
-  @_Concurrency.MainActor(unsafe) open func play(fromFrame: AuthMeUI.AnimationFrameTime? = nil, toFrame: AuthMeUI.AnimationFrameTime, loopMode: AuthMeUI.LottieLoopMode? = nil, completion: AuthMeUI.LottieCompletionBlock? = nil)
-  @_Concurrency.MainActor(unsafe) open func play(fromMarker: Swift.String? = nil, toMarker: Swift.String, playEndMarkerFrame: Swift.Bool = true, loopMode: AuthMeUI.LottieLoopMode? = nil, completion: AuthMeUI.LottieCompletionBlock? = nil)
-  @_Concurrency.MainActor(unsafe) open func play(marker: Swift.String, loopMode: AuthMeUI.LottieLoopMode? = nil, completion: AuthMeUI.LottieCompletionBlock? = nil)
-  @_Concurrency.MainActor(unsafe) open func play(markers: [Swift.String], completion: AuthMeUI.LottieCompletionBlock? = nil)
-  @_Concurrency.MainActor(unsafe) open func stop()
-  @_Concurrency.MainActor(unsafe) open func pause()
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor @preconcurrency open class LottieAnimationView : AuthMeUI.LottieAnimationViewBase {
+  @_Concurrency.MainActor @preconcurrency public init(animation: AuthMeUI.LottieAnimation?, imageProvider: (any AuthMeUI.AnimationImageProvider)? = nil, textProvider: any AuthMeUI.AnimationKeypathTextProvider = DefaultTextProvider(), fontProvider: any AuthMeUI.AnimationFontProvider = DefaultFontProvider(), configuration: AuthMeUI.LottieConfiguration = .shared, logger: AuthMeUI.LottieLogger = .shared)
+  @_Concurrency.MainActor @preconcurrency public init(dotLottie: AuthMeUI.DotLottieFile?, animationId: Swift.String? = nil, textProvider: any AuthMeUI.AnimationKeypathTextProvider = DefaultTextProvider(), fontProvider: any AuthMeUI.AnimationFontProvider = DefaultFontProvider(), configuration: AuthMeUI.LottieConfiguration = .shared, logger: AuthMeUI.LottieLogger = .shared)
+  @_Concurrency.MainActor @preconcurrency public init(configuration: AuthMeUI.LottieConfiguration = .shared, logger: AuthMeUI.LottieLogger = .shared)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency open func play(_ mode: AuthMeUI.LottiePlaybackMode.PlaybackMode, completion: AuthMeUI.LottieCompletionBlock? = nil)
+  @_Concurrency.MainActor @preconcurrency open func play(completion: AuthMeUI.LottieCompletionBlock? = nil)
+  @_Concurrency.MainActor @preconcurrency open func play(fromProgress: AuthMeUI.AnimationProgressTime? = nil, toProgress: AuthMeUI.AnimationProgressTime, loopMode: AuthMeUI.LottieLoopMode? = nil, completion: AuthMeUI.LottieCompletionBlock? = nil)
+  @_Concurrency.MainActor @preconcurrency open func play(fromFrame: AuthMeUI.AnimationFrameTime? = nil, toFrame: AuthMeUI.AnimationFrameTime, loopMode: AuthMeUI.LottieLoopMode? = nil, completion: AuthMeUI.LottieCompletionBlock? = nil)
+  @_Concurrency.MainActor @preconcurrency open func play(fromMarker: Swift.String? = nil, toMarker: Swift.String, playEndMarkerFrame: Swift.Bool = true, loopMode: AuthMeUI.LottieLoopMode? = nil, completion: AuthMeUI.LottieCompletionBlock? = nil)
+  @_Concurrency.MainActor @preconcurrency open func play(marker: Swift.String, loopMode: AuthMeUI.LottieLoopMode? = nil, completion: AuthMeUI.LottieCompletionBlock? = nil)
+  @_Concurrency.MainActor @preconcurrency open func play(markers: [Swift.String], completion: AuthMeUI.LottieCompletionBlock? = nil)
+  @_Concurrency.MainActor @preconcurrency open func stop()
+  @_Concurrency.MainActor @preconcurrency open func pause()
   @available(*, deprecated, renamed: "setPlaybackMode(_:completion:)", message: "Will be removed in a future major release.")
-  @_Concurrency.MainActor(unsafe) open func play(_ playbackMode: AuthMeUI.LottiePlaybackMode, animationCompletionHandler: AuthMeUI.LottieCompletionBlock? = nil)
-  @_Concurrency.MainActor(unsafe) open func setPlaybackMode(_ playbackMode: AuthMeUI.LottiePlaybackMode, completion: AuthMeUI.LottieCompletionBlock? = nil)
-  @_Concurrency.MainActor(unsafe) public var animateLayoutChangesWithCurrentCoreAnimationContext: Swift.Bool
-  @_Concurrency.MainActor(unsafe) public var configuration: AuthMeUI.LottieConfiguration {
+  @_Concurrency.MainActor @preconcurrency open func play(_ playbackMode: AuthMeUI.LottiePlaybackMode, animationCompletionHandler: AuthMeUI.LottieCompletionBlock? = nil)
+  @_Concurrency.MainActor @preconcurrency open func setPlaybackMode(_ playbackMode: AuthMeUI.LottiePlaybackMode, completion: AuthMeUI.LottieCompletionBlock? = nil)
+  @_Concurrency.MainActor @preconcurrency public var animateLayoutChangesWithCurrentCoreAnimationContext: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public var configuration: AuthMeUI.LottieConfiguration {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var valueProviders: [AuthMeUI.AnimationKeypath : any AuthMeUI.AnyValueProvider] {
+  @_Concurrency.MainActor @preconcurrency public var valueProviders: [AuthMeUI.AnimationKeypath : any AuthMeUI.AnyValueProvider] {
     get
   }
-  @_Concurrency.MainActor(unsafe) public var backgroundBehavior: AuthMeUI.LottieBackgroundBehavior {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var animation: AuthMeUI.LottieAnimation? {
+  @_Concurrency.MainActor @preconcurrency public var backgroundBehavior: AuthMeUI.LottieBackgroundBehavior {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var animationLoaded: ((_ animationView: AuthMeUI.LottieAnimationView, _ animation: AuthMeUI.LottieAnimation) -> Swift.Void)? {
+  @_Concurrency.MainActor @preconcurrency public var animation: AuthMeUI.LottieAnimation? {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var imageProvider: any AuthMeUI.AnimationImageProvider {
+  @_Concurrency.MainActor @preconcurrency public var animationLoaded: ((_ animationView: AuthMeUI.LottieAnimationView, _ animation: AuthMeUI.LottieAnimation) -> Swift.Void)? {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var textProvider: any AuthMeUI.AnimationKeypathTextProvider {
+  @_Concurrency.MainActor @preconcurrency public var imageProvider: any AuthMeUI.AnimationImageProvider {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var fontProvider: any AuthMeUI.AnimationFontProvider {
+  @_Concurrency.MainActor @preconcurrency public var textProvider: any AuthMeUI.AnimationKeypathTextProvider {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var maskAnimationToBounds: Swift.Bool {
+  @_Concurrency.MainActor @preconcurrency public var fontProvider: any AuthMeUI.AnimationFontProvider {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var isAnimationPlaying: Swift.Bool {
-    get
-  }
-  @_Concurrency.MainActor(unsafe) public var isAnimationQueued: Swift.Bool {
-    get
-  }
-  @_Concurrency.MainActor(unsafe) public var loopMode: AuthMeUI.LottieLoopMode {
+  @_Concurrency.MainActor @preconcurrency public var maskAnimationToBounds: Swift.Bool {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var shouldRasterizeWhenIdle: Swift.Bool {
+  @_Concurrency.MainActor @preconcurrency public var isAnimationPlaying: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var isAnimationQueued: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var loopMode: AuthMeUI.LottieLoopMode {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var currentProgress: AuthMeUI.AnimationProgressTime {
+  @_Concurrency.MainActor @preconcurrency public var shouldRasterizeWhenIdle: Swift.Bool {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var currentTime: Foundation.TimeInterval {
+  @_Concurrency.MainActor @preconcurrency public var currentProgress: AuthMeUI.AnimationProgressTime {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var currentFrame: AuthMeUI.AnimationFrameTime {
+  @_Concurrency.MainActor @preconcurrency public var currentTime: Foundation.TimeInterval {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var realtimeAnimationFrame: AuthMeUI.AnimationFrameTime {
-    get
-  }
-  @_Concurrency.MainActor(unsafe) public var realtimeAnimationProgress: AuthMeUI.AnimationProgressTime {
-    get
-  }
-  @_Concurrency.MainActor(unsafe) public var animationSpeed: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor @preconcurrency public var currentFrame: AuthMeUI.AnimationFrameTime {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var respectAnimationFrameRate: Swift.Bool {
+  @_Concurrency.MainActor @preconcurrency public var realtimeAnimationFrame: AuthMeUI.AnimationFrameTime {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var realtimeAnimationProgress: AuthMeUI.AnimationProgressTime {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var animationSpeed: CoreFoundation.CGFloat {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var viewportFrame: CoreFoundation.CGRect? {
+  @_Concurrency.MainActor @preconcurrency public var respectAnimationFrameRate: Swift.Bool {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public var intrinsicContentSize: CoreFoundation.CGSize {
+  @_Concurrency.MainActor @preconcurrency public var viewportFrame: CoreFoundation.CGRect? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var intrinsicContentSize: CoreFoundation.CGSize {
     @objc get
   }
-  @_Concurrency.MainActor(unsafe) public var currentRenderingEngine: AuthMeUI.RenderingEngine? {
+  @_Concurrency.MainActor @preconcurrency public var currentRenderingEngine: AuthMeUI.RenderingEngine? {
     get
   }
-  @_Concurrency.MainActor(unsafe) public var currentPlaybackMode: AuthMeUI.LottiePlaybackMode? {
+  @_Concurrency.MainActor @preconcurrency public var currentPlaybackMode: AuthMeUI.LottiePlaybackMode? {
     get
   }
-  @_Concurrency.MainActor(unsafe) public var mainThreadRenderingEngineShouldForceDisplayUpdateOnEachFrame: Swift.Bool {
+  @_Concurrency.MainActor @preconcurrency public var mainThreadRenderingEngineShouldForceDisplayUpdateOnEachFrame: Swift.Bool {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public func loadAnimation(_ animationId: Swift.String? = nil, from dotLottieFile: AuthMeUI.DotLottieFile)
-  @_Concurrency.MainActor(unsafe) public func loadAnimation(atIndex index: Swift.Int, from dotLottieFile: AuthMeUI.DotLottieFile)
-  @_Concurrency.MainActor(unsafe) public func reloadImages()
-  @_Concurrency.MainActor(unsafe) public func forceDisplayUpdate()
-  @_Concurrency.MainActor(unsafe) public func setValueProvider(_ valueProvider: any AuthMeUI.AnyValueProvider, keypath: AuthMeUI.AnimationKeypath)
-  @_Concurrency.MainActor(unsafe) public func getValue(for keypath: AuthMeUI.AnimationKeypath, atFrame: AuthMeUI.AnimationFrameTime?) -> Any?
-  @_Concurrency.MainActor(unsafe) public func getOriginalValue(for keypath: AuthMeUI.AnimationKeypath, atFrame: AuthMeUI.AnimationFrameTime?) -> Any?
-  @_Concurrency.MainActor(unsafe) public func logHierarchyKeypaths()
-  @_Concurrency.MainActor(unsafe) public func allHierarchyKeypaths() -> [Swift.String]
-  @_Concurrency.MainActor(unsafe) public func addSubview(_ subview: AuthMeUI.AnimationSubview, forLayerAt keypath: AuthMeUI.AnimationKeypath)
-  @_Concurrency.MainActor(unsafe) public func convert(_ rect: CoreFoundation.CGRect, toLayerAt keypath: AuthMeUI.AnimationKeypath?) -> CoreFoundation.CGRect?
-  @_Concurrency.MainActor(unsafe) public func convert(_ point: CoreFoundation.CGPoint, toLayerAt keypath: AuthMeUI.AnimationKeypath?) -> CoreFoundation.CGPoint?
-  @_Concurrency.MainActor(unsafe) public func setNodeIsEnabled(isEnabled: Swift.Bool, keypath: AuthMeUI.AnimationKeypath)
-  @_Concurrency.MainActor(unsafe) public func progressTime(forMarker named: Swift.String) -> AuthMeUI.AnimationProgressTime?
-  @_Concurrency.MainActor(unsafe) public func frameTime(forMarker named: Swift.String) -> AuthMeUI.AnimationFrameTime?
-  @_Concurrency.MainActor(unsafe) public func durationFrameTime(forMarker named: Swift.String) -> AuthMeUI.AnimationFrameTime?
+  @_Concurrency.MainActor @preconcurrency public func loadAnimation(_ animationId: Swift.String? = nil, from dotLottieFile: AuthMeUI.DotLottieFile)
+  @_Concurrency.MainActor @preconcurrency public func loadAnimation(atIndex index: Swift.Int, from dotLottieFile: AuthMeUI.DotLottieFile)
+  @_Concurrency.MainActor @preconcurrency public func reloadImages()
+  @_Concurrency.MainActor @preconcurrency public func forceDisplayUpdate()
+  @_Concurrency.MainActor @preconcurrency public func setValueProvider(_ valueProvider: any AuthMeUI.AnyValueProvider, keypath: AuthMeUI.AnimationKeypath)
+  @_Concurrency.MainActor @preconcurrency public func getValue(for keypath: AuthMeUI.AnimationKeypath, atFrame: AuthMeUI.AnimationFrameTime?) -> Any?
+  @_Concurrency.MainActor @preconcurrency public func getOriginalValue(for keypath: AuthMeUI.AnimationKeypath, atFrame: AuthMeUI.AnimationFrameTime?) -> Any?
+  @_Concurrency.MainActor @preconcurrency public func logHierarchyKeypaths()
+  @_Concurrency.MainActor @preconcurrency public func allHierarchyKeypaths() -> [Swift.String]
+  @_Concurrency.MainActor @preconcurrency public func addSubview(_ subview: AuthMeUI.AnimationSubview, forLayerAt keypath: AuthMeUI.AnimationKeypath)
+  @_Concurrency.MainActor @preconcurrency public func convert(_ rect: CoreFoundation.CGRect, toLayerAt keypath: AuthMeUI.AnimationKeypath?) -> CoreFoundation.CGRect?
+  @_Concurrency.MainActor @preconcurrency public func convert(_ point: CoreFoundation.CGPoint, toLayerAt keypath: AuthMeUI.AnimationKeypath?) -> CoreFoundation.CGPoint?
+  @_Concurrency.MainActor @preconcurrency public func setNodeIsEnabled(isEnabled: Swift.Bool, keypath: AuthMeUI.AnimationKeypath)
+  @_Concurrency.MainActor @preconcurrency public func progressTime(forMarker named: Swift.String) -> AuthMeUI.AnimationProgressTime?
+  @_Concurrency.MainActor @preconcurrency public func frameTime(forMarker named: Swift.String) -> AuthMeUI.AnimationFrameTime?
+  @_Concurrency.MainActor @preconcurrency public func durationFrameTime(forMarker named: Swift.String) -> AuthMeUI.AnimationFrameTime?
   @objc deinit
 }
 public class BundleImageProvider : AuthMeUI.AnimationImageProvider {
@@ -202,11 +203,11 @@ public class AuthMeAccessToken {
   }
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class BaseViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class BaseViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
 infix operator +| : DefaultPrecedence
@@ -221,11 +222,11 @@ public struct AnimationKeypath : Swift.Hashable, Swift.ExpressibleByStringLitera
   public var string: Swift.String {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: AuthMeUI.AnimationKeypath, b: AuthMeUI.AnimationKeypath) -> Swift.Bool
   public typealias ExtendedGraphemeClusterLiteralType = Swift.String
   public typealias StringLiteralType = Swift.String
   public typealias UnicodeScalarLiteralType = Swift.String
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -282,15 +283,15 @@ extension AuthMeUI.DefaultTextProvider : Swift.Equatable {
 }
 final public class LottieLogger {
   public init(assert: @escaping AuthMeUI.LottieLogger.Assert = { condition, message, file, line in
-      // If we default to `Swift.assert` directly with `assert: Assert = Swift.assert`,
-      // the call will unexpectedly not respect the -O flag and will crash in release
-      // https://github.com/apple/swift/issues/60249
+       
+       
+       
       Swift.assert(condition(), message(), file: file, line: line)
     }, assertionFailure: @escaping AuthMeUI.LottieLogger.AssertionFailure = { message, file, line in
-      // If we default to `Swift.assertionFailure` directly with
-      // `assertionFailure: AssertionFailure = Swift.assertionFailure`,
-      // the call will unexpectedly not respect the -O flag and will crash in release
-      // https://github.com/apple/swift/issues/60249
+       
+       
+       
+       
       Swift.assertionFailure(message(), file: file, line: line)
     }, warn: @escaping AuthMeUI.LottieLogger.Warn = { message, _, _ in
     }, info: @escaping AuthMeUI.LottieLogger.Info = { message in
@@ -433,8 +434,8 @@ public struct LottieColor : Swift.Hashable {
   public var b: Swift.Double
   public var a: Swift.Double
   public init(r: Swift.Double, g: Swift.Double, b: Swift.Double, a: Swift.Double, denominator: AuthMeUI.ColorFormatDenominator = .One)
-  public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: AuthMeUI.LottieColor, b: AuthMeUI.LottieColor) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -468,90 +469,90 @@ public struct LottieColor : Swift.Hashable {
     get
   }
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) final public class CompatibleAnimationView : UIKit.UIView {
-  @objc @_Concurrency.MainActor(unsafe) convenience public init(compatibleAnimation: AuthMeUI.CompatibleAnimation)
-  @objc @_Concurrency.MainActor(unsafe) public init(compatibleAnimation: AuthMeUI.CompatibleAnimation, compatibleRenderingEngineOption: AuthMeUI.CompatibleRenderingEngineOption)
-  @objc @_Concurrency.MainActor(unsafe) convenience public init(url: Foundation.URL)
-  @objc @_Concurrency.MainActor(unsafe) public init(url: Foundation.URL, compatibleRenderingEngineOption: AuthMeUI.CompatibleRenderingEngineOption)
-  @objc @_Concurrency.MainActor(unsafe) convenience public init(data: Foundation.Data)
-  @objc @_Concurrency.MainActor(unsafe) public init(data: Foundation.Data, compatibleRenderingEngineOption: AuthMeUI.CompatibleRenderingEngineOption)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @objc @_Concurrency.MainActor(unsafe) final public var compatibleAnimation: AuthMeUI.CompatibleAnimation? {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor @preconcurrency final public class CompatibleAnimationView : UIKit.UIView {
+  @objc @_Concurrency.MainActor @preconcurrency convenience public init(compatibleAnimation: AuthMeUI.CompatibleAnimation)
+  @objc @_Concurrency.MainActor @preconcurrency public init(compatibleAnimation: AuthMeUI.CompatibleAnimation, compatibleRenderingEngineOption: AuthMeUI.CompatibleRenderingEngineOption)
+  @objc @_Concurrency.MainActor @preconcurrency convenience public init(url: Foundation.URL)
+  @objc @_Concurrency.MainActor @preconcurrency public init(url: Foundation.URL, compatibleRenderingEngineOption: AuthMeUI.CompatibleRenderingEngineOption)
+  @objc @_Concurrency.MainActor @preconcurrency convenience public init(data: Foundation.Data)
+  @objc @_Concurrency.MainActor @preconcurrency public init(data: Foundation.Data, compatibleRenderingEngineOption: AuthMeUI.CompatibleRenderingEngineOption)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc @_Concurrency.MainActor @preconcurrency final public var compatibleAnimation: AuthMeUI.CompatibleAnimation? {
     @objc get
     @objc set
   }
-  @objc @_Concurrency.MainActor(unsafe) final public var loopAnimationCount: CoreFoundation.CGFloat {
+  @objc @_Concurrency.MainActor @preconcurrency final public var loopAnimationCount: CoreFoundation.CGFloat {
     @objc get
     @objc set
   }
-  @objc @_Concurrency.MainActor(unsafe) final public var compatibleDictionaryTextProvider: AuthMeUI.CompatibleDictionaryTextProvider? {
+  @objc @_Concurrency.MainActor @preconcurrency final public var compatibleDictionaryTextProvider: AuthMeUI.CompatibleDictionaryTextProvider? {
     @objc get
     @objc set
   }
-  @_Concurrency.MainActor(unsafe) @objc override final public var contentMode: UIKit.UIView.ContentMode {
+  @_Concurrency.MainActor @preconcurrency @objc override final public var contentMode: UIKit.UIView.ContentMode {
     @objc get
     @objc set
   }
-  @objc @_Concurrency.MainActor(unsafe) final public var shouldRasterizeWhenIdle: Swift.Bool {
+  @objc @_Concurrency.MainActor @preconcurrency final public var shouldRasterizeWhenIdle: Swift.Bool {
     @objc get
     @objc set
   }
-  @objc @_Concurrency.MainActor(unsafe) final public var currentProgress: CoreFoundation.CGFloat {
+  @objc @_Concurrency.MainActor @preconcurrency final public var currentProgress: CoreFoundation.CGFloat {
     @objc get
     @objc set
   }
-  @objc @_Concurrency.MainActor(unsafe) final public var duration: CoreFoundation.CGFloat {
+  @objc @_Concurrency.MainActor @preconcurrency final public var duration: CoreFoundation.CGFloat {
     @objc get
   }
-  @objc @_Concurrency.MainActor(unsafe) final public var currentTime: Foundation.TimeInterval {
-    @objc get
-    @objc set
-  }
-  @objc @_Concurrency.MainActor(unsafe) final public var currentFrame: CoreFoundation.CGFloat {
+  @objc @_Concurrency.MainActor @preconcurrency final public var currentTime: Foundation.TimeInterval {
     @objc get
     @objc set
   }
-  @objc @_Concurrency.MainActor(unsafe) final public var realtimeAnimationFrame: CoreFoundation.CGFloat {
-    @objc get
-  }
-  @objc @_Concurrency.MainActor(unsafe) final public var realtimeAnimationProgress: CoreFoundation.CGFloat {
-    @objc get
-  }
-  @objc @_Concurrency.MainActor(unsafe) final public var animationSpeed: CoreFoundation.CGFloat {
+  @objc @_Concurrency.MainActor @preconcurrency final public var currentFrame: CoreFoundation.CGFloat {
     @objc get
     @objc set
   }
-  @objc @_Concurrency.MainActor(unsafe) final public var respectAnimationFrameRate: Swift.Bool {
+  @objc @_Concurrency.MainActor @preconcurrency final public var realtimeAnimationFrame: CoreFoundation.CGFloat {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor @preconcurrency final public var realtimeAnimationProgress: CoreFoundation.CGFloat {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor @preconcurrency final public var animationSpeed: CoreFoundation.CGFloat {
     @objc get
     @objc set
   }
-  @objc @_Concurrency.MainActor(unsafe) final public var isAnimationPlaying: Swift.Bool {
-    @objc get
-  }
-  @objc @_Concurrency.MainActor(unsafe) final public var backgroundMode: AuthMeUI.CompatibleBackgroundBehavior {
+  @objc @_Concurrency.MainActor @preconcurrency final public var respectAnimationFrameRate: Swift.Bool {
     @objc get
     @objc set
   }
-  @objc @_Concurrency.MainActor(unsafe) final public func play()
-  @objc @_Concurrency.MainActor(unsafe) final public func play(completion: ((Swift.Bool) -> Swift.Void)?)
-  @objc @_Concurrency.MainActor(unsafe) final public func play(fromProgress: CoreFoundation.CGFloat, toProgress: CoreFoundation.CGFloat, completion: ((Swift.Bool) -> Swift.Void)? = nil)
-  @objc @_Concurrency.MainActor(unsafe) final public func play(fromFrame: CoreFoundation.CGFloat, toFrame: CoreFoundation.CGFloat, completion: ((Swift.Bool) -> Swift.Void)? = nil)
-  @objc @_Concurrency.MainActor(unsafe) final public func play(fromMarker: Swift.String, toMarker: Swift.String, completion: ((Swift.Bool) -> Swift.Void)? = nil)
-  @objc @_Concurrency.MainActor(unsafe) final public func play(marker: Swift.String, completion: ((Swift.Bool) -> Swift.Void)? = nil)
-  @objc @_Concurrency.MainActor(unsafe) final public func stop()
-  @objc @_Concurrency.MainActor(unsafe) final public func pause()
-  @objc @_Concurrency.MainActor(unsafe) final public func reloadImages()
-  @objc @_Concurrency.MainActor(unsafe) final public func forceDisplayUpdate()
-  @objc @_Concurrency.MainActor(unsafe) final public func getValue(for keypath: AuthMeUI.CompatibleAnimationKeypath, atFrame: CoreFoundation.CGFloat) -> Any?
-  @objc @_Concurrency.MainActor(unsafe) final public func logHierarchyKeypaths()
-  @objc @_Concurrency.MainActor(unsafe) final public func setColorValue(_ color: UIKit.UIColor, forKeypath keypath: AuthMeUI.CompatibleAnimationKeypath)
-  @objc @_Concurrency.MainActor(unsafe) final public func getColorValue(for keypath: AuthMeUI.CompatibleAnimationKeypath, atFrame: CoreFoundation.CGFloat) -> UIKit.UIColor?
-  @objc @_Concurrency.MainActor(unsafe) final public func addSubview(_ subview: AuthMeUI.AnimationSubview, forLayerAt keypath: AuthMeUI.CompatibleAnimationKeypath)
-  @objc @_Concurrency.MainActor(unsafe) final public func convert(rect: CoreFoundation.CGRect, toLayerAt keypath: AuthMeUI.CompatibleAnimationKeypath?) -> CoreFoundation.CGRect
-  @objc @_Concurrency.MainActor(unsafe) final public func convert(point: CoreFoundation.CGPoint, toLayerAt keypath: AuthMeUI.CompatibleAnimationKeypath?) -> CoreFoundation.CGPoint
-  @objc @_Concurrency.MainActor(unsafe) final public func progressTime(forMarker named: Swift.String) -> CoreFoundation.CGFloat
-  @objc @_Concurrency.MainActor(unsafe) final public func frameTime(forMarker named: Swift.String) -> CoreFoundation.CGFloat
-  @objc @_Concurrency.MainActor(unsafe) final public func durationFrameTime(forMarker named: Swift.String) -> CoreFoundation.CGFloat
+  @objc @_Concurrency.MainActor @preconcurrency final public var isAnimationPlaying: Swift.Bool {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor @preconcurrency final public var backgroundMode: AuthMeUI.CompatibleBackgroundBehavior {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor @preconcurrency final public func play()
+  @objc @_Concurrency.MainActor @preconcurrency final public func play(completion: ((Swift.Bool) -> Swift.Void)?)
+  @objc @_Concurrency.MainActor @preconcurrency final public func play(fromProgress: CoreFoundation.CGFloat, toProgress: CoreFoundation.CGFloat, completion: ((Swift.Bool) -> Swift.Void)? = nil)
+  @objc @_Concurrency.MainActor @preconcurrency final public func play(fromFrame: CoreFoundation.CGFloat, toFrame: CoreFoundation.CGFloat, completion: ((Swift.Bool) -> Swift.Void)? = nil)
+  @objc @_Concurrency.MainActor @preconcurrency final public func play(fromMarker: Swift.String, toMarker: Swift.String, completion: ((Swift.Bool) -> Swift.Void)? = nil)
+  @objc @_Concurrency.MainActor @preconcurrency final public func play(marker: Swift.String, completion: ((Swift.Bool) -> Swift.Void)? = nil)
+  @objc @_Concurrency.MainActor @preconcurrency final public func stop()
+  @objc @_Concurrency.MainActor @preconcurrency final public func pause()
+  @objc @_Concurrency.MainActor @preconcurrency final public func reloadImages()
+  @objc @_Concurrency.MainActor @preconcurrency final public func forceDisplayUpdate()
+  @objc @_Concurrency.MainActor @preconcurrency final public func getValue(for keypath: AuthMeUI.CompatibleAnimationKeypath, atFrame: CoreFoundation.CGFloat) -> Any?
+  @objc @_Concurrency.MainActor @preconcurrency final public func logHierarchyKeypaths()
+  @objc @_Concurrency.MainActor @preconcurrency final public func setColorValue(_ color: UIKit.UIColor, forKeypath keypath: AuthMeUI.CompatibleAnimationKeypath)
+  @objc @_Concurrency.MainActor @preconcurrency final public func getColorValue(for keypath: AuthMeUI.CompatibleAnimationKeypath, atFrame: CoreFoundation.CGFloat) -> UIKit.UIColor?
+  @objc @_Concurrency.MainActor @preconcurrency final public func addSubview(_ subview: AuthMeUI.AnimationSubview, forLayerAt keypath: AuthMeUI.CompatibleAnimationKeypath)
+  @objc @_Concurrency.MainActor @preconcurrency final public func convert(rect: CoreFoundation.CGRect, toLayerAt keypath: AuthMeUI.CompatibleAnimationKeypath?) -> CoreFoundation.CGRect
+  @objc @_Concurrency.MainActor @preconcurrency final public func convert(point: CoreFoundation.CGPoint, toLayerAt keypath: AuthMeUI.CompatibleAnimationKeypath?) -> CoreFoundation.CGPoint
+  @objc @_Concurrency.MainActor @preconcurrency final public func progressTime(forMarker named: Swift.String) -> CoreFoundation.CGFloat
+  @objc @_Concurrency.MainActor @preconcurrency final public func frameTime(forMarker named: Swift.String) -> CoreFoundation.CGFloat
+  @objc @_Concurrency.MainActor @preconcurrency final public func durationFrameTime(forMarker named: Swift.String) -> CoreFoundation.CGFloat
   @objc deinit
 }
 @objc final public class CompatibleDictionaryTextProvider : ObjectiveC.NSObject {
@@ -564,26 +565,16 @@ extension AuthMeUI.DotLottieFile {
     public static func named(_ name: Swift.String, bundle: Foundation.Bundle = Bundle.main, subdirectory: Swift.String? = nil, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache) -> Swift.Result<AuthMeUI.DotLottieFile, any Swift.Error>
     public static func loadedFrom(data: Foundation.Data, filename: Swift.String) -> Swift.Result<AuthMeUI.DotLottieFile, any Swift.Error>
   }
-  #if compiler(>=5.3) && $AsyncAwait
   public static func named(_ name: Swift.String, bundle: Foundation.Bundle = Bundle.main, subdirectory: Swift.String? = nil, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache) async throws -> AuthMeUI.DotLottieFile
-  #endif
   public static func named(_ name: Swift.String, bundle: Foundation.Bundle = Bundle.main, subdirectory: Swift.String? = nil, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache, dispatchQueue: Dispatch.DispatchQueue = .dotLottie, handleResult: @escaping (Swift.Result<AuthMeUI.DotLottieFile, any Swift.Error>) -> Swift.Void)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func loadedFrom(filepath: Swift.String, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache) async throws -> AuthMeUI.DotLottieFile
-  #endif
   public static func loadedFrom(filepath: Swift.String, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache, dispatchQueue: Dispatch.DispatchQueue = .dotLottie, handleResult: @escaping (Swift.Result<AuthMeUI.DotLottieFile, any Swift.Error>) -> Swift.Void)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func asset(named name: Swift.String, bundle: Foundation.Bundle = Bundle.main, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache) async throws -> AuthMeUI.DotLottieFile
-  #endif
   public static func asset(named name: Swift.String, bundle: Foundation.Bundle = Bundle.main, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache, dispatchQueue: Dispatch.DispatchQueue = .dotLottie, handleResult: @escaping (Swift.Result<AuthMeUI.DotLottieFile, any Swift.Error>) -> Swift.Void)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func loadedFrom(url: Foundation.URL, session: Foundation.URLSession = .shared, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache) async throws -> AuthMeUI.DotLottieFile
-  #endif
   public static func loadedFrom(url: Foundation.URL, session: Foundation.URLSession = .shared, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache, handleResult: @escaping (Swift.Result<AuthMeUI.DotLottieFile, any Swift.Error>) -> Swift.Void)
   public static func loadedFrom(data: Foundation.Data, filename: Swift.String, dispatchQueue: Dispatch.DispatchQueue = .dotLottie, handleResult: @escaping (Swift.Result<AuthMeUI.DotLottieFile, any Swift.Error>) -> Swift.Void)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func loadedFrom(data: Foundation.Data, filename: Swift.String, dispatchQueue: Dispatch.DispatchQueue = .dotLottie) async throws -> AuthMeUI.DotLottieFile
-  #endif
 }
 extension Dispatch.DispatchQueue {
   public static let dotLottie: Dispatch.DispatchQueue
@@ -708,8 +699,8 @@ public struct LottieConfiguration : Swift.Hashable {
   public var decodingStrategy: AuthMeUI.DecodingStrategy
   public var reducedMotionOption: AuthMeUI.ReducedMotionOption
   public var colorSpace: CoreGraphics.CGColorSpace
-  public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: AuthMeUI.LottieConfiguration, b: AuthMeUI.LottieConfiguration) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -751,8 +742,8 @@ public enum LottiePlaybackMode : Swift.Hashable {
     case frame(_: AuthMeUI.AnimationFrameTime)
     case time(_: Foundation.TimeInterval)
     case marker(_: Swift.String, position: AuthMeUI.LottieMarkerPosition = .start)
-    public func hash(into hasher: inout Swift.Hasher)
     public static func == (a: AuthMeUI.LottiePlaybackMode.PausedState, b: AuthMeUI.LottiePlaybackMode.PausedState) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
@@ -763,14 +754,14 @@ public enum LottiePlaybackMode : Swift.Hashable {
     case fromMarker(_: Swift.String?, toMarker: Swift.String, playEndMarkerFrame: Swift.Bool = true, loopMode: AuthMeUI.LottieLoopMode)
     case marker(_: Swift.String, loopMode: AuthMeUI.LottieLoopMode)
     case markers(_: [Swift.String])
-    public func hash(into hasher: inout Swift.Hasher)
     public static func == (a: AuthMeUI.LottiePlaybackMode.PlaybackMode, b: AuthMeUI.LottiePlaybackMode.PlaybackMode) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
   }
-  public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: AuthMeUI.LottiePlaybackMode, b: AuthMeUI.LottiePlaybackMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -859,27 +850,27 @@ extension AuthMeUI.RenderingEngine : Swift.RawRepresentable, Swift.CustomStringC
   }
   public typealias RawValue = Swift.String
 }
-public struct LottieButton {
-  public init(animation: AuthMeUI.LottieAnimation?, action: @escaping () -> Swift.Void)
-  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+@_Concurrency.MainActor @preconcurrency public struct LottieButton {
+  @_Concurrency.MainActor @preconcurrency public init(animation: AuthMeUI.LottieAnimation?, action: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
     get
   }
-  public func configure(_ configure: @escaping (AuthMeUI.AnimatedButton) -> Swift.Void) -> AuthMeUI.LottieButton
-  public func configuration(_ configuration: AuthMeUI.LottieConfiguration) -> AuthMeUI.LottieButton
-  public func animate(fromProgress: AuthMeUI.AnimationProgressTime, toProgress: AuthMeUI.AnimationProgressTime, on event: AuthMeUI.LottieControlEvent) -> AuthMeUI.LottieButton
-  public func animate(fromMarker: Swift.String, toMarker: Swift.String, on event: AuthMeUI.LottieControlEvent) -> AuthMeUI.LottieButton
-  public func valueProvider<ValueProvider>(_ valueProvider: ValueProvider, for keypath: AuthMeUI.AnimationKeypath) -> AuthMeUI.LottieButton where ValueProvider : AuthMeUI.AnyValueProvider, ValueProvider : Swift.Equatable
+  @_Concurrency.MainActor @preconcurrency public func configure(_ configure: @escaping (AuthMeUI.AnimatedButton) -> Swift.Void) -> AuthMeUI.LottieButton
+  @_Concurrency.MainActor @preconcurrency public func configuration(_ configuration: AuthMeUI.LottieConfiguration) -> AuthMeUI.LottieButton
+  @_Concurrency.MainActor @preconcurrency public func animate(fromProgress: AuthMeUI.AnimationProgressTime, toProgress: AuthMeUI.AnimationProgressTime, on event: AuthMeUI.LottieControlEvent) -> AuthMeUI.LottieButton
+  @_Concurrency.MainActor @preconcurrency public func animate(fromMarker: Swift.String, toMarker: Swift.String, on event: AuthMeUI.LottieControlEvent) -> AuthMeUI.LottieButton
+  @_Concurrency.MainActor @preconcurrency public func valueProvider<ValueProvider>(_ valueProvider: ValueProvider, for keypath: AuthMeUI.AnimationKeypath) -> AuthMeUI.LottieButton where ValueProvider : AuthMeUI.AnyValueProvider, ValueProvider : Swift.Equatable
   public typealias Body = @_opaqueReturnTypeOf("$s8AuthMeUI12LottieButtonV4bodyQrvp", 0) __
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class LottieAnimationViewBase : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public var contentMode: UIKit.UIView.ContentMode {
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class LottieAnimationViewBase : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var contentMode: UIKit.UIView.ContentMode {
     @objc get
     @objc set
   }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func didMoveToWindow()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func didMoveToWindow()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
 public class FilepathImageProvider : AuthMeUI.AnimationImageProvider {
@@ -914,17 +905,17 @@ extension AuthMeUI.AnimationImageProvider {
 }
 extension AuthMeUI.Asset : @unchecked Swift.Sendable {
 }
-public struct LottieSwitch {
-  public init(animation: AuthMeUI.LottieAnimation?)
-  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+@_Concurrency.MainActor @preconcurrency public struct LottieSwitch {
+  @_Concurrency.MainActor @preconcurrency public init(animation: AuthMeUI.LottieAnimation?)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
     get
   }
-  public func configure(_ configure: @escaping (AuthMeUI.AnimatedSwitch) -> Swift.Void) -> AuthMeUI.LottieSwitch
-  public func configuration(_ configuration: AuthMeUI.LottieConfiguration) -> AuthMeUI.LottieSwitch
-  public func isOn(_ binding: SwiftUI.Binding<Swift.Bool>) -> AuthMeUI.LottieSwitch
-  public func onAnimation(fromProgress onStartProgress: AuthMeUI.AnimationProgressTime, toProgress onEndProgress: AuthMeUI.AnimationProgressTime) -> AuthMeUI.LottieSwitch
-  public func offAnimation(fromProgress offStartProgress: AuthMeUI.AnimationProgressTime, toProgress offEndProgress: AuthMeUI.AnimationProgressTime) -> AuthMeUI.LottieSwitch
-  public func valueProvider<ValueProvider>(_ valueProvider: ValueProvider, for keypath: AuthMeUI.AnimationKeypath) -> AuthMeUI.LottieSwitch where ValueProvider : AuthMeUI.AnyValueProvider, ValueProvider : Swift.Equatable
+  @_Concurrency.MainActor @preconcurrency public func configure(_ configure: @escaping (AuthMeUI.AnimatedSwitch) -> Swift.Void) -> AuthMeUI.LottieSwitch
+  @_Concurrency.MainActor @preconcurrency public func configuration(_ configuration: AuthMeUI.LottieConfiguration) -> AuthMeUI.LottieSwitch
+  @_Concurrency.MainActor @preconcurrency public func isOn(_ binding: SwiftUICore.Binding<Swift.Bool>) -> AuthMeUI.LottieSwitch
+  @_Concurrency.MainActor @preconcurrency public func onAnimation(fromProgress onStartProgress: AuthMeUI.AnimationProgressTime, toProgress onEndProgress: AuthMeUI.AnimationProgressTime) -> AuthMeUI.LottieSwitch
+  @_Concurrency.MainActor @preconcurrency public func offAnimation(fromProgress offStartProgress: AuthMeUI.AnimationProgressTime, toProgress offEndProgress: AuthMeUI.AnimationProgressTime) -> AuthMeUI.LottieSwitch
+  @_Concurrency.MainActor @preconcurrency public func valueProvider<ValueProvider>(_ valueProvider: ValueProvider, for keypath: AuthMeUI.AnimationKeypath) -> AuthMeUI.LottieSwitch where ValueProvider : AuthMeUI.AnyValueProvider, ValueProvider : Swift.Equatable
   public typealias Body = @_opaqueReturnTypeOf("$s8AuthMeUI12LottieSwitchV4bodyQrvp", 0) __
 }
 @available(*, deprecated, message: "Use DefaultAnimationCache instead, which is thread-safe and automatically responds to memory pressure.")
@@ -989,19 +980,19 @@ public enum BlendMode : Swift.Int, Swift.Codable {
     get
   }
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class AnimatedButton : AuthMeUI.AnimatedControl {
-  @_Concurrency.MainActor(unsafe) override public init(animation: AuthMeUI.LottieAnimation?, configuration: AuthMeUI.LottieConfiguration = .shared)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init()
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func beginTracking(_ touch: UIKit.UITouch, with event: UIKit.UIEvent?) -> Swift.Bool
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func endTracking(_ touch: UIKit.UITouch?, with event: UIKit.UIEvent?)
-  @_Concurrency.MainActor(unsafe) public var performAction: (() -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public var accessibilityTraits: UIKit.UIAccessibilityTraits {
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class AnimatedButton : AuthMeUI.AnimatedControl {
+  @_Concurrency.MainActor @preconcurrency override public init(animation: AuthMeUI.LottieAnimation?, configuration: AuthMeUI.LottieConfiguration = .shared)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init()
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func beginTracking(_ touch: UIKit.UITouch, with event: UIKit.UIEvent?) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func endTracking(_ touch: UIKit.UITouch?, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor @preconcurrency public var performAction: (() -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var accessibilityTraits: UIKit.UIAccessibilityTraits {
     @objc get
     @objc set
   }
-  @_Concurrency.MainActor(unsafe) public func setPlayRange(fromProgress: AuthMeUI.AnimationProgressTime, toProgress: AuthMeUI.AnimationProgressTime, event: AuthMeUI.LottieControlEvent)
-  @_Concurrency.MainActor(unsafe) public func setPlayRange(fromMarker fromName: Swift.String, toMarker toName: Swift.String, event: AuthMeUI.LottieControlEvent)
+  @_Concurrency.MainActor @preconcurrency public func setPlayRange(fromProgress: AuthMeUI.AnimationProgressTime, toProgress: AuthMeUI.AnimationProgressTime, event: AuthMeUI.LottieControlEvent)
+  @_Concurrency.MainActor @preconcurrency public func setPlayRange(fromMarker fromName: Swift.String, toMarker toName: Swift.String, event: AuthMeUI.LottieControlEvent)
   @objc deinit
 }
 public enum DecodingStrategy : Swift.Hashable {
@@ -1051,9 +1042,7 @@ extension AuthMeUI.LottieAnimation {
   public static func filepath(_ filepath: Swift.String, animationCache: (any AuthMeUI.AnimationCacheProvider)? = LottieAnimationCache.shared) -> AuthMeUI.LottieAnimation?
   public static func asset(_ name: Swift.String, bundle: Foundation.Bundle = Bundle.main, animationCache: (any AuthMeUI.AnimationCacheProvider)? = LottieAnimationCache.shared) -> AuthMeUI.LottieAnimation?
   public static func from(data: Foundation.Data, strategy: AuthMeUI.DecodingStrategy = LottieConfiguration.shared.decodingStrategy) throws -> AuthMeUI.LottieAnimation
-  #if compiler(>=5.3) && $AsyncAwait
   public static func loadedFrom(url: Foundation.URL, session: Foundation.URLSession = .shared, animationCache: (any AuthMeUI.AnimationCacheProvider)? = LottieAnimationCache.shared) async -> AuthMeUI.LottieAnimation?
-  #endif
   public static func loadedFrom(url: Foundation.URL, session: Foundation.URLSession = .shared, closure: @escaping AuthMeUI.LottieAnimation.DownloadClosure, animationCache: (any AuthMeUI.AnimationCacheProvider)? = LottieAnimationCache.shared)
   final public func progressTime(forMarker named: Swift.String) -> AuthMeUI.AnimationProgressTime?
   final public func frameTime(forMarker named: Swift.String) -> AuthMeUI.AnimationFrameTime?
@@ -1065,12 +1054,12 @@ extension AuthMeUI.LottieAnimation {
 }
 extension Foundation.Bundle : @unchecked Swift.Sendable {
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class AnimatedSwitch : AuthMeUI.AnimatedControl {
-  @_Concurrency.MainActor(unsafe) override public init(animation: AuthMeUI.LottieAnimation?, configuration: AuthMeUI.LottieConfiguration = .shared)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init()
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) override open func animationDidSet()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func endTracking(_ touch: UIKit.UITouch?, with event: UIKit.UIEvent?)
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class AnimatedSwitch : AuthMeUI.AnimatedControl {
+  @_Concurrency.MainActor @preconcurrency override public init(animation: AuthMeUI.LottieAnimation?, configuration: AuthMeUI.LottieConfiguration = .shared)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init()
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency override open func animationDidSet()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func endTracking(_ touch: UIKit.UITouch?, with event: UIKit.UIEvent?)
   public enum CancelBehavior {
     case reverse
     case none
@@ -1080,26 +1069,26 @@ extension Foundation.Bundle : @unchecked Swift.Sendable {
       get
     }
   }
-  @_Concurrency.MainActor(unsafe) public var cancelBehavior: AuthMeUI.AnimatedSwitch.CancelBehavior
-  @_Concurrency.MainActor(unsafe) public var animateUpdateWhenChangingAnimation: Swift.Bool
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public var accessibilityTraits: UIKit.UIAccessibilityTraits {
+  @_Concurrency.MainActor @preconcurrency public var cancelBehavior: AuthMeUI.AnimatedSwitch.CancelBehavior
+  @_Concurrency.MainActor @preconcurrency public var animateUpdateWhenChangingAnimation: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var accessibilityTraits: UIKit.UIAccessibilityTraits {
     @objc get
     @objc set
   }
-  @_Concurrency.MainActor(unsafe) public var stateUpdated: ((_ isOn: Swift.Bool) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) public var isOn: Swift.Bool {
+  @_Concurrency.MainActor @preconcurrency public var stateUpdated: ((_ isOn: Swift.Bool) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency public var isOn: Swift.Bool {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public func setIsOn(_ isOn: Swift.Bool, animated: Swift.Bool, shouldFireHaptics: Swift.Bool = true)
-  @_Concurrency.MainActor(unsafe) public func setProgressForState(fromProgress: AuthMeUI.AnimationProgressTime, toProgress: AuthMeUI.AnimationProgressTime, forOnState: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func setIsOn(_ isOn: Swift.Bool, animated: Swift.Bool, shouldFireHaptics: Swift.Bool = true)
+  @_Concurrency.MainActor @preconcurrency public func setProgressForState(fromProgress: AuthMeUI.AnimationProgressTime, toProgress: AuthMeUI.AnimationProgressTime, forOnState: Swift.Bool)
   @objc deinit
 }
 public struct LottieVector1D : Swift.Hashable, Swift.Sendable {
   public init(_ value: Swift.Double)
   public let value: Swift.Double
-  public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: AuthMeUI.LottieVector1D, b: AuthMeUI.LottieVector1D) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -1109,8 +1098,8 @@ public struct LottieVector3D : Swift.Hashable, Swift.Sendable {
   public let y: Swift.Double
   public let z: Swift.Double
   public init(x: Swift.Double, y: Swift.Double, z: Swift.Double)
-  public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: AuthMeUI.LottieVector3D, b: AuthMeUI.LottieVector3D) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -1146,8 +1135,8 @@ extension AuthMeUI.LottieVector1D : Swift.Codable {
 public struct LottieVector2D : Swift.Codable, Swift.Hashable, Swift.Sendable {
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
-  public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: AuthMeUI.LottieVector2D, b: AuthMeUI.LottieVector2D) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -1464,9 +1453,7 @@ extension AuthMeUI.AuthmeFeatureConfig {
   @objc deinit
 }
 extension AuthMeUI.AuthmeCoordinator {
-  #if compiler(>=5.3) && $AsyncAwait
   public static func getCustomerState(waitingTime: Swift.Int = 3, retryTimes: Swift.Int = 2) async throws -> VerificationState
-  #endif
 }
 @objc final public class CompatibleAnimationKeypath : ObjectiveC.NSObject {
   @objc public init(keypath: Swift.String)
@@ -1540,69 +1527,57 @@ extension AuthMeUI.PointValueProvider : Swift.Equatable {
 public enum LottieAnimationCache {
   public static var shared: (any AuthMeUI.AnimationCacheProvider)?
 }
-public struct LottieView<Placeholder> where Placeholder : SwiftUI.View {
-  public init(animation: AuthMeUI.LottieAnimation?) where Placeholder == SwiftUI.EmptyView
-  public init(dotLottieFile: AuthMeUI.DotLottieFile?) where Placeholder == SwiftUI.EmptyView
-  #if compiler(>=5.3) && $AsyncAwait
-  public init(_ loadAnimation: @escaping () async throws -> AuthMeUI.LottieAnimation?) where Placeholder == SwiftUI.EmptyView
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
-  public init(_ loadAnimation: @escaping () async throws -> AuthMeUI.LottieAnimation?, @SwiftUI.ViewBuilder placeholder: @escaping (() -> Placeholder))
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
-  public init(_ loadDotLottieFile: @escaping () async throws -> AuthMeUI.DotLottieFile?) where Placeholder == SwiftUI.EmptyView
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
-  public init(_ loadDotLottieFile: @escaping () async throws -> AuthMeUI.DotLottieFile?, @SwiftUI.ViewBuilder placeholder: @escaping (() -> Placeholder))
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
-  public init(_ loadAnimation: @escaping () async throws -> AuthMeUI.LottieAnimationSource?) where Placeholder == SwiftUI.EmptyView
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
-  public init(_ loadAnimation: @escaping () async throws -> AuthMeUI.LottieAnimationSource?, @SwiftUI.ViewBuilder placeholder: @escaping () -> Placeholder)
-  #endif
-  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+@_Concurrency.MainActor @preconcurrency public struct LottieView<Placeholder> where Placeholder : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(animation: AuthMeUI.LottieAnimation?) where Placeholder == SwiftUICore.EmptyView
+  @_Concurrency.MainActor @preconcurrency public init(dotLottieFile: AuthMeUI.DotLottieFile?) where Placeholder == SwiftUICore.EmptyView
+  @_Concurrency.MainActor @preconcurrency public init(_ loadAnimation: @escaping () async throws -> AuthMeUI.LottieAnimation?) where Placeholder == SwiftUICore.EmptyView
+  @_Concurrency.MainActor @preconcurrency public init(_ loadAnimation: @escaping () async throws -> AuthMeUI.LottieAnimation?, @SwiftUICore.ViewBuilder placeholder: @escaping () -> Placeholder)
+  @_Concurrency.MainActor @preconcurrency public init(_ loadDotLottieFile: @escaping () async throws -> AuthMeUI.DotLottieFile?) where Placeholder == SwiftUICore.EmptyView
+  @_Concurrency.MainActor @preconcurrency public init(_ loadDotLottieFile: @escaping () async throws -> AuthMeUI.DotLottieFile?, @SwiftUICore.ViewBuilder placeholder: @escaping () -> Placeholder)
+  @_Concurrency.MainActor @preconcurrency public init(_ loadAnimation: @escaping () async throws -> AuthMeUI.LottieAnimationSource?) where Placeholder == SwiftUICore.EmptyView
+  @_Concurrency.MainActor @preconcurrency public init(_ loadAnimation: @escaping () async throws -> AuthMeUI.LottieAnimationSource?, @SwiftUICore.ViewBuilder placeholder: @escaping () -> Placeholder)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
     get
   }
-  public func configure<Property>(_ property: Swift.ReferenceWritableKeyPath<AuthMeUI.LottieAnimationView, Property>, to value: Property) -> AuthMeUI.LottieView<Placeholder>
-  public func configure<Property>(_ property: Swift.ReferenceWritableKeyPath<AuthMeUI.LottieAnimationView, Property>, to value: Property) -> AuthMeUI.LottieView<Placeholder> where Property : Swift.Equatable
-  public func configure(_ configure: @escaping (AuthMeUI.LottieAnimationView) -> Swift.Void) -> AuthMeUI.LottieView<Placeholder>
-  public func resizable() -> AuthMeUI.LottieView<Placeholder>
-  public func intrinsicSize() -> AuthMeUI.LottieView<Placeholder>
+  @_Concurrency.MainActor @preconcurrency public func configure<Property>(_ property: Swift.ReferenceWritableKeyPath<AuthMeUI.LottieAnimationView, Property>, to value: Property) -> AuthMeUI.LottieView<Placeholder>
+  @_Concurrency.MainActor @preconcurrency public func configure<Property>(_ property: Swift.ReferenceWritableKeyPath<AuthMeUI.LottieAnimationView, Property>, to value: Property) -> AuthMeUI.LottieView<Placeholder> where Property : Swift.Equatable
+  @_Concurrency.MainActor @preconcurrency public func configure(_ configure: @escaping (AuthMeUI.LottieAnimationView) -> Swift.Void) -> AuthMeUI.LottieView<Placeholder>
+  @_Concurrency.MainActor @preconcurrency public func resizable() -> AuthMeUI.LottieView<Placeholder>
+  @_Concurrency.MainActor @preconcurrency public func intrinsicSize() -> AuthMeUI.LottieView<Placeholder>
   @available(*, deprecated, renamed: "playing()", message: "Will be removed in a future major release.")
-  public func play() -> AuthMeUI.LottieView<Placeholder>
-  public func looping() -> AuthMeUI.LottieView<Placeholder>
+  @_Concurrency.MainActor @preconcurrency public func play() -> AuthMeUI.LottieView<Placeholder>
+  @_Concurrency.MainActor @preconcurrency public func looping() -> AuthMeUI.LottieView<Placeholder>
   @available(*, deprecated, renamed: "playing(_:)", message: "Will be removed in a future major release.")
-  public func play(loopMode: AuthMeUI.LottieLoopMode = .playOnce) -> AuthMeUI.LottieView<Placeholder>
+  @_Concurrency.MainActor @preconcurrency public func play(loopMode: AuthMeUI.LottieLoopMode = .playOnce) -> AuthMeUI.LottieView<Placeholder>
   @available(*, deprecated, renamed: "playbackMode(_:)", message: "Will be removed in a future major release.")
-  public func play(_ playbackMode: AuthMeUI.LottiePlaybackMode) -> AuthMeUI.LottieView<Placeholder>
-  public func playing(_ mode: AuthMeUI.LottiePlaybackMode.PlaybackMode) -> AuthMeUI.LottieView<Placeholder>
-  public func playing(loopMode: AuthMeUI.LottieLoopMode) -> AuthMeUI.LottieView<Placeholder>
-  public func playing() -> AuthMeUI.LottieView<Placeholder>
-  public func paused(at state: AuthMeUI.LottiePlaybackMode.PausedState = .currentFrame) -> AuthMeUI.LottieView<Placeholder>
-  public func playbackMode(_ playbackMode: AuthMeUI.LottiePlaybackMode) -> AuthMeUI.LottieView<Placeholder>
-  public func animationSpeed(_ animationSpeed: Swift.Double) -> AuthMeUI.LottieView<Placeholder>
-  public func animationDidLoad(_ animationDidLoad: @escaping (AuthMeUI.LottieAnimationSource) -> Swift.Void) -> AuthMeUI.LottieView<Placeholder>
-  public func animationDidFinish(_ animationCompletionHandler: AuthMeUI.LottieCompletionBlock?) -> AuthMeUI.LottieView<Placeholder>
-  public func backgroundBehavior(_ value: AuthMeUI.LottieBackgroundBehavior) -> AuthMeUI.LottieView<Placeholder>
-  public func accessibilityLabel(_ accessibilityLabel: Swift.String?) -> AuthMeUI.LottieView<Placeholder>
-  public func configuration(_ configuration: AuthMeUI.LottieConfiguration) -> AuthMeUI.LottieView<Placeholder>
-  public func logger(_ logger: AuthMeUI.LottieLogger) -> AuthMeUI.LottieView<Placeholder>
-  public func imageProvider<ImageProvider>(_ imageProvider: ImageProvider) -> AuthMeUI.LottieView<Placeholder> where ImageProvider : AuthMeUI.AnimationImageProvider, ImageProvider : Swift.Equatable
-  public func textProvider<TextProvider>(_ textProvider: TextProvider) -> AuthMeUI.LottieView<Placeholder> where TextProvider : AuthMeUI.AnimationKeypathTextProvider, TextProvider : Swift.Equatable
-  public func fontProvider<FontProvider>(_ fontProvider: FontProvider) -> AuthMeUI.LottieView<Placeholder> where FontProvider : AuthMeUI.AnimationFontProvider, FontProvider : Swift.Equatable
-  public func valueProvider<ValueProvider>(_ valueProvider: ValueProvider, for keypath: AuthMeUI.AnimationKeypath) -> AuthMeUI.LottieView<Placeholder> where ValueProvider : AuthMeUI.AnyValueProvider, ValueProvider : Swift.Equatable
-  public func currentProgress(_ currentProgress: AuthMeUI.AnimationProgressTime?) -> AuthMeUI.LottieView<Placeholder>
-  public func currentFrame(_ currentFrame: AuthMeUI.AnimationFrameTime?) -> AuthMeUI.LottieView<Placeholder>
-  public func currentTime(_ currentTime: Foundation.TimeInterval?) -> AuthMeUI.LottieView<Placeholder>
-  public func reloadAnimationTrigger(_ value: some Equatable, showPlaceholder: Swift.Bool = true) -> AuthMeUI.LottieView<Placeholder>
+  @_Concurrency.MainActor @preconcurrency public func play(_ playbackMode: AuthMeUI.LottiePlaybackMode) -> AuthMeUI.LottieView<Placeholder>
+  @_Concurrency.MainActor @preconcurrency public func playing(_ mode: AuthMeUI.LottiePlaybackMode.PlaybackMode) -> AuthMeUI.LottieView<Placeholder>
+  @_Concurrency.MainActor @preconcurrency public func playing(loopMode: AuthMeUI.LottieLoopMode) -> AuthMeUI.LottieView<Placeholder>
+  @_Concurrency.MainActor @preconcurrency public func playing() -> AuthMeUI.LottieView<Placeholder>
+  @_Concurrency.MainActor @preconcurrency public func paused(at state: AuthMeUI.LottiePlaybackMode.PausedState = .currentFrame) -> AuthMeUI.LottieView<Placeholder>
+  @_Concurrency.MainActor @preconcurrency public func playbackMode(_ playbackMode: AuthMeUI.LottiePlaybackMode) -> AuthMeUI.LottieView<Placeholder>
+  @_Concurrency.MainActor @preconcurrency public func animationSpeed(_ animationSpeed: Swift.Double) -> AuthMeUI.LottieView<Placeholder>
+  @_Concurrency.MainActor @preconcurrency public func animationDidLoad(_ animationDidLoad: @escaping (AuthMeUI.LottieAnimationSource) -> Swift.Void) -> AuthMeUI.LottieView<Placeholder>
+  @_Concurrency.MainActor @preconcurrency public func animationDidFinish(_ animationCompletionHandler: AuthMeUI.LottieCompletionBlock?) -> AuthMeUI.LottieView<Placeholder>
+  @_Concurrency.MainActor @preconcurrency public func backgroundBehavior(_ value: AuthMeUI.LottieBackgroundBehavior) -> AuthMeUI.LottieView<Placeholder>
+  @_Concurrency.MainActor @preconcurrency public func accessibilityLabel(_ accessibilityLabel: Swift.String?) -> AuthMeUI.LottieView<Placeholder>
+  @_Concurrency.MainActor @preconcurrency public func configuration(_ configuration: AuthMeUI.LottieConfiguration) -> AuthMeUI.LottieView<Placeholder>
+  @_Concurrency.MainActor @preconcurrency public func logger(_ logger: AuthMeUI.LottieLogger) -> AuthMeUI.LottieView<Placeholder>
+  @_Concurrency.MainActor @preconcurrency public func imageProvider<ImageProvider>(_ imageProvider: ImageProvider) -> AuthMeUI.LottieView<Placeholder> where ImageProvider : AuthMeUI.AnimationImageProvider, ImageProvider : Swift.Equatable
+  @_Concurrency.MainActor @preconcurrency public func textProvider<TextProvider>(_ textProvider: TextProvider) -> AuthMeUI.LottieView<Placeholder> where TextProvider : AuthMeUI.AnimationKeypathTextProvider, TextProvider : Swift.Equatable
+  @_Concurrency.MainActor @preconcurrency public func fontProvider<FontProvider>(_ fontProvider: FontProvider) -> AuthMeUI.LottieView<Placeholder> where FontProvider : AuthMeUI.AnimationFontProvider, FontProvider : Swift.Equatable
+  @_Concurrency.MainActor @preconcurrency public func valueProvider<ValueProvider>(_ valueProvider: ValueProvider, for keypath: AuthMeUI.AnimationKeypath) -> AuthMeUI.LottieView<Placeholder> where ValueProvider : AuthMeUI.AnyValueProvider, ValueProvider : Swift.Equatable
+  @_Concurrency.MainActor @preconcurrency public func currentProgress(_ currentProgress: AuthMeUI.AnimationProgressTime?) -> AuthMeUI.LottieView<Placeholder>
+  @_Concurrency.MainActor @preconcurrency public func currentFrame(_ currentFrame: AuthMeUI.AnimationFrameTime?) -> AuthMeUI.LottieView<Placeholder>
+  @_Concurrency.MainActor @preconcurrency public func currentTime(_ currentTime: Foundation.TimeInterval?) -> AuthMeUI.LottieView<Placeholder>
+  @_Concurrency.MainActor @preconcurrency public func reloadAnimationTrigger(_ value: some Equatable, showPlaceholder: Swift.Bool = true) -> AuthMeUI.LottieView<Placeholder>
   @available(iOS 15.0, tvOS 15.0, macOS 12.0, *)
-  public func getRealtimeAnimationProgress(_ realtimeAnimationProgress: SwiftUI.Binding<AuthMeUI.AnimationProgressTime>?) -> some SwiftUI.View
+  @_Concurrency.MainActor @preconcurrency public func getRealtimeAnimationProgress(_ realtimeAnimationProgress: SwiftUICore.Binding<AuthMeUI.AnimationProgressTime>?) -> some SwiftUICore.View
   
   @available(iOS 15.0, tvOS 15.0, macOS 12.0, *)
-  public func getRealtimeAnimationFrame(_ realtimeAnimationFrame: SwiftUI.Binding<AuthMeUI.AnimationFrameTime>?) -> some SwiftUI.View
+  @_Concurrency.MainActor @preconcurrency public func getRealtimeAnimationFrame(_ realtimeAnimationFrame: SwiftUICore.Binding<AuthMeUI.AnimationFrameTime>?) -> some SwiftUICore.View
   
-  public func dotLottieConfigurationComponents(_ dotLottieConfigurationComponents: AuthMeUI.DotLottieConfigurationComponents) -> AuthMeUI.LottieView<Placeholder>
+  @_Concurrency.MainActor @preconcurrency public func dotLottieConfigurationComponents(_ dotLottieConfigurationComponents: AuthMeUI.DotLottieConfigurationComponents) -> AuthMeUI.LottieView<Placeholder>
   public typealias Body = @_opaqueReturnTypeOf("$s8AuthMeUI10LottieViewV4bodyQrvp", 0) __<Placeholder>
 }
 public class DotLottieCache : AuthMeUI.DotLottieCacheProvider {
@@ -1633,14 +1608,14 @@ public enum NFCDeviceError : Swift.String, Swift.Error {
   }
 }
 extension AuthMeUI.LottieAnimationView {
-  @_Concurrency.MainActor(unsafe) convenience public init(name: Swift.String, bundle: Foundation.Bundle = Bundle.main, subdirectory: Swift.String? = nil, imageProvider: (any AuthMeUI.AnimationImageProvider)? = nil, animationCache: (any AuthMeUI.AnimationCacheProvider)? = LottieAnimationCache.shared, configuration: AuthMeUI.LottieConfiguration = .shared)
-  @_Concurrency.MainActor(unsafe) convenience public init(filePath: Swift.String, imageProvider: (any AuthMeUI.AnimationImageProvider)? = nil, animationCache: (any AuthMeUI.AnimationCacheProvider)? = LottieAnimationCache.shared, configuration: AuthMeUI.LottieConfiguration = .shared)
-  @_Concurrency.MainActor(unsafe) convenience public init(url: Foundation.URL, imageProvider: (any AuthMeUI.AnimationImageProvider)? = nil, session: Foundation.URLSession = .shared, closure: @escaping AuthMeUI.LottieAnimationView.DownloadClosure, animationCache: (any AuthMeUI.AnimationCacheProvider)? = LottieAnimationCache.shared, configuration: AuthMeUI.LottieConfiguration = .shared)
-  @_Concurrency.MainActor(unsafe) convenience public init(asset name: Swift.String, bundle: Foundation.Bundle = Bundle.main, imageProvider: (any AuthMeUI.AnimationImageProvider)? = nil, animationCache: (any AuthMeUI.AnimationCacheProvider)? = LottieAnimationCache.shared, configuration: AuthMeUI.LottieConfiguration = .shared)
-  @_Concurrency.MainActor(unsafe) convenience public init(dotLottieName name: Swift.String, bundle: Foundation.Bundle = Bundle.main, subdirectory: Swift.String? = nil, animationId: Swift.String? = nil, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache, configuration: AuthMeUI.LottieConfiguration = .shared, completion: ((AuthMeUI.LottieAnimationView, (any Swift.Error)?) -> Swift.Void)? = nil)
-  @_Concurrency.MainActor(unsafe) convenience public init(dotLottieFilePath filePath: Swift.String, animationId: Swift.String? = nil, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache, configuration: AuthMeUI.LottieConfiguration = .shared, completion: ((AuthMeUI.LottieAnimationView, (any Swift.Error)?) -> Swift.Void)? = nil)
-  @_Concurrency.MainActor(unsafe) convenience public init(dotLottieUrl url: Foundation.URL, animationId: Swift.String? = nil, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache, configuration: AuthMeUI.LottieConfiguration = .shared, session: Foundation.URLSession = .shared, completion: ((AuthMeUI.LottieAnimationView, (any Swift.Error)?) -> Swift.Void)? = nil)
-  @_Concurrency.MainActor(unsafe) convenience public init(dotLottieAsset name: Swift.String, bundle: Foundation.Bundle = Bundle.main, animationId: Swift.String? = nil, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache, configuration: AuthMeUI.LottieConfiguration = .shared, completion: ((AuthMeUI.LottieAnimationView, (any Swift.Error)?) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency convenience public init(name: Swift.String, bundle: Foundation.Bundle = Bundle.main, subdirectory: Swift.String? = nil, imageProvider: (any AuthMeUI.AnimationImageProvider)? = nil, animationCache: (any AuthMeUI.AnimationCacheProvider)? = LottieAnimationCache.shared, configuration: AuthMeUI.LottieConfiguration = .shared)
+  @_Concurrency.MainActor @preconcurrency convenience public init(filePath: Swift.String, imageProvider: (any AuthMeUI.AnimationImageProvider)? = nil, animationCache: (any AuthMeUI.AnimationCacheProvider)? = LottieAnimationCache.shared, configuration: AuthMeUI.LottieConfiguration = .shared)
+  @_Concurrency.MainActor @preconcurrency convenience public init(url: Foundation.URL, imageProvider: (any AuthMeUI.AnimationImageProvider)? = nil, session: Foundation.URLSession = .shared, closure: @escaping AuthMeUI.LottieAnimationView.DownloadClosure, animationCache: (any AuthMeUI.AnimationCacheProvider)? = LottieAnimationCache.shared, configuration: AuthMeUI.LottieConfiguration = .shared)
+  @_Concurrency.MainActor @preconcurrency convenience public init(asset name: Swift.String, bundle: Foundation.Bundle = Bundle.main, imageProvider: (any AuthMeUI.AnimationImageProvider)? = nil, animationCache: (any AuthMeUI.AnimationCacheProvider)? = LottieAnimationCache.shared, configuration: AuthMeUI.LottieConfiguration = .shared)
+  @_Concurrency.MainActor @preconcurrency convenience public init(dotLottieName name: Swift.String, bundle: Foundation.Bundle = Bundle.main, subdirectory: Swift.String? = nil, animationId: Swift.String? = nil, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache, configuration: AuthMeUI.LottieConfiguration = .shared, completion: ((AuthMeUI.LottieAnimationView, (any Swift.Error)?) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency convenience public init(dotLottieFilePath filePath: Swift.String, animationId: Swift.String? = nil, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache, configuration: AuthMeUI.LottieConfiguration = .shared, completion: ((AuthMeUI.LottieAnimationView, (any Swift.Error)?) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency convenience public init(dotLottieUrl url: Foundation.URL, animationId: Swift.String? = nil, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache, configuration: AuthMeUI.LottieConfiguration = .shared, session: Foundation.URLSession = .shared, completion: ((AuthMeUI.LottieAnimationView, (any Swift.Error)?) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency convenience public init(dotLottieAsset name: Swift.String, bundle: Foundation.Bundle = Bundle.main, animationId: Swift.String? = nil, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache, configuration: AuthMeUI.LottieConfiguration = .shared, completion: ((AuthMeUI.LottieAnimationView, (any Swift.Error)?) -> Swift.Void)? = nil)
   public typealias DownloadClosure = ((any Swift.Error)?) -> Swift.Void
 }
 public struct AuthMeUIConfig {
@@ -1703,41 +1678,41 @@ extension AuthMeUI.AuthmeKYCConfig {
   @discardableResult
   final public func isUploadFullFrameEnabaled(_ enabled: Swift.Bool) -> Self
 }
-@objc @_Concurrency.MainActor(unsafe) open class AnimatedControl : AuthMeUI.LottieControlType {
-  @_Concurrency.MainActor(unsafe) public init(animation: AuthMeUI.LottieAnimation?, configuration: AuthMeUI.LottieConfiguration = .shared)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public init()
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isEnabled: Swift.Bool {
+@objc @_Concurrency.MainActor @preconcurrency open class AnimatedControl : AuthMeUI.LottieControlType {
+  @_Concurrency.MainActor @preconcurrency public init(animation: AuthMeUI.LottieAnimation?, configuration: AuthMeUI.LottieConfiguration = .shared)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public init()
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var isEnabled: Swift.Bool {
     @objc get
     @objc set
   }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isSelected: Swift.Bool {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var isSelected: Swift.Bool {
     @objc get
     @objc set
   }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isHighlighted: Swift.Bool {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var isHighlighted: Swift.Bool {
     @objc get
     @objc set
   }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
     @objc get
   }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func beginTracking(_ touch: UIKit.UITouch, with event: UIKit.UIEvent?) -> Swift.Bool
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func continueTracking(_ touch: UIKit.UITouch, with event: UIKit.UIEvent?) -> Swift.Bool
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func endTracking(_ touch: UIKit.UITouch?, with event: UIKit.UIEvent?)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func cancelTracking(with event: UIKit.UIEvent?)
-  @_Concurrency.MainActor(unsafe) open func animationDidSet()
-  @_Concurrency.MainActor(unsafe) final public let animationView: AuthMeUI.LottieAnimationView
-  @_Concurrency.MainActor(unsafe) public var animation: AuthMeUI.LottieAnimation? {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func beginTracking(_ touch: UIKit.UITouch, with event: UIKit.UIEvent?) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func continueTracking(_ touch: UIKit.UITouch, with event: UIKit.UIEvent?) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func endTracking(_ touch: UIKit.UITouch?, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func cancelTracking(with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor @preconcurrency open func animationDidSet()
+  @_Concurrency.MainActor @preconcurrency final public let animationView: AuthMeUI.LottieAnimationView
+  @_Concurrency.MainActor @preconcurrency public var animation: AuthMeUI.LottieAnimation? {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var animationSpeed: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor @preconcurrency public var animationSpeed: CoreFoundation.CGFloat {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public func setLayer(named: Swift.String, forState: AuthMeUI.LottieControlState)
-  @_Concurrency.MainActor(unsafe) public func setValueProvider(_ valueProvider: any AuthMeUI.AnyValueProvider, keypath: AuthMeUI.AnimationKeypath)
+  @_Concurrency.MainActor @preconcurrency public func setLayer(named: Swift.String, forState: AuthMeUI.LottieControlState)
+  @_Concurrency.MainActor @preconcurrency public func setValueProvider(_ valueProvider: any AuthMeUI.AnyValueProvider, keypath: AuthMeUI.AnimationKeypath)
   @objc deinit
 }
 final public class FloatValueProvider {
@@ -1761,19 +1736,19 @@ extension AuthMeUI.FloatValueProvider : Swift.Equatable {
   public static func == (lhs: AuthMeUI.FloatValueProvider, rhs: AuthMeUI.FloatValueProvider) -> Swift.Bool
 }
 extension AuthMeUI.LivenessViewController : AVFoundation.AVCaptureDataOutputSynchronizerDelegate {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func dataOutputSynchronizer(_ synchronizer: AVFoundation.AVCaptureDataOutputSynchronizer, didOutput synchronizedDataCollection: AVFoundation.AVCaptureSynchronizedDataCollection)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func dataOutputSynchronizer(_ synchronizer: AVFoundation.AVCaptureDataOutputSynchronizer, didOutput synchronizedDataCollection: AVFoundation.AVCaptureSynchronizedDataCollection)
 }
 extension AuthMeUI.LivenessViewController : LivenessFlowDelegate {
-  @_Concurrency.MainActor(unsafe) public func livenessDidStart()
-  @_Concurrency.MainActor(unsafe) public func livenessDidNotifyMessage(status: LivenessDetectStatus)
-  @_Concurrency.MainActor(unsafe) public func livenessDidUpdateReconize(result: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) public func livenessDidFailureWith(error: FlowError, retryHandler: @escaping (() -> Swift.Void))
-  @_Concurrency.MainActor(unsafe) public func livenessDidRecognize(image: UIKit.UIImage)
-  @_Concurrency.MainActor(unsafe) public func livenessDidFaceScale(direction: LivenessFlow.FaceScaleDirection.Direction)
+  @_Concurrency.MainActor @preconcurrency public func livenessDidStart()
+  @_Concurrency.MainActor @preconcurrency public func livenessDidNotifyMessage(status: LivenessDetectStatus)
+  @_Concurrency.MainActor @preconcurrency public func livenessDidUpdateReconize(result: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func livenessDidFailureWith(error: FlowError, retryHandler: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func livenessDidRecognize(image: UIKit.UIImage)
+  @_Concurrency.MainActor @preconcurrency public func livenessDidFaceScale(direction: LivenessFlow.FaceScaleDirection.Direction)
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class AnimationSubview : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency final public class AnimationSubview : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
 public enum LivenessResult {
@@ -1781,16 +1756,16 @@ public enum LivenessResult {
   case failed
   case canceled
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class LivenessViewController : AuthMeUI.BaseViewController {
-  @_Concurrency.MainActor(unsafe) public var uiParams: AuthMeUI.AuthMeLivenessUIParams?
-  @_Concurrency.MainActor(unsafe) @objc dynamic public init()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class LivenessViewController : AuthMeUI.BaseViewController {
+  @_Concurrency.MainActor @preconcurrency public var uiParams: AuthMeUI.AuthMeLivenessUIParams?
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public init()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
     @objc get
   }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillDisappear(_: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLayoutSubviews()
   @objc deinit
 }
 extension AuthMeUI.AuthMeUICoordinator where T == OfflineMode {
@@ -1851,8 +1826,10 @@ extension AuthMeUI.ColorValueProvider : AuthMeUI.AnyValueProvider {}
 extension AuthMeUI.AuthmeFeature : Swift.Equatable {}
 extension AuthMeUI.AuthmeFeature : Swift.Hashable {}
 extension AuthMeUI.AuthmeFeature : Swift.RawRepresentable {}
-extension AuthMeUI.LottieButton : SwiftUI.View {}
-extension AuthMeUI.LottieSwitch : SwiftUI.View {}
+extension AuthMeUI.LottieButton : SwiftUICore.View {}
+extension AuthMeUI.LottieButton : Swift.Sendable {}
+extension AuthMeUI.LottieSwitch : SwiftUICore.View {}
+extension AuthMeUI.LottieSwitch : Swift.Sendable {}
 extension AuthMeUI.LayerType : Swift.Equatable {}
 extension AuthMeUI.LayerType : Swift.Hashable {}
 extension AuthMeUI.LayerType : Swift.RawRepresentable {}
@@ -1873,7 +1850,8 @@ extension AuthMeUI.TransitionStyle : Swift.Hashable {}
 extension AuthMeUI.AuthmeCoordinatorError : Swift.Equatable {}
 extension AuthMeUI.AuthmeCoordinatorError : Swift.Hashable {}
 extension AuthMeUI.PointValueProvider : AuthMeUI.AnyValueProvider {}
-extension AuthMeUI.LottieView : SwiftUI.View {}
+extension AuthMeUI.LottieView : SwiftUICore.View {}
+extension AuthMeUI.LottieView : Swift.Sendable {}
 extension AuthMeUI.NFCDeviceError : Swift.Equatable {}
 extension AuthMeUI.NFCDeviceError : Swift.Hashable {}
 extension AuthMeUI.NFCDeviceError : Swift.RawRepresentable {}

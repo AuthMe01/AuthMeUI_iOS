@@ -6,11 +6,11 @@
 	<dict>
 		<key>ios-arm64/AuthMeUI.framework/Assets.car</key>
 		<data>
-		/RnD5a3Xf7/nIMiML84FXcCeMPY=
+		tI23ZTGMdMHf6jo9FbbBx9kmPSs=
 		</data>
 		<key>ios-arm64/AuthMeUI.framework/AuthMeUI</key>
 		<data>
-		8fI3RzxBXfmukr533UQGTdT4yPc=
+		QaoOkMNFiRE0Uglq2qRATpbDx+I=
 		</data>
 		<key>ios-arm64/AuthMeUI.framework/AuthMeUI-Info.plist</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>ios-arm64/AuthMeUI.framework/Headers/AuthMeUI-Swift.h</key>
 		<data>
-		kdsDgsMvIUnUEA1jUDNyOUgn4kU=
+		A/WyxBK9po/58hHGLca1Dv/tvZw=
 		</data>
 		<key>ios-arm64/AuthMeUI.framework/Headers/AuthMeUI.h</key>
 		<data>
@@ -30,23 +30,23 @@
 		</data>
 		<key>ios-arm64/AuthMeUI.framework/Info.plist</key>
 		<data>
-		BdOyilrs3pLb/VsE2G1dH/QtnpA=
+		X8yGisxAD88XbfBAWCvy8r+oPMI=
 		</data>
 		<key>ios-arm64/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		dtQ/JUCh9SgVjIc8zyZgAY3Olog=
+		nD09vFwb3BlHnq+fFrH1Y42f5ho=
 		</data>
 		<key>ios-arm64/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		S0O9qEjxQXypSxyzL9Bs5Pz+qqw=
+		5CwqX1fTOGTdqLPVednU237Ql+8=
 		</data>
 		<key>ios-arm64/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		BlWfoHWJM46rD/b7YJD8NMe5reg=
+		OTrCR+i8NhMSllW6o+YWPtA5QcM=
 		</data>
 		<key>ios-arm64/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		S0O9qEjxQXypSxyzL9Bs5Pz+qqw=
+		5CwqX1fTOGTdqLPVednU237Ql+8=
 		</data>
 		<key>ios-arm64/AuthMeUI.framework/Modules/module.modulemap</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>ios-arm64/AuthMeUI.framework/NFCComponentableViewController.nib</key>
 		<data>
-		PBoy7dBMtY74JXZU8bRPLHrOuzE=
+		NNgfdtTHxAf+tkGGdycUhucMNdc=
 		</data>
 		<key>ios-arm64/AuthMeUI.framework/NFCImageTableViewCell.nib</key>
 		<data>
@@ -82,13 +82,13 @@
 		</data>
 		<key>ios-arm64/AuthMeUI.framework/ThicknessOCRScanViewController.nib</key>
 		<data>
-		a5b3ugzf3xnqdMDvHoKTWQwpzo4=
+		4cVnx64KaIJNc748S0dcKw8TOFk=
 		</data>
 		<key>ios-arm64/AuthMeUI.framework/en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			poEOkq7O5d/okr3s+OT4XZVx49E=
+			CyJnhln0cGK6Nz0t5XKOk9mrMh0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -97,7 +97,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bFaI7QtnqAb2gxn7+9cpxsEqqq0=
+			IM0BZTSjUD3eZHzPioVcbiz7uus=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -118,18 +118,18 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			127YDRKktuoAk4ZyeyOiXdsjaAs=
+			t2w/aA5fKIMNzSa+1oJ6FJ/dj1o=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Assets.car</key>
 		<data>
-		R2T9SSnxAcSMvYj2brWUxuEeosw=
+		tI23ZTGMdMHf6jo9FbbBx9kmPSs=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/AuthMeUI</key>
 		<data>
-		LMmWNSXnTLMla1Dug63UnEgVHr8=
+		QEkLLcTViFuDbsb9D6h3NfHpIWA=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/AuthMeUI-Info.plist</key>
 		<data>
@@ -137,7 +137,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Headers/AuthMeUI-Swift.h</key>
 		<data>
-		3XoqQpvrLsUrrdWZpT+EwnWBqlw=
+		N0XQOpqnHRpxN8bV9j4yvBVMZhg=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Headers/AuthMeUI.h</key>
 		<data>
@@ -149,39 +149,39 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Info.plist</key>
 		<data>
-		eab6DUpFoLhpYm0hgUxEbdq8jeQ=
+		0mOrbrasHA64VajR/FPUwbPB61c=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		9HS5WRJZOwUlVnpeeAwvxhrD4Bs=
+		Y++eViECVOvUEirj1+OXcmbQEbE=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		qkFIRwdJPdJnJB8hR0C/Kztxsd4=
+		9GLouLX9vN3BtMJ4bZsT5gJWFiA=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		8Bkq3LyMeGzCJAxXiwPFizwh5UM=
+		3PF3amOIUuKzSq2RWLMJfcKC0Vw=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		qkFIRwdJPdJnJB8hR0C/Kztxsd4=
+		9GLouLX9vN3BtMJ4bZsT5gJWFiA=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		9HS5WRJZOwUlVnpeeAwvxhrD4Bs=
+		Y++eViECVOvUEirj1+OXcmbQEbE=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		GTzvucXkX+d3+/fmiBR04K3cnzI=
+		NIziF2l98fRujp+l01vYk7oWyOg=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		0l/wf4zXBRCfr+HEa0uYy/gnLOg=
+		0O6ID3EZ6bnMkCYdyMM0Ekm6t5Q=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		GTzvucXkX+d3+/fmiBR04K3cnzI=
+		NIziF2l98fRujp+l01vYk7oWyOg=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Modules/module.modulemap</key>
 		<data>
@@ -189,7 +189,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/NFCComponentableViewController.nib</key>
 		<data>
-		PBoy7dBMtY74JXZU8bRPLHrOuzE=
+		NNgfdtTHxAf+tkGGdycUhucMNdc=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/NFCImageTableViewCell.nib</key>
 		<data>
@@ -217,17 +217,17 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/ThicknessOCRScanViewController.nib</key>
 		<data>
-		a5b3ugzf3xnqdMDvHoKTWQwpzo4=
+		4cVnx64KaIJNc748S0dcKw8TOFk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/_CodeSignature/CodeResources</key>
 		<data>
-		XItqeUYWYfF257foN5tFEyy6htU=
+		OJgEWfg+kU626XkCcTbZTAZIGyk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			poEOkq7O5d/okr3s+OT4XZVx49E=
+			CyJnhln0cGK6Nz0t5XKOk9mrMh0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -236,7 +236,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bFaI7QtnqAb2gxn7+9cpxsEqqq0=
+			IM0BZTSjUD3eZHzPioVcbiz7uus=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -257,7 +257,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			127YDRKktuoAk4ZyeyOiXdsjaAs=
+			t2w/aA5fKIMNzSa+1oJ6FJ/dj1o=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -269,22 +269,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/RnD5a3Xf7/nIMiML84FXcCeMPY=
+			tI23ZTGMdMHf6jo9FbbBx9kmPSs=
 			</data>
 			<key>hash2</key>
 			<data>
-			GugGNk3MyfflYBsoVzuPEuWqV2UYbf5KNpfHdU3iExw=
+			+Bbbt6oieIPxPvlD98jb9gOTb3UXA1aQ7ORuSFSpDRc=
 			</data>
 		</dict>
 		<key>ios-arm64/AuthMeUI.framework/AuthMeUI</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			8fI3RzxBXfmukr533UQGTdT4yPc=
+			QaoOkMNFiRE0Uglq2qRATpbDx+I=
 			</data>
 			<key>hash2</key>
 			<data>
-			0/2LjsMI/MNd5ISoHgUrt52wcxL73NJ8FP/RmZil1lU=
+			kyqbS7l95SzR2naWB1REz9eEsRu/tfA03XIG5yyuVCs=
 			</data>
 		</dict>
 		<key>ios-arm64/AuthMeUI.framework/AuthMeUI-Info.plist</key>
@@ -302,11 +302,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			kdsDgsMvIUnUEA1jUDNyOUgn4kU=
+			A/WyxBK9po/58hHGLca1Dv/tvZw=
 			</data>
 			<key>hash2</key>
 			<data>
-			6hXBSUXNSvKBPRgFvqriPyKrVfx7sgG7fmDEsRaDHgY=
+			f5QHEcnMt0GIlL4ZbHlQZXdXZLS7bLnzaqMFmz3tNtY=
 			</data>
 		</dict>
 		<key>ios-arm64/AuthMeUI.framework/Headers/AuthMeUI.h</key>
@@ -335,55 +335,55 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BdOyilrs3pLb/VsE2G1dH/QtnpA=
+			X8yGisxAD88XbfBAWCvy8r+oPMI=
 			</data>
 			<key>hash2</key>
 			<data>
-			eZSgH36X3KZ87NEjk6Fxrogwa2mLZT7DLq5nxMkbSKI=
+			V94h/64V6QlN9O0yuADDpVsKoL1+7i7kwyrmCsZHVb4=
 			</data>
 		</dict>
 		<key>ios-arm64/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			dtQ/JUCh9SgVjIc8zyZgAY3Olog=
+			nD09vFwb3BlHnq+fFrH1Y42f5ho=
 			</data>
 			<key>hash2</key>
 			<data>
-			bOqrZI+geOuGIDJqVNP0UmJDerGj11syw2mgXuSIlzA=
+			oHMJY6NjSbGDug8tEM8Qpl9A+v7lgAZuAykXA8SBpsQ=
 			</data>
 		</dict>
 		<key>ios-arm64/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			S0O9qEjxQXypSxyzL9Bs5Pz+qqw=
+			5CwqX1fTOGTdqLPVednU237Ql+8=
 			</data>
 			<key>hash2</key>
 			<data>
-			rA0oFvPuuk3MXrlRH0/uNJFW5EJWMIYzV0l/VRRLvhQ=
+			CNbhMAi3SE8JcdnvNErb6qhulpc+35lZsRdjxXS37EM=
 			</data>
 		</dict>
 		<key>ios-arm64/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BlWfoHWJM46rD/b7YJD8NMe5reg=
+			OTrCR+i8NhMSllW6o+YWPtA5QcM=
 			</data>
 			<key>hash2</key>
 			<data>
-			tW4Yvi9Mo89uMy+7d4S3gInoM6rNsY0cPA7euoNYPQU=
+			imJRMqvueG4W5DDWGrkUBru7fBirzSft2nMrhrX5Hh4=
 			</data>
 		</dict>
 		<key>ios-arm64/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			S0O9qEjxQXypSxyzL9Bs5Pz+qqw=
+			5CwqX1fTOGTdqLPVednU237Ql+8=
 			</data>
 			<key>hash2</key>
 			<data>
-			rA0oFvPuuk3MXrlRH0/uNJFW5EJWMIYzV0l/VRRLvhQ=
+			CNbhMAi3SE8JcdnvNErb6qhulpc+35lZsRdjxXS37EM=
 			</data>
 		</dict>
 		<key>ios-arm64/AuthMeUI.framework/Modules/module.modulemap</key>
@@ -401,11 +401,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PBoy7dBMtY74JXZU8bRPLHrOuzE=
+			NNgfdtTHxAf+tkGGdycUhucMNdc=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ag+8QUB8MspnpD7YuIV+8w5j5EiBbnKT/xPePyPD01g=
+			QcxBWZ35PYz9GUN5vYSQ3xx0NBVtN/Udy9gbqVy4540=
 			</data>
 		</dict>
 		<key>ios-arm64/AuthMeUI.framework/NFCImageTableViewCell.nib</key>
@@ -478,22 +478,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			a5b3ugzf3xnqdMDvHoKTWQwpzo4=
+			4cVnx64KaIJNc748S0dcKw8TOFk=
 			</data>
 			<key>hash2</key>
 			<data>
-			6AuQab4bMsx6hbE8FYnQnZGjxyaq+CoZeybSBZkEw8c=
+			in2a2w3eEz1NOnpbpSaCYBlKeSgWhNIbCZzIAiDXZo0=
 			</data>
 		</dict>
 		<key>ios-arm64/AuthMeUI.framework/en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			poEOkq7O5d/okr3s+OT4XZVx49E=
+			CyJnhln0cGK6Nz0t5XKOk9mrMh0=
 			</data>
 			<key>hash2</key>
 			<data>
-			7movsJNg4I+kxXDRAR6mQ0dj7oc+RoJNySvU6MucD+M=
+			ms+SfnPc4gJ8YIZ5eEk/SpJcW+zsvvlCl1ga4p3RKmE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -502,11 +502,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bFaI7QtnqAb2gxn7+9cpxsEqqq0=
+			IM0BZTSjUD3eZHzPioVcbiz7uus=
 			</data>
 			<key>hash2</key>
 			<data>
-			7i3XVIZxXWy1qIM7aUbUK+Yb62uxGtjK0qX5rU4fNac=
+			eoC/fJHIRT34a1fU2ecslMYffMyIZ0Pl1Tt6BqzxCRk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -548,11 +548,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			127YDRKktuoAk4ZyeyOiXdsjaAs=
+			t2w/aA5fKIMNzSa+1oJ6FJ/dj1o=
 			</data>
 			<key>hash2</key>
 			<data>
-			jW8ivMeAL9NwpUmudJiMKulVGB/EqgjKxYVCgoXZo7k=
+			pBaBsf29LeV5FBOAb93DU0UeWljITz/bPBKnJZLGMyg=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -561,22 +561,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			R2T9SSnxAcSMvYj2brWUxuEeosw=
+			tI23ZTGMdMHf6jo9FbbBx9kmPSs=
 			</data>
 			<key>hash2</key>
 			<data>
-			MnBz3Edff5C1Cfu0BHNlevI+Igv14TpYzICbR9OT2TA=
+			+Bbbt6oieIPxPvlD98jb9gOTb3UXA1aQ7ORuSFSpDRc=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/AuthMeUI</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LMmWNSXnTLMla1Dug63UnEgVHr8=
+			QEkLLcTViFuDbsb9D6h3NfHpIWA=
 			</data>
 			<key>hash2</key>
 			<data>
-			F+lCKZm9iEJASKDxSkq6Allx6ujgYsaCQcQnGl097NI=
+			G9Oqk2+WEJxn+e73jv6xmXehL2PabY7GCiu/zcSE3pQ=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/AuthMeUI-Info.plist</key>
@@ -594,11 +594,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3XoqQpvrLsUrrdWZpT+EwnWBqlw=
+			N0XQOpqnHRpxN8bV9j4yvBVMZhg=
 			</data>
 			<key>hash2</key>
 			<data>
-			hJ01NPgw7RAPB7hoBIJr+fquM6z9Adb3RVk+Odaan4w=
+			rvywIyTUr6DU24frHPkAUESaSy83SHrlYDcY+CIXHbA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Headers/AuthMeUI.h</key>
@@ -627,99 +627,99 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eab6DUpFoLhpYm0hgUxEbdq8jeQ=
+			0mOrbrasHA64VajR/FPUwbPB61c=
 			</data>
 			<key>hash2</key>
 			<data>
-			FtAksnwt5cna1b6hdsz30zGYlQtAs0jfznaglAJQ/Ng=
+			2fWTJ8Ebo2iA4z2t5iyPxuAbKpiYsCo1ZL2vkSgiB/0=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9HS5WRJZOwUlVnpeeAwvxhrD4Bs=
+			Y++eViECVOvUEirj1+OXcmbQEbE=
 			</data>
 			<key>hash2</key>
 			<data>
-			iLtWpJ2F2aQIcXNbCl+kiiipZngH/BI0BeDN2YGmUas=
+			DrwbUe8rZnp/vsPTmckf7nkIx3BMVRiF9Kj9AWPiGcA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qkFIRwdJPdJnJB8hR0C/Kztxsd4=
+			9GLouLX9vN3BtMJ4bZsT5gJWFiA=
 			</data>
 			<key>hash2</key>
 			<data>
-			KgRycH5be4O3/yto/zldGznNwju6JtQIJbd7/onQGds=
+			eGxvi/OU75rSfqvQ3+R9ncg3Tib04mPDdxSODiklB74=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			8Bkq3LyMeGzCJAxXiwPFizwh5UM=
+			3PF3amOIUuKzSq2RWLMJfcKC0Vw=
 			</data>
 			<key>hash2</key>
 			<data>
-			aX/GgxSqMMmqA8+aOBUdihvft2tFBUyeehtWhGLY3jQ=
+			iu7Kw6ltBpbprJw3muJ0csnVjfEHPgogjrES6/lrIPQ=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qkFIRwdJPdJnJB8hR0C/Kztxsd4=
+			9GLouLX9vN3BtMJ4bZsT5gJWFiA=
 			</data>
 			<key>hash2</key>
 			<data>
-			KgRycH5be4O3/yto/zldGznNwju6JtQIJbd7/onQGds=
+			eGxvi/OU75rSfqvQ3+R9ncg3Tib04mPDdxSODiklB74=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9HS5WRJZOwUlVnpeeAwvxhrD4Bs=
+			Y++eViECVOvUEirj1+OXcmbQEbE=
 			</data>
 			<key>hash2</key>
 			<data>
-			iLtWpJ2F2aQIcXNbCl+kiiipZngH/BI0BeDN2YGmUas=
+			DrwbUe8rZnp/vsPTmckf7nkIx3BMVRiF9Kj9AWPiGcA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GTzvucXkX+d3+/fmiBR04K3cnzI=
+			NIziF2l98fRujp+l01vYk7oWyOg=
 			</data>
 			<key>hash2</key>
 			<data>
-			SerI1fdJsEWdUUPuCVzmfK3RaF6V94z+CISoQX56Rzw=
+			3F6uCIAxdjSIluXviJvxbpvbT/SciOWf/9A14BcDLLU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0l/wf4zXBRCfr+HEa0uYy/gnLOg=
+			0O6ID3EZ6bnMkCYdyMM0Ekm6t5Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			J+hGQe0gZ4wHQvPlcCrrbgidxgS1VI9+oUvMvjKMkV4=
+			kJPkvYa3UGjRz/784weBgXihOoTgY8BEIYXqHERoWt8=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Modules/AuthMeUI.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GTzvucXkX+d3+/fmiBR04K3cnzI=
+			NIziF2l98fRujp+l01vYk7oWyOg=
 			</data>
 			<key>hash2</key>
 			<data>
-			SerI1fdJsEWdUUPuCVzmfK3RaF6V94z+CISoQX56Rzw=
+			3F6uCIAxdjSIluXviJvxbpvbT/SciOWf/9A14BcDLLU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/Modules/module.modulemap</key>
@@ -737,11 +737,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PBoy7dBMtY74JXZU8bRPLHrOuzE=
+			NNgfdtTHxAf+tkGGdycUhucMNdc=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ag+8QUB8MspnpD7YuIV+8w5j5EiBbnKT/xPePyPD01g=
+			QcxBWZ35PYz9GUN5vYSQ3xx0NBVtN/Udy9gbqVy4540=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/NFCImageTableViewCell.nib</key>
@@ -814,33 +814,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			a5b3ugzf3xnqdMDvHoKTWQwpzo4=
+			4cVnx64KaIJNc748S0dcKw8TOFk=
 			</data>
 			<key>hash2</key>
 			<data>
-			6AuQab4bMsx6hbE8FYnQnZGjxyaq+CoZeybSBZkEw8c=
+			in2a2w3eEz1NOnpbpSaCYBlKeSgWhNIbCZzIAiDXZo0=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XItqeUYWYfF257foN5tFEyy6htU=
+			OJgEWfg+kU626XkCcTbZTAZIGyk=
 			</data>
 			<key>hash2</key>
 			<data>
-			f1kAKtzqd1TphnSo8J7rq6GSgxOetrG6LzYyYO79Zq4=
+			dW6NvvEXZI2k3Ijd6lFRE1uEax2bnOL7ghjvCajSGf0=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AuthMeUI.framework/en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			poEOkq7O5d/okr3s+OT4XZVx49E=
+			CyJnhln0cGK6Nz0t5XKOk9mrMh0=
 			</data>
 			<key>hash2</key>
 			<data>
-			7movsJNg4I+kxXDRAR6mQ0dj7oc+RoJNySvU6MucD+M=
+			ms+SfnPc4gJ8YIZ5eEk/SpJcW+zsvvlCl1ga4p3RKmE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -849,11 +849,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bFaI7QtnqAb2gxn7+9cpxsEqqq0=
+			IM0BZTSjUD3eZHzPioVcbiz7uus=
 			</data>
 			<key>hash2</key>
 			<data>
-			7i3XVIZxXWy1qIM7aUbUK+Yb62uxGtjK0qX5rU4fNac=
+			eoC/fJHIRT34a1fU2ecslMYffMyIZ0Pl1Tt6BqzxCRk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -895,11 +895,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			127YDRKktuoAk4ZyeyOiXdsjaAs=
+			t2w/aA5fKIMNzSa+1oJ6FJ/dj1o=
 			</data>
 			<key>hash2</key>
 			<data>
-			jW8ivMeAL9NwpUmudJiMKulVGB/EqgjKxYVCgoXZo7k=
+			pBaBsf29LeV5FBOAb93DU0UeWljITz/bPBKnJZLGMyg=
 			</data>
 			<key>optional</key>
 			<true/>
