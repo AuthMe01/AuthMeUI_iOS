@@ -40191,6 +40191,220 @@
             ]
           },
           {
+            "kind": "TypeDecl",
+            "name": "LivenessSpeed",
+            "printedName": "LivenessSpeed",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "normal",
+                "printedName": "normal",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(AuthMeUI.AuthmeFeatureConfig.LivenessSpeed.Type) -> AuthMeUI.AuthmeFeatureConfig.LivenessSpeed",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LivenessSpeed",
+                        "printedName": "AuthMeUI.AuthmeFeatureConfig.LivenessSpeed",
+                        "usr": "s:8AuthMeUI19AuthmeFeatureConfigC13LivenessSpeedO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "AuthMeUI.AuthmeFeatureConfig.LivenessSpeed.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "LivenessSpeed",
+                            "printedName": "AuthMeUI.AuthmeFeatureConfig.LivenessSpeed",
+                            "usr": "s:8AuthMeUI19AuthmeFeatureConfigC13LivenessSpeedO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:8AuthMeUI19AuthmeFeatureConfigC13LivenessSpeedO6normalyA2EmF",
+                "mangledName": "$s8AuthMeUI19AuthmeFeatureConfigC13LivenessSpeedO6normalyA2EmF",
+                "moduleName": "AuthMeUI"
+              },
+              {
+                "kind": "Var",
+                "name": "low",
+                "printedName": "low",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(AuthMeUI.AuthmeFeatureConfig.LivenessSpeed.Type) -> AuthMeUI.AuthmeFeatureConfig.LivenessSpeed",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LivenessSpeed",
+                        "printedName": "AuthMeUI.AuthmeFeatureConfig.LivenessSpeed",
+                        "usr": "s:8AuthMeUI19AuthmeFeatureConfigC13LivenessSpeedO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "AuthMeUI.AuthmeFeatureConfig.LivenessSpeed.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "LivenessSpeed",
+                            "printedName": "AuthMeUI.AuthmeFeatureConfig.LivenessSpeed",
+                            "usr": "s:8AuthMeUI19AuthmeFeatureConfigC13LivenessSpeedO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:8AuthMeUI19AuthmeFeatureConfigC13LivenessSpeedO3lowyA2EmF",
+                "mangledName": "$s8AuthMeUI19AuthmeFeatureConfigC13LivenessSpeedO3lowyA2EmF",
+                "moduleName": "AuthMeUI"
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LivenessSpeed",
+                    "printedName": "AuthMeUI.AuthmeFeatureConfig.LivenessSpeed",
+                    "usr": "s:8AuthMeUI19AuthmeFeatureConfigC13LivenessSpeedO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LivenessSpeed",
+                    "printedName": "AuthMeUI.AuthmeFeatureConfig.LivenessSpeed",
+                    "usr": "s:8AuthMeUI19AuthmeFeatureConfigC13LivenessSpeedO"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:8AuthMeUI19AuthmeFeatureConfigC13LivenessSpeedO2eeoiySbAE_AEtFZ",
+                "mangledName": "$s8AuthMeUI19AuthmeFeatureConfigC13LivenessSpeedO2eeoiySbAE_AEtFZ",
+                "moduleName": "AuthMeUI",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:8AuthMeUI19AuthmeFeatureConfigC13LivenessSpeedO9hashValueSivp",
+                "mangledName": "$s8AuthMeUI19AuthmeFeatureConfigC13LivenessSpeedO9hashValueSivp",
+                "moduleName": "AuthMeUI",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:8AuthMeUI19AuthmeFeatureConfigC13LivenessSpeedO9hashValueSivg",
+                    "mangledName": "$s8AuthMeUI19AuthmeFeatureConfigC13LivenessSpeedO9hashValueSivg",
+                    "moduleName": "AuthMeUI",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:8AuthMeUI19AuthmeFeatureConfigC13LivenessSpeedO4hash4intoys6HasherVz_tF",
+                "mangledName": "$s8AuthMeUI19AuthmeFeatureConfigC13LivenessSpeedO4hash4intoys6HasherVz_tF",
+                "moduleName": "AuthMeUI",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:8AuthMeUI19AuthmeFeatureConfigC13LivenessSpeedO",
+            "mangledName": "$s8AuthMeUI19AuthmeFeatureConfigC13LivenessSpeedO",
+            "moduleName": "AuthMeUI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "setWith",
             "printedName": "setWith(_:)",
@@ -40506,6 +40720,34 @@
             "declKind": "Func",
             "usr": "s:8AuthMeUI19AuthmeFeatureConfigC17setCameraPositionyACXDAC06CamertI0OF",
             "mangledName": "$s8AuthMeUI19AuthmeFeatureConfigC17setCameraPositionyACXDAC06CamertI0OF",
+            "moduleName": "AuthMeUI",
+            "declAttributes": [
+              "Final",
+              "DiscardableResult"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setLivenesssSpeed",
+            "printedName": "setLivenesssSpeed(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DynamicSelf",
+                "printedName": "Self"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LivenessSpeed",
+                "printedName": "AuthMeUI.AuthmeFeatureConfig.LivenessSpeed",
+                "usr": "s:8AuthMeUI19AuthmeFeatureConfigC13LivenessSpeedO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8AuthMeUI19AuthmeFeatureConfigC17setLivenesssSpeedyACXDAC08LivenessI0OF",
+            "mangledName": "$s8AuthMeUI19AuthmeFeatureConfigC17setLivenesssSpeedyACXDAC08LivenessI0OF",
             "moduleName": "AuthMeUI",
             "declAttributes": [
               "Final",
@@ -53570,6 +53812,13 @@
       },
       {
         "kind": "Import",
+        "name": "AuthMe",
+        "printedName": "AuthMe",
+        "declKind": "Import",
+        "moduleName": "AuthMeUI"
+      },
+      {
+        "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
         "declKind": "Import",
@@ -60901,21 +61150,21 @@
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/CameraCapture\/AbstractCapture.swift",
       "kind": "BooleanLiteral",
-      "offset": 1050,
+      "offset": 983,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/CameraCapture\/AbstractCapture.swift",
       "kind": "BooleanLiteral",
-      "offset": 1430,
+      "offset": 1363,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/CameraCapture\/AbstractCapture.swift",
       "kind": "StringLiteral",
-      "offset": 6262,
+      "offset": 6211,
       "length": 23,
       "value": "\"capture session queue\""
     },
@@ -62560,42 +62809,42 @@
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCRSelector\/AuthmeAuthenticationViewController.swift",
       "kind": "Array",
-      "offset": 4418,
+      "offset": 4493,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCRSelector\/AuthmeAuthenticationViewController.swift",
       "kind": "StringLiteral",
-      "offset": 4829,
+      "offset": 4904,
       "length": 6,
       "value": "\"test\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCRSelector\/AuthmeAuthenticationViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5067,
+      "offset": 5142,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCRSelector\/AuthmeAuthenticationViewController.swift",
       "kind": "StringLiteral",
-      "offset": 38751,
+      "offset": 39090,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCRSelector\/AuthmeAuthenticationViewController.swift",
       "kind": "StringLiteral",
-      "offset": 38800,
+      "offset": 39139,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCRSelector\/AuthmeAuthenticationViewController.swift",
       "kind": "StringLiteral",
-      "offset": 38857,
+      "offset": 39196,
       "length": 2,
       "value": "\"\""
     },
@@ -64184,21 +64433,21 @@
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeOCRViewController.swift",
       "kind": "StringLiteral",
-      "offset": 21244,
+      "offset": 21236,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeOCRViewController.swift",
       "kind": "StringLiteral",
-      "offset": 21293,
+      "offset": 21285,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/AuthmeOCRViewController.swift",
       "kind": "StringLiteral",
-      "offset": 21350,
+      "offset": 21342,
       "length": 2,
       "value": "\"\""
     },
@@ -67131,21 +67380,21 @@
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanViewController.swift",
       "kind": "StringLiteral",
-      "offset": 27797,
+      "offset": 27789,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanViewController.swift",
       "kind": "StringLiteral",
-      "offset": 27846,
+      "offset": 27838,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/AntiSproof\/AntiFakeOCRScanViewController.swift",
       "kind": "StringLiteral",
-      "offset": 27903,
+      "offset": 27895,
       "length": 2,
       "value": "\"\""
     },
@@ -68643,14 +68892,14 @@
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/AuthmeCoordinator.swift",
       "kind": "StringLiteral",
-      "offset": 12498,
+      "offset": 12594,
       "length": 23,
       "value": "\"sdk.general.uploading\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/AuthmeCoordinator.swift",
       "kind": "BooleanLiteral",
-      "offset": 12705,
+      "offset": 12801,
       "length": 5,
       "value": "false"
     },
@@ -70254,146 +70503,146 @@
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/Component\/AuthMeLoadingIndicator\/AuthMeLoadingIndicator.swift",
       "kind": "StringLiteral",
       "offset": 1085,
-      "length": 9,
-      "value": "\"spinner\""
+      "length": 18,
+      "value": "\"spinner_template\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/Component\/AuthMeLoadingIndicator\/AuthMeLoadingIndicator.swift",
       "kind": "BooleanLiteral",
-      "offset": 1198,
+      "offset": 1243,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/Component\/AuthMeLoadingIndicator\/AuthMeLoadingIndicator.swift",
       "kind": "IntegerLiteral",
-      "offset": 1412,
+      "offset": 1546,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/Component\/AuthMeLoadingIndicator\/AuthMeLoadingIndicator.swift",
       "kind": "StringLiteral",
-      "offset": 2058,
+      "offset": 2192,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/Component\/AuthMeLoadingIndicator\/AuthMeLoadingIndicator.swift",
       "kind": "BooleanLiteral",
-      "offset": 5304,
+      "offset": 5438,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/Component\/AuthMeLoadingIndicator\/AuthMeLoadingIndicator.swift",
       "kind": "StringLiteral",
-      "offset": 5351,
+      "offset": 5485,
       "length": 23,
       "value": "\"uploadSuccessed_check\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/Component\/AuthMeLoadingIndicator\/AuthMeLoadingIndicator.swift",
       "kind": "BooleanLiteral",
-      "offset": 5626,
+      "offset": 5760,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/Component\/AuthMeLoadingIndicator\/AuthMeLoadingIndicator.swift",
       "kind": "IntegerLiteral",
-      "offset": 5666,
+      "offset": 5800,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/Component\/AuthMeLoadingIndicator\/AuthMeLoadingIndicator.swift",
       "kind": "BooleanLiteral",
-      "offset": 5701,
+      "offset": 5835,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/Component\/AuthMeLoadingIndicator\/AuthMeLoadingIndicator.swift",
       "kind": "BooleanLiteral",
-      "offset": 7523,
+      "offset": 7657,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/Component\/AuthMeLoadingIndicator\/AuthMeLoadingIndicator.swift",
       "kind": "StringLiteral",
-      "offset": 7570,
+      "offset": 7704,
       "length": 20,
       "value": "\"uploadFailed_cross\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/Component\/AuthMeLoadingIndicator\/AuthMeLoadingIndicator.swift",
       "kind": "BooleanLiteral",
-      "offset": 7842,
+      "offset": 7976,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/Component\/AuthMeLoadingIndicator\/AuthMeLoadingIndicator.swift",
       "kind": "IntegerLiteral",
-      "offset": 7956,
+      "offset": 8090,
       "length": 2,
       "value": "48"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/Component\/AuthMeLoadingIndicator\/AuthMeLoadingIndicator.swift",
       "kind": "IntegerLiteral",
-      "offset": 8014,
+      "offset": 8148,
       "length": 2,
       "value": "32"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/Component\/AuthMeLoadingIndicator\/AuthMeLoadingIndicator.swift",
       "kind": "BooleanLiteral",
-      "offset": 8056,
+      "offset": 8190,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/Component\/AuthMeLoadingIndicator\/AuthMeLoadingIndicator.swift",
       "kind": "BooleanLiteral",
-      "offset": 10855,
+      "offset": 10989,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/Component\/AuthMeLoadingIndicator\/AuthMeLoadingIndicator.swift",
       "kind": "StringLiteral",
-      "offset": 10902,
+      "offset": 11036,
       "length": 23,
       "value": "\"uploadSuccessed_check\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/Component\/AuthMeLoadingIndicator\/AuthMeLoadingIndicator.swift",
       "kind": "BooleanLiteral",
-      "offset": 11177,
+      "offset": 11311,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/Component\/AuthMeLoadingIndicator\/AuthMeLoadingIndicator.swift",
       "kind": "IntegerLiteral",
-      "offset": 11291,
+      "offset": 11425,
       "length": 2,
       "value": "48"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/Component\/AuthMeLoadingIndicator\/AuthMeLoadingIndicator.swift",
       "kind": "IntegerLiteral",
-      "offset": 11349,
+      "offset": 11483,
       "length": 2,
       "value": "32"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/Component\/AuthMeLoadingIndicator\/AuthMeLoadingIndicator.swift",
       "kind": "BooleanLiteral",
-      "offset": 11391,
+      "offset": 11525,
       "length": 4,
       "value": "true"
     },
@@ -70435,77 +70684,77 @@
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/Component\/IPhoneTableViewCell.swift",
       "kind": "StringLiteral",
-      "offset": 488,
+      "offset": 502,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/Component\/IPhoneTableViewCell.swift",
       "kind": "StringLiteral",
-      "offset": 523,
+      "offset": 537,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/Component\/IPhoneTableViewCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 680,
+      "offset": 694,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/Component\/IPhoneTableViewCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 886,
+      "offset": 900,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/Component\/IPhoneTableViewCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 930,
+      "offset": 944,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/Component\/IPhoneTableViewCell.swift",
       "kind": "StringLiteral",
-      "offset": 987,
+      "offset": 1001,
       "length": 9,
       "value": "\"#BDBDBD\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/Component\/IPhoneTableViewCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 1057,
+      "offset": 1071,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/Component\/IPhoneTableViewCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 1176,
+      "offset": 1190,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/Component\/IPhoneTableViewCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 1333,
+      "offset": 1347,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/Component\/IPhoneTableViewCell.swift",
       "kind": "StringLiteral",
-      "offset": 1379,
+      "offset": 1393,
       "length": 8,
       "value": "\"F7453F\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/OCR\/Component\/IPhoneTableViewCell.swift",
       "kind": "StringLiteral",
-      "offset": 1410,
+      "offset": 1424,
       "length": 3,
       "value": "\" \""
     },
@@ -70659,28 +70908,28 @@
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/Liveness\/LivenessViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6769,
+      "offset": 6828,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/Liveness\/LivenessViewController.swift",
       "kind": "StringLiteral",
-      "offset": 16617,
+      "offset": 16732,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/Liveness\/LivenessViewController.swift",
       "kind": "StringLiteral",
-      "offset": 16658,
+      "offset": 16773,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ekyc-sdk-ui-ios\/ekyc-sdk-ui-ios\/AuthMeUI\/ViewController\/Liveness\/LivenessViewController.swift",
       "kind": "StringLiteral",
-      "offset": 16707,
+      "offset": 16822,
       "length": 2,
       "value": "\"\""
     },
@@ -71415,35 +71664,42 @@
     {
       "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/Asuka-ghmoxfmilrpqlhfxdqjxhpmvsdxj\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AuthMeUI\/IntermediateBuildFilesPath\/Asuka.build\/Release-iphoneos\/AuthMeUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 12709,
+      "offset": 12729,
+      "length": 18,
+      "value": "\"spinner_template\""
+    },
+    {
+      "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/Asuka-ghmoxfmilrpqlhfxdqjxhpmvsdxj\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AuthMeUI\/IntermediateBuildFilesPath\/Asuka.build\/Release-iphoneos\/AuthMeUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 12868,
       "length": 8,
       "value": "\"test 5\""
     },
     {
       "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/Asuka-ghmoxfmilrpqlhfxdqjxhpmvsdxj\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AuthMeUI\/IntermediateBuildFilesPath\/Asuka.build\/Release-iphoneos\/AuthMeUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 12837,
+      "offset": 12996,
       "length": 7,
       "value": "\"test4\""
     },
     {
       "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/Asuka-ghmoxfmilrpqlhfxdqjxhpmvsdxj\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AuthMeUI\/IntermediateBuildFilesPath\/Asuka.build\/Release-iphoneos\/AuthMeUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 12989,
+      "offset": 13148,
       "length": 20,
       "value": "\"uploadFailed_cross\""
     },
     {
       "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/Asuka-ghmoxfmilrpqlhfxdqjxhpmvsdxj\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AuthMeUI\/IntermediateBuildFilesPath\/Asuka.build\/Release-iphoneos\/AuthMeUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 13160,
+      "offset": 13319,
       "length": 23,
       "value": "\"uploadSuccessed_check\""
     },
     {
       "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/Asuka-ghmoxfmilrpqlhfxdqjxhpmvsdxj\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AuthMeUI\/IntermediateBuildFilesPath\/Asuka.build\/Release-iphoneos\/AuthMeUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 13315,
+      "offset": 13474,
       "length": 13,
       "value": "\"welcomepage\""
     }

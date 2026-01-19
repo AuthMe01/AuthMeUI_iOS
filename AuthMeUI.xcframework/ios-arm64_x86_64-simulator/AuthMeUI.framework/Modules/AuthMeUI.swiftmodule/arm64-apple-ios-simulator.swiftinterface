@@ -1301,6 +1301,15 @@ extension AuthMeUI.AuthMeOCRUIParams {
       get
     }
   }
+  public enum LivenessSpeed {
+    case normal
+    case low
+    public static func == (a: AuthMeUI.AuthmeFeatureConfig.LivenessSpeed, b: AuthMeUI.AuthmeFeatureConfig.LivenessSpeed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
   public static func setWith(_ block: (AuthMeUI.AuthmeFeatureConfig) -> Swift.Void) -> AuthMeUI.AuthmeFeatureConfig
   @objc deinit
 }
@@ -1325,6 +1334,8 @@ extension AuthMeUI.AuthmeFeatureConfig {
   final public func setCustomParameters(_ customParameters: Swift.String) -> Self
   @discardableResult
   final public func setCameraPosition(_ customParameters: AuthMeUI.AuthmeFeatureConfig.CamertPosition) -> Self
+  @discardableResult
+  final public func setLivenesssSpeed(_ customParameters: AuthMeUI.AuthmeFeatureConfig.LivenessSpeed) -> Self
 }
 @objc @_hasMissingDesignatedInitializers public class LottieAnimationLayer : QuartzCore.CALayer {
   public init(animation: AuthMeUI.LottieAnimation?, imageProvider: (any AuthMeUI.AnimationImageProvider)? = nil, textProvider: any AuthMeUI.AnimationKeypathTextProvider = DefaultTextProvider(), fontProvider: any AuthMeUI.AnimationFontProvider = DefaultFontProvider(), configuration: AuthMeUI.LottieConfiguration = .shared, logger: AuthMeUI.LottieLogger = .shared)
@@ -1845,6 +1856,8 @@ extension AuthMeUI.SizeValueProvider : AuthMeUI.AnyValueProvider {}
 extension AuthMeUI.GradientValueProvider : AuthMeUI.AnyValueProvider {}
 extension AuthMeUI.AuthmeFeatureConfig.CamertPosition : Swift.Equatable {}
 extension AuthMeUI.AuthmeFeatureConfig.CamertPosition : Swift.Hashable {}
+extension AuthMeUI.AuthmeFeatureConfig.LivenessSpeed : Swift.Equatable {}
+extension AuthMeUI.AuthmeFeatureConfig.LivenessSpeed : Swift.Hashable {}
 extension AuthMeUI.TransitionStyle : Swift.Equatable {}
 extension AuthMeUI.TransitionStyle : Swift.Hashable {}
 extension AuthMeUI.AuthmeCoordinatorError : Swift.Equatable {}
