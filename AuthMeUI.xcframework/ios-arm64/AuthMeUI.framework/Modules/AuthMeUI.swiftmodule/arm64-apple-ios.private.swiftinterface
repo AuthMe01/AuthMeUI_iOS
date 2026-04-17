@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
-// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AuthMeUI
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name AuthMeUI
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import AVFoundation
 import AudioToolbox
 import AuthMe
@@ -171,6 +171,7 @@ extension AuthMeUI.LottieLoopMode : Swift.Equatable {
   @_Concurrency.MainActor @preconcurrency public func reloadImages()
   @_Concurrency.MainActor @preconcurrency public func forceDisplayUpdate()
   @_Concurrency.MainActor @preconcurrency public func setValueProvider(_ valueProvider: any AuthMeUI.AnyValueProvider, keypath: AuthMeUI.AnimationKeypath)
+  @_Concurrency.MainActor @preconcurrency public func removeValueProvider(for keypath: AuthMeUI.AnimationKeypath)
   @_Concurrency.MainActor @preconcurrency public func getValue(for keypath: AuthMeUI.AnimationKeypath, atFrame: AuthMeUI.AnimationFrameTime?) -> Any?
   @_Concurrency.MainActor @preconcurrency public func getOriginalValue(for keypath: AuthMeUI.AnimationKeypath, atFrame: AuthMeUI.AnimationFrameTime?) -> Any?
   @_Concurrency.MainActor @preconcurrency public func logHierarchyKeypaths()
@@ -184,10 +185,10 @@ extension AuthMeUI.LottieLoopMode : Swift.Equatable {
   @_Concurrency.MainActor @preconcurrency public func durationFrameTime(forMarker named: Swift.String) -> AuthMeUI.AnimationFrameTime?
   @objc deinit
 }
-public class BundleImageProvider : AuthMeUI.AnimationImageProvider {
+final public class BundleImageProvider : AuthMeUI.AnimationImageProvider {
   public init(bundle: Foundation.Bundle, searchPath: Swift.String?, contentsGravity: QuartzCore.CALayerContentsGravity = .resize)
-  public func imageForAsset(asset: AuthMeUI.ImageAsset) -> CoreGraphics.CGImage?
-  public func contentsGravity(for _: AuthMeUI.ImageAsset) -> QuartzCore.CALayerContentsGravity
+  final public func imageForAsset(asset: AuthMeUI.ImageAsset) -> CoreGraphics.CGImage?
+  final public func contentsGravity(for _: AuthMeUI.ImageAsset) -> QuartzCore.CALayerContentsGravity
   @objc deinit
 }
 extension AuthMeUI.BundleImageProvider : Swift.Equatable {
@@ -222,11 +223,11 @@ public struct AnimationKeypath : Swift.Hashable, Swift.ExpressibleByStringLitera
   public var string: Swift.String {
     get
   }
+  public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: AuthMeUI.AnimationKeypath, b: AuthMeUI.AnimationKeypath) -> Swift.Bool
   public typealias ExtendedGraphemeClusterLiteralType = Swift.String
   public typealias StringLiteralType = Swift.String
   public typealias UnicodeScalarLiteralType = Swift.String
-  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -262,6 +263,9 @@ public protocol LegacyAnimationTextProvider : AuthMeUI.AnimationKeypathTextProvi
 }
 extension AuthMeUI.LegacyAnimationTextProvider {
   public func text(for _: AuthMeUI.AnimationKeypath, sourceText _: Swift.String) -> Swift.String?
+}
+public protocol TextContentsScaleProvider : AuthMeUI.AnimationKeypathTextProvider {
+  func contentsScale(for keypath: AuthMeUI.AnimationKeypath) -> CoreFoundation.CGFloat?
 }
 final public class DictionaryTextProvider : AuthMeUI.AnimationKeypathTextProvider, AuthMeUI.LegacyAnimationTextProvider {
   public init(_ values: [Swift.String : Swift.String])
@@ -429,13 +433,13 @@ public enum ColorFormatDenominator : Swift.Hashable {
   }
 }
 public struct LottieColor : Swift.Hashable {
+  public init(r: Swift.Double, g: Swift.Double, b: Swift.Double, a: Swift.Double, denominator: AuthMeUI.ColorFormatDenominator = .One)
   public var r: Swift.Double
   public var g: Swift.Double
   public var b: Swift.Double
   public var a: Swift.Double
-  public init(r: Swift.Double, g: Swift.Double, b: Swift.Double, a: Swift.Double, denominator: AuthMeUI.ColorFormatDenominator = .One)
-  public static func == (a: AuthMeUI.LottieColor, b: AuthMeUI.LottieColor) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: AuthMeUI.LottieColor, b: AuthMeUI.LottieColor) -> Swift.Bool
   public var hashValue: Swift.Int {
     get
   }
@@ -571,8 +575,9 @@ extension AuthMeUI.DotLottieFile {
   public static func loadedFrom(filepath: Swift.String, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache, dispatchQueue: Dispatch.DispatchQueue = .dotLottie, handleResult: @escaping (Swift.Result<AuthMeUI.DotLottieFile, any Swift.Error>) -> Swift.Void)
   public static func asset(named name: Swift.String, bundle: Foundation.Bundle = Bundle.main, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache) async throws -> AuthMeUI.DotLottieFile
   public static func asset(named name: Swift.String, bundle: Foundation.Bundle = Bundle.main, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache, dispatchQueue: Dispatch.DispatchQueue = .dotLottie, handleResult: @escaping (Swift.Result<AuthMeUI.DotLottieFile, any Swift.Error>) -> Swift.Void)
-  public static func loadedFrom(url: Foundation.URL, session: Foundation.URLSession = .shared, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache) async throws -> AuthMeUI.DotLottieFile
-  public static func loadedFrom(url: Foundation.URL, session: Foundation.URLSession = .shared, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache, handleResult: @escaping (Swift.Result<AuthMeUI.DotLottieFile, any Swift.Error>) -> Swift.Void)
+  public static func loadedFrom(url: Foundation.URL, session: any AuthMeUI.LottieURLSession = LottieConfiguration.defaultURLSession, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache) async throws -> AuthMeUI.DotLottieFile
+  @discardableResult
+  public static func loadedFrom(url: Foundation.URL, session: any AuthMeUI.LottieURLSession = LottieConfiguration.defaultURLSession, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache, handleResult: @escaping (Swift.Result<AuthMeUI.DotLottieFile, any Swift.Error>) -> Swift.Void) -> Foundation.URLSessionDataTask?
   public static func loadedFrom(data: Foundation.Data, filename: Swift.String, dispatchQueue: Dispatch.DispatchQueue = .dotLottie, handleResult: @escaping (Swift.Result<AuthMeUI.DotLottieFile, any Swift.Error>) -> Swift.Void)
   public static func loadedFrom(data: Foundation.Data, filename: Swift.String, dispatchQueue: Dispatch.DispatchQueue = .dotLottie) async throws -> AuthMeUI.DotLottieFile
 }
@@ -695,12 +700,13 @@ public enum AuthmeFeature : Swift.String {
 public struct LottieConfiguration : Swift.Hashable {
   public init(renderingEngine: AuthMeUI.RenderingEngineOption = .automatic, decodingStrategy: AuthMeUI.DecodingStrategy = .dictionaryBased, colorSpace: CoreGraphics.CGColorSpace = CGColorSpaceCreateDeviceRGB(), reducedMotionOption: AuthMeUI.ReducedMotionOption = .systemReducedMotionToggle)
   public static var shared: AuthMeUI.LottieConfiguration
+  public static var defaultURLSession: any AuthMeUI.LottieURLSession
   public var renderingEngine: AuthMeUI.RenderingEngineOption
   public var decodingStrategy: AuthMeUI.DecodingStrategy
   public var reducedMotionOption: AuthMeUI.ReducedMotionOption
   public var colorSpace: CoreGraphics.CGColorSpace
-  public static func == (a: AuthMeUI.LottieConfiguration, b: AuthMeUI.LottieConfiguration) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: AuthMeUI.LottieConfiguration, b: AuthMeUI.LottieConfiguration) -> Swift.Bool
   public var hashValue: Swift.Int {
     get
   }
@@ -742,8 +748,8 @@ public enum LottiePlaybackMode : Swift.Hashable {
     case frame(_: AuthMeUI.AnimationFrameTime)
     case time(_: Foundation.TimeInterval)
     case marker(_: Swift.String, position: AuthMeUI.LottieMarkerPosition = .start)
-    public static func == (a: AuthMeUI.LottiePlaybackMode.PausedState, b: AuthMeUI.LottiePlaybackMode.PausedState) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: AuthMeUI.LottiePlaybackMode.PausedState, b: AuthMeUI.LottiePlaybackMode.PausedState) -> Swift.Bool
     public var hashValue: Swift.Int {
       get
     }
@@ -754,14 +760,14 @@ public enum LottiePlaybackMode : Swift.Hashable {
     case fromMarker(_: Swift.String?, toMarker: Swift.String, playEndMarkerFrame: Swift.Bool = true, loopMode: AuthMeUI.LottieLoopMode)
     case marker(_: Swift.String, loopMode: AuthMeUI.LottieLoopMode)
     case markers(_: [Swift.String])
-    public static func == (a: AuthMeUI.LottiePlaybackMode.PlaybackMode, b: AuthMeUI.LottiePlaybackMode.PlaybackMode) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: AuthMeUI.LottiePlaybackMode.PlaybackMode, b: AuthMeUI.LottiePlaybackMode.PlaybackMode) -> Swift.Bool
     public var hashValue: Swift.Int {
       get
     }
   }
-  public static func == (a: AuthMeUI.LottiePlaybackMode, b: AuthMeUI.LottiePlaybackMode) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: AuthMeUI.LottiePlaybackMode, b: AuthMeUI.LottiePlaybackMode) -> Swift.Bool
   public var hashValue: Swift.Int {
     get
   }
@@ -796,16 +802,16 @@ extension UIKit.UIColor {
     get
   }
 }
-public class DefaultAnimationCache : AuthMeUI.AnimationCacheProvider {
+final public class DefaultAnimationCache : AuthMeUI.AnimationCacheProvider {
   public init()
   public static let sharedCache: AuthMeUI.DefaultAnimationCache
-  public var cacheSize: Swift.Int {
+  final public var cacheSize: Swift.Int {
     get
     set
   }
-  public func clearCache()
-  public func animation(forKey key: Swift.String) -> AuthMeUI.LottieAnimation?
-  public func setAnimation(_ animation: AuthMeUI.LottieAnimation, forKey key: Swift.String)
+  final public func clearCache()
+  final public func animation(forKey key: Swift.String) -> AuthMeUI.LottieAnimation?
+  final public func setAnimation(_ animation: AuthMeUI.LottieAnimation, forKey key: Swift.String)
   @objc deinit
 }
 extension AuthMeUI.DefaultAnimationCache : @unchecked Swift.Sendable {
@@ -873,18 +879,15 @@ extension AuthMeUI.RenderingEngine : Swift.RawRepresentable, Swift.CustomStringC
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
-public class FilepathImageProvider : AuthMeUI.AnimationImageProvider {
+final public class FilepathImageProvider : AuthMeUI.AnimationImageProvider {
   public init(filepath: Swift.String, contentsGravity: QuartzCore.CALayerContentsGravity = .resize)
   public init(filepath: Foundation.URL, contentsGravity: QuartzCore.CALayerContentsGravity = .resize)
-  public func imageForAsset(asset: AuthMeUI.ImageAsset) -> CoreGraphics.CGImage?
-  public func contentsGravity(for _: AuthMeUI.ImageAsset) -> QuartzCore.CALayerContentsGravity
+  final public func imageForAsset(asset: AuthMeUI.ImageAsset) -> CoreGraphics.CGImage?
+  final public func contentsGravity(for _: AuthMeUI.ImageAsset) -> QuartzCore.CALayerContentsGravity
   @objc deinit
 }
 extension AuthMeUI.FilepathImageProvider : Swift.Equatable {
   public static func == (lhs: AuthMeUI.FilepathImageProvider, rhs: AuthMeUI.FilepathImageProvider) -> Swift.Bool
-}
-extension QuartzCore.CALayer {
-  @nonobjc public func logLayerTree(withIndent: Swift.Int = 0)
 }
 public protocol AnimationImageProvider {
   var cacheEligible: Swift.Bool { get }
@@ -1042,8 +1045,9 @@ extension AuthMeUI.LottieAnimation {
   public static func filepath(_ filepath: Swift.String, animationCache: (any AuthMeUI.AnimationCacheProvider)? = LottieAnimationCache.shared) -> AuthMeUI.LottieAnimation?
   public static func asset(_ name: Swift.String, bundle: Foundation.Bundle = Bundle.main, animationCache: (any AuthMeUI.AnimationCacheProvider)? = LottieAnimationCache.shared) -> AuthMeUI.LottieAnimation?
   public static func from(data: Foundation.Data, strategy: AuthMeUI.DecodingStrategy = LottieConfiguration.shared.decodingStrategy) throws -> AuthMeUI.LottieAnimation
-  public static func loadedFrom(url: Foundation.URL, session: Foundation.URLSession = .shared, animationCache: (any AuthMeUI.AnimationCacheProvider)? = LottieAnimationCache.shared) async -> AuthMeUI.LottieAnimation?
-  public static func loadedFrom(url: Foundation.URL, session: Foundation.URLSession = .shared, closure: @escaping AuthMeUI.LottieAnimation.DownloadClosure, animationCache: (any AuthMeUI.AnimationCacheProvider)? = LottieAnimationCache.shared)
+  public static func loadedFrom(url: Foundation.URL, session: any AuthMeUI.LottieURLSession = LottieConfiguration.defaultURLSession, animationCache: (any AuthMeUI.AnimationCacheProvider)? = LottieAnimationCache.shared) async -> AuthMeUI.LottieAnimation?
+  @discardableResult
+  public static func loadedFrom(url: Foundation.URL, session: any AuthMeUI.LottieURLSession = LottieConfiguration.defaultURLSession, closure: @escaping AuthMeUI.LottieAnimation.DownloadClosure, animationCache: (any AuthMeUI.AnimationCacheProvider)? = LottieAnimationCache.shared) -> Foundation.URLSessionDataTask?
   final public func progressTime(forMarker named: Swift.String) -> AuthMeUI.AnimationProgressTime?
   final public func frameTime(forMarker named: Swift.String) -> AuthMeUI.AnimationFrameTime?
   final public func durationFrameTime(forMarker named: Swift.String) -> AuthMeUI.AnimationFrameTime?
@@ -1051,8 +1055,6 @@ extension AuthMeUI.LottieAnimation {
   final public func frameTime(forProgress progressTime: AuthMeUI.AnimationProgressTime) -> AuthMeUI.AnimationFrameTime
   final public func time(forFrame frameTime: AuthMeUI.AnimationFrameTime) -> Foundation.TimeInterval
   final public func frameTime(forTime time: Foundation.TimeInterval) -> AuthMeUI.AnimationFrameTime
-}
-extension Foundation.Bundle : @unchecked Swift.Sendable {
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class AnimatedSwitch : AuthMeUI.AnimatedControl {
   @_Concurrency.MainActor @preconcurrency override public init(animation: AuthMeUI.LottieAnimation?, configuration: AuthMeUI.LottieConfiguration = .shared)
@@ -1071,11 +1073,11 @@ extension Foundation.Bundle : @unchecked Swift.Sendable {
   }
   @_Concurrency.MainActor @preconcurrency public var cancelBehavior: AuthMeUI.AnimatedSwitch.CancelBehavior
   @_Concurrency.MainActor @preconcurrency public var animateUpdateWhenChangingAnimation: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public var stateUpdated: ((_ isOn: Swift.Bool) -> Swift.Void)?
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public var accessibilityTraits: UIKit.UIAccessibilityTraits {
     @objc get
     @objc set
   }
-  @_Concurrency.MainActor @preconcurrency public var stateUpdated: ((_ isOn: Swift.Bool) -> Swift.Void)?
   @_Concurrency.MainActor @preconcurrency public var isOn: Swift.Bool {
     get
     set
@@ -1087,19 +1089,19 @@ extension Foundation.Bundle : @unchecked Swift.Sendable {
 public struct LottieVector1D : Swift.Hashable, Swift.Sendable {
   public init(_ value: Swift.Double)
   public let value: Swift.Double
-  public static func == (a: AuthMeUI.LottieVector1D, b: AuthMeUI.LottieVector1D) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: AuthMeUI.LottieVector1D, b: AuthMeUI.LottieVector1D) -> Swift.Bool
   public var hashValue: Swift.Int {
     get
   }
 }
 public struct LottieVector3D : Swift.Hashable, Swift.Sendable {
+  public init(x: Swift.Double, y: Swift.Double, z: Swift.Double)
   public let x: Swift.Double
   public let y: Swift.Double
   public let z: Swift.Double
-  public init(x: Swift.Double, y: Swift.Double, z: Swift.Double)
-  public static func == (a: AuthMeUI.LottieVector3D, b: AuthMeUI.LottieVector3D) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: AuthMeUI.LottieVector3D, b: AuthMeUI.LottieVector3D) -> Swift.Bool
   public var hashValue: Swift.Int {
     get
   }
@@ -1135,8 +1137,8 @@ extension AuthMeUI.LottieVector1D : Swift.Codable {
 public struct LottieVector2D : Swift.Codable, Swift.Hashable, Swift.Sendable {
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
-  public static func == (a: AuthMeUI.LottieVector2D, b: AuthMeUI.LottieVector2D) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: AuthMeUI.LottieVector2D, b: AuthMeUI.LottieVector2D) -> Swift.Bool
   public var hashValue: Swift.Int {
     get
   }
@@ -1206,6 +1208,8 @@ public struct SystemReducedMotionOptionProvider : AuthMeUI.ReducedMotionOptionPr
   override final public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
+extension AuthMeUI.ImageAsset : @unchecked Swift.Sendable {
+}
 public protocol Interpolatable : AuthMeUI.AnyInterpolatable {
   func interpolate(to: Self, amount: CoreFoundation.CGFloat) -> Self
 }
@@ -1255,9 +1259,15 @@ extension AuthMeUI.LottieVector3D : AuthMeUI.SpatialInterpolatable {
 extension Swift.Array : AuthMeUI.Interpolatable, AuthMeUI.AnyInterpolatable where Element : AuthMeUI.Interpolatable {
   public func interpolate(to: [Element], amount: CoreFoundation.CGFloat) -> [Element]
 }
+#if compiler(>=5.3) && $NoncopyableGenerics
 extension Swift.Optional : AuthMeUI.Interpolatable, AuthMeUI.AnyInterpolatable where Wrapped : AuthMeUI.Interpolatable {
   public func interpolate(to: Wrapped?, amount: CoreFoundation.CGFloat) -> Wrapped?
 }
+#else
+extension Swift.Optional : AuthMeUI.Interpolatable, AuthMeUI.AnyInterpolatable where Wrapped : AuthMeUI.Interpolatable {
+  public func interpolate(to: Wrapped?, amount: CoreFoundation.CGFloat) -> Wrapped?
+}
+#endif
 final public class GradientValueProvider {
   public init(block: @escaping AuthMeUI.GradientValueProvider.ColorsValueBlock, locations: AuthMeUI.GradientValueProvider.ColorLocationsBlock? = nil)
   public init(_ colors: [AuthMeUI.LottieColor], locations: [Swift.Double] = [])
@@ -1449,6 +1459,7 @@ extension AuthMeUI.AuthmeFeatureConfig {
   public func reloadImages()
   public func forceDisplayUpdate()
   public func setValueProvider(_ valueProvider: any AuthMeUI.AnyValueProvider, keypath: AuthMeUI.AnimationKeypath)
+  public func removeValueProvider(for keypath: AuthMeUI.AnimationKeypath)
   public func getValue(for keypath: AuthMeUI.AnimationKeypath, atFrame: AuthMeUI.AnimationFrameTime?) -> Any?
   public func getOriginalValue(for keypath: AuthMeUI.AnimationKeypath, atFrame: AuthMeUI.AnimationFrameTime?) -> Any?
   public func logHierarchyKeypaths()
@@ -1542,9 +1553,9 @@ public enum LottieAnimationCache {
   @_Concurrency.MainActor @preconcurrency public init(animation: AuthMeUI.LottieAnimation?) where Placeholder == SwiftUICore.EmptyView
   @_Concurrency.MainActor @preconcurrency public init(dotLottieFile: AuthMeUI.DotLottieFile?) where Placeholder == SwiftUICore.EmptyView
   @_Concurrency.MainActor @preconcurrency public init(_ loadAnimation: @escaping () async throws -> AuthMeUI.LottieAnimation?) where Placeholder == SwiftUICore.EmptyView
-  @_Concurrency.MainActor @preconcurrency public init(_ loadAnimation: @escaping () async throws -> AuthMeUI.LottieAnimation?, @SwiftUICore.ViewBuilder placeholder: @escaping () -> Placeholder)
+  @_Concurrency.MainActor @preconcurrency public init(_ loadAnimation: @escaping () async throws -> AuthMeUI.LottieAnimation?, @SwiftUICore.ViewBuilder placeholder: @escaping (() -> Placeholder))
   @_Concurrency.MainActor @preconcurrency public init(_ loadDotLottieFile: @escaping () async throws -> AuthMeUI.DotLottieFile?) where Placeholder == SwiftUICore.EmptyView
-  @_Concurrency.MainActor @preconcurrency public init(_ loadDotLottieFile: @escaping () async throws -> AuthMeUI.DotLottieFile?, @SwiftUICore.ViewBuilder placeholder: @escaping () -> Placeholder)
+  @_Concurrency.MainActor @preconcurrency public init(_ loadDotLottieFile: @escaping () async throws -> AuthMeUI.DotLottieFile?, @SwiftUICore.ViewBuilder placeholder: @escaping (() -> Placeholder))
   @_Concurrency.MainActor @preconcurrency public init(_ loadAnimation: @escaping () async throws -> AuthMeUI.LottieAnimationSource?) where Placeholder == SwiftUICore.EmptyView
   @_Concurrency.MainActor @preconcurrency public init(_ loadAnimation: @escaping () async throws -> AuthMeUI.LottieAnimationSource?, @SwiftUICore.ViewBuilder placeholder: @escaping () -> Placeholder)
   @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
@@ -1591,16 +1602,16 @@ public enum LottieAnimationCache {
   @_Concurrency.MainActor @preconcurrency public func dotLottieConfigurationComponents(_ dotLottieConfigurationComponents: AuthMeUI.DotLottieConfigurationComponents) -> AuthMeUI.LottieView<Placeholder>
   public typealias Body = @_opaqueReturnTypeOf("$s8AuthMeUI10LottieViewV4bodyQrvp", 0) __<Placeholder>
 }
-public class DotLottieCache : AuthMeUI.DotLottieCacheProvider {
+final public class DotLottieCache : AuthMeUI.DotLottieCacheProvider {
   public init()
   public static let sharedCache: AuthMeUI.DotLottieCache
-  public var cacheSize: Swift.Int {
+  final public var cacheSize: Swift.Int {
     get
     set
   }
-  public func clearCache()
-  public func file(forKey key: Swift.String) -> AuthMeUI.DotLottieFile?
-  public func setFile(_ lottie: AuthMeUI.DotLottieFile, forKey key: Swift.String)
+  final public func clearCache()
+  final public func file(forKey key: Swift.String) -> AuthMeUI.DotLottieFile?
+  final public func setFile(_ lottie: AuthMeUI.DotLottieFile, forKey key: Swift.String)
   @objc deinit
 }
 extension AuthMeUI.DotLottieCache : @unchecked Swift.Sendable {
@@ -1621,11 +1632,11 @@ public enum NFCDeviceError : Swift.String, Swift.Error {
 extension AuthMeUI.LottieAnimationView {
   @_Concurrency.MainActor @preconcurrency convenience public init(name: Swift.String, bundle: Foundation.Bundle = Bundle.main, subdirectory: Swift.String? = nil, imageProvider: (any AuthMeUI.AnimationImageProvider)? = nil, animationCache: (any AuthMeUI.AnimationCacheProvider)? = LottieAnimationCache.shared, configuration: AuthMeUI.LottieConfiguration = .shared)
   @_Concurrency.MainActor @preconcurrency convenience public init(filePath: Swift.String, imageProvider: (any AuthMeUI.AnimationImageProvider)? = nil, animationCache: (any AuthMeUI.AnimationCacheProvider)? = LottieAnimationCache.shared, configuration: AuthMeUI.LottieConfiguration = .shared)
-  @_Concurrency.MainActor @preconcurrency convenience public init(url: Foundation.URL, imageProvider: (any AuthMeUI.AnimationImageProvider)? = nil, session: Foundation.URLSession = .shared, closure: @escaping AuthMeUI.LottieAnimationView.DownloadClosure, animationCache: (any AuthMeUI.AnimationCacheProvider)? = LottieAnimationCache.shared, configuration: AuthMeUI.LottieConfiguration = .shared)
+  @_Concurrency.MainActor @preconcurrency convenience public init(url: Foundation.URL, imageProvider: (any AuthMeUI.AnimationImageProvider)? = nil, session: any AuthMeUI.LottieURLSession = LottieConfiguration.defaultURLSession, closure: @escaping AuthMeUI.LottieAnimationView.DownloadClosure, animationCache: (any AuthMeUI.AnimationCacheProvider)? = LottieAnimationCache.shared, configuration: AuthMeUI.LottieConfiguration = .shared)
   @_Concurrency.MainActor @preconcurrency convenience public init(asset name: Swift.String, bundle: Foundation.Bundle = Bundle.main, imageProvider: (any AuthMeUI.AnimationImageProvider)? = nil, animationCache: (any AuthMeUI.AnimationCacheProvider)? = LottieAnimationCache.shared, configuration: AuthMeUI.LottieConfiguration = .shared)
   @_Concurrency.MainActor @preconcurrency convenience public init(dotLottieName name: Swift.String, bundle: Foundation.Bundle = Bundle.main, subdirectory: Swift.String? = nil, animationId: Swift.String? = nil, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache, configuration: AuthMeUI.LottieConfiguration = .shared, completion: ((AuthMeUI.LottieAnimationView, (any Swift.Error)?) -> Swift.Void)? = nil)
   @_Concurrency.MainActor @preconcurrency convenience public init(dotLottieFilePath filePath: Swift.String, animationId: Swift.String? = nil, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache, configuration: AuthMeUI.LottieConfiguration = .shared, completion: ((AuthMeUI.LottieAnimationView, (any Swift.Error)?) -> Swift.Void)? = nil)
-  @_Concurrency.MainActor @preconcurrency convenience public init(dotLottieUrl url: Foundation.URL, animationId: Swift.String? = nil, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache, configuration: AuthMeUI.LottieConfiguration = .shared, session: Foundation.URLSession = .shared, completion: ((AuthMeUI.LottieAnimationView, (any Swift.Error)?) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency convenience public init(dotLottieUrl url: Foundation.URL, animationId: Swift.String? = nil, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache, configuration: AuthMeUI.LottieConfiguration = .shared, session: any AuthMeUI.LottieURLSession = LottieConfiguration.defaultURLSession, completion: ((AuthMeUI.LottieAnimationView, (any Swift.Error)?) -> Swift.Void)? = nil)
   @_Concurrency.MainActor @preconcurrency convenience public init(dotLottieAsset name: Swift.String, bundle: Foundation.Bundle = Bundle.main, animationId: Swift.String? = nil, dotLottieCache: (any AuthMeUI.DotLottieCacheProvider)? = DotLottieCache.sharedCache, configuration: AuthMeUI.LottieConfiguration = .shared, completion: ((AuthMeUI.LottieAnimationView, (any Swift.Error)?) -> Swift.Void)? = nil)
   public typealias DownloadClosure = ((any Swift.Error)?) -> Swift.Void
 }
@@ -1724,6 +1735,7 @@ extension AuthMeUI.AuthmeKYCConfig {
   }
   @_Concurrency.MainActor @preconcurrency public func setLayer(named: Swift.String, forState: AuthMeUI.LottieControlState)
   @_Concurrency.MainActor @preconcurrency public func setValueProvider(_ valueProvider: any AuthMeUI.AnyValueProvider, keypath: AuthMeUI.AnimationKeypath)
+  @_Concurrency.MainActor @preconcurrency public func removeValueProvider(for keypath: AuthMeUI.AnimationKeypath)
   @objc deinit
 }
 final public class FloatValueProvider {
@@ -1753,7 +1765,7 @@ extension AuthMeUI.LivenessViewController : LivenessFlowDelegate {
   @_Concurrency.MainActor @preconcurrency public func livenessDidStart()
   @_Concurrency.MainActor @preconcurrency public func livenessDidNotifyMessage(status: LivenessDetectStatus)
   @_Concurrency.MainActor @preconcurrency public func livenessDidUpdateReconize(result: Swift.Bool)
-  @_Concurrency.MainActor @preconcurrency public func livenessDidFailureWith(error: FlowError, retryHandler: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func livenessDidFailureWith(error: FlowError, retryHandler: @escaping (() -> Swift.Void))
   @_Concurrency.MainActor @preconcurrency public func livenessDidRecognize(image: UIKit.UIImage)
   @_Concurrency.MainActor @preconcurrency public func livenessDidFaceScale(direction: LivenessFlow.FaceScaleDirection.Direction)
 }
@@ -1818,6 +1830,12 @@ extension AuthMeUI.DotLottieFile {
   final public var animationSource: AuthMeUI.LottieAnimationSource {
     get
   }
+}
+public protocol LottieURLSession : Swift.Sendable {
+  func lottieDataTask(with url: Foundation.URL, completionHandler: @escaping @Sendable (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void) -> Foundation.URLSessionDataTask?
+}
+extension Foundation.URLSession : AuthMeUI.LottieURLSession {
+  public func lottieDataTask(with url: Foundation.URL, completionHandler: @escaping @Sendable (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void) -> Foundation.URLSessionDataTask?
 }
 extension AuthMeUI.LottieBackgroundBehavior : Swift.Equatable {}
 extension AuthMeUI.LottieBackgroundBehavior : Swift.Hashable {}
